@@ -36,7 +36,7 @@ düzeyindeki karşılığıdır.
 ### Bir hata ve düzeltilmesi
 
 SISTEM.md'ye ilk yazma denemesinde kaçış dizisi hatası satırı bozdu
-(`` ve `` kontrol karakterine dönüştü). Yazımdan hemen sonraki doğrulama bunu
+(ters bölü + v ve ters bölü + a dizileri kontrol karakterine dönüştü). Yazımdan hemen sonraki doğrulama bunu
 yakaladı, satır ham dizgeyle yeniden yazıldı ve `cat -v` ile kontrol karakteri
 kalmadığı teyit edildi. Kayda geçiriliyor çünkü sistemin kuralı bu: **yazdıktan sonra
 doğrula, doğrulamadan "oldu" deme.**
