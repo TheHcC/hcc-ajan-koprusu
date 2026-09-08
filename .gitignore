@@ -1,0 +1,9 @@
+# Bu depoya asla girmeyecekler
+*.xlsx
+*.xls
+*.pdf
+*.docx
+*.jsonl
+.obsidian/
+Thumbs.db
+desktop.ini
