@@ -5,6 +5,49 @@ sorusunun cevabıdır. Sohbete yeni katılan bir model önce burayı okur.
 
 ---
 
+## 2026-09-08 (2. tur) · claude-opus-5 (Claude Code) — Köprü kuruldu, P0 düzeltildi
+
+### Köprü deposu yayına alındı
+
+Bu depo oluşturuldu ve public olarak yayımlandı. Anonim okunabilirlik fiilen
+doğrulandı (kimlik doğrulaması olmadan HTTP 200). Artık Claude.ai sohbeti ve ChatGPT
+bu depoyu okuyup `gelen-kutusu/` üzerinden katkı sunabilir.
+
+### P0 kural çelişkisi giderildi
+
+Üç değişiklik yapıldı:
+
+1. **`inceleme-os\SISTEM.md` §2** — Antigravity atölye satırı ölü bir yolu
+   (`Desktop\Anti\...`) gösteriyordu; kanonik ağaca çekildi. Önceki hâliyle, kurala
+   *tam uyan* bir ajan var olmayan klasöre yönleniyordu.
+2. **`AGENTS.md` §7** — "Diğer ajanlar kuyruğa nasıl yazar" alt bölümü ve JSONL satır
+   şeması eklendi. Tespit şuydu: `/save-bulgu` bir Claude Code slash komutu, diğer
+   CLI'lar onu çağıramıyor. Çözüm ikinci bir kuyruk açmak değil — kuyruk zaten düz bir
+   JSONL dosyası, şeması belgelendi. Vault'a yazma yetkisi (onay kapısı) tek elde kaldı.
+3. **Bayat iddia düzeltildi** — aynı bölümde "kuyruk 28.07'den beri işlenmedi, vault
+   24 Haziran'da beslenmeyi bıraktı" yazıyordu. Doğrulandı ve **yanlış** çıktı: arşiv
+   dosyasında 2026-09-03 tarihli işlenmiş bir kayıt ve hedef notu mevcut.
+
+Üçüncüsü öngörülen iş değildi; aynı bölümü düzenlerken bulundu ve kanıtla doğrulandığı
+için düzeltildi. **Ders:** kural dosyalarındaki tarihli iddialar da bayatlıyor. Bu,
+poster künyesindeki `son_dogrulama` alanının neden zorunlu olduğunun kural-dosyası
+düzeyindeki karşılığıdır.
+
+### Bir hata ve düzeltilmesi
+
+SISTEM.md'ye ilk yazma denemesinde kaçış dizisi hatası satırı bozdu
+(`` ve `` kontrol karakterine dönüştü). Yazımdan hemen sonraki doğrulama bunu
+yakaladı, satır ham dizgeyle yeniden yazıldı ve `cat -v` ile kontrol karakteri
+kalmadığı teyit edildi. Kayda geçiriliyor çünkü sistemin kuralı bu: **yazdıktan sonra
+doğrula, doğrulamadan "oldu" deme.**
+
+### Sıradaki
+
+Revizyon arşivinin indekslenmesi (68 dosya): her dosya için konu, tür, tarih,
+bayatlama riski (ÖLÜ / RİSKLİ / KALICI) ve dayanak tahmini.
+
+---
+
 ## 2026-09-08 · claude-opus-5 (Claude Code) — Teşhis oturumu
 
 ### Başlangıç noktası

@@ -1,8 +1,8 @@
 # DURUM — özet (otorite değil)
 
-**Son güncelleme:** 08.09.2026 · claude-opus-5 (Claude Code)
+**Son güncelleme:** 08.09.2026 (2. tur) · claude-opus-5 (Claude Code)
 **Aktif iş:** YMM ikinci beyin + sürdürülebilir çalışma sistemi kurulumu
-**İlerleme:** 14 adımın 5'i tamam (bkz. `GUNLUK.md`)
+**İlerleme:** 15 adımın 8'i tamam (bkz. `GUNLUK.md`)
 
 > Otorite bu dosya değildir. Operasyonel gerçek:
 > `Desktop\inceleme-os\obsidian-ikinci-beyin\durum.md`
@@ -23,23 +23,25 @@ gücü Cihan'ın kanıtlanmış görsel formatına (poster) bağlayacak şekilde
 | 3 | Astra (gpt-6-astra) Obsidian raporunun bağımsız denetimi | ✅ |
 | 4 | Vault yeri ve mevzuat doğrulama kararları | ✅ |
 | 5 | `ymm-korpus/09_bilgi/` ağacının kurulması | ✅ |
-| 6 | P0 kural çelişkisinin cerrahi düzeltmesi | ⏳ onay bekliyor |
-| 7 | Revizyon arşivinin tam indeksi (68 dosya) | ⏳ |
-| 8-9 | SPK / diğer klasörlerin indeksi | ⏳ |
-| 10 | Poster atom şablonu ve künye standardı | ⏳ |
-| 11 | Bayatlama motoru (dayanak → geçerlilik → son doğrulama) | ⏳ |
-| 12 | Çoklu-ajan halüsinasyon önleme protokolü | ⏳ |
-| 13 | Yeni master plan belgesi | ⏳ |
-| 14 | Git akışı ve depo kurulumu | 🔄 bu depo ilk adımı |
+| 6 | Ajan köprüsü deposu kuruldu ve yayına alındı | ✅ |
+| 7 | GitHub public repo + push (anonim erişim doğrulandı) | ✅ |
+| 8 | P0 kural çelişkisinin cerrahi düzeltmesi | ✅ |
+| 9 | Revizyon arşivinin tam indeksi (68 dosya) | 🔄 sıradaki |
+| 10-11 | SPK / diğer klasörlerin indeksi | ⏳ |
+| 12 | Poster atom şablonu — pilot poster üretimi | ⏳ |
+| 13 | Bayatlama motoru (dayanak → geçerlilik → son doğrulama) | ⏳ |
+| 14 | Çoklu-ajan halüsinasyon önleme protokolü | ⏳ |
+| 15 | Yeni master plan belgesi | ⏳ |
+
 
 ## Bilinen engeller
 
 - `Mevzuat MCP` ve `yargi-mcp` bağlantısı 08.09.2026 oturumunda **CONNECT_TIMEOUT**
   verdi. Cihan bağlantıyı düzeltecek. Düzelene kadar mevzuat parametreleri
   `[TEYİT: kaynak gerekli]` etiketiyle kalır.
-- `gh` (GitHub CLI) kurulu değil; depo oluşturma manuel yapılır, push otomatiktir.
+- `gh` (GitHub CLI) kurulu değil; depo oluşturma manuel yapılır, push otomatiktir. *(08.09 çözüldü)*
 
 ## Sıradaki tek iş
 
-P0 düzeltmesi için Cihan'ın onayı (2 satırlık değişiklik), ardından Revizyon
-arşivinin indekslenmesi.
+Revizyon arşivinin indekslenmesi (68 dosya) — hangi dosya ölü, hangisi güncellenmeli,
+hangisi kalıcı poster adayı.
