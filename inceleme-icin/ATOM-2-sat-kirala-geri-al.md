@@ -3,10 +3,12 @@ konu: Sat-kirala-geri al — kazanç istisnası, özel fon ve amortismanın böl
 ders: [Revizyon, Vergi Tekniği]
 yuzey_profili: poster-tablo
 dayanak:
-  - KVK m.5/1-j        # 6728 s.K. (2016) ile eklendi — [TEYİT: bent harfi, Sınırlar'a bak]
+  - KVK m.5/1-j        # 6728 s.K. m.56 (15/7/2016) ile eklendi — bent harfi TEYİT EDİLDİ (teyit turu 01)
   - KDV m.17/4-y       # 6728 s.K. ile değişik
 iliskili_maddeler:
-  - KVK m.5/1-e        # taşınmaz satış kazancı istisnası — benzer fon disiplini
+  - KVK m.5/1-e        # ⚠️ 7456 s.K. (15/7/2023) ile TAŞINMAZ bu bentten ÇIKARILDI; bent artık
+                       # iştirak hissesi vb. için %75. Taşınmazda Geçici m.16 ile %25 (sadece
+                       # 15/7/2023 öncesi iktisap). Fon disiplini benzetmesi ARTIK GEÇERSİZ.
   - KDV m.30/a         # indirim iptali — 17/4-y bu listede YOK
   - VUK mük. m.290     # finansal kiralama işlemlerinde değerleme
   - VUK mük. m.298     # kullanma hakkının yeniden değerlemesi
@@ -16,14 +18,15 @@ iliskili_maddeler:
 gecis_kontrolu:
   kdv: "VAR + ZIT SONUC — m.17/4-y istisna, ANCAK m.30/a'nin parantez ici listesinde YOK (listede yalniz 17/2-b,c,d ve 17/4-i,o sayili). Indirim iptali ISLER. Telafi: devre kadar indirilemeyen KDV 'Ilave edilecek KDV' olarak beyan edilir ve gider yazilir. Bagis atomunun (17/2-b) tam TERSI."
   vuk: "VAR — muk. m.290 finansal kiralama degerlemesi: kiracida kullanma hakki ve borc, rayic bedel ile kira odemelerinin bugunku degerinden DUSUK olani ile degerlenir; kullanma hakki amortismana tabi. Ayrica finansal kiralama testi (dort olcutten biri yeterli)."
-  gvk: "SUPHELI — istisna kiraci tarafinda 'kurumlar vergisi mukellefleri' ile sinirli (KVKUGT 5.15.1). Gercek kisi/ferdi isletme icin GVK'da paralel hukum olup olmadigi incelenmedi [TEYIT: kaynak gerekli]."
+  gvk: "YOK (teyit turu 01, 09.09.2026) — GVK'da paralel hukum YOKTUR. KVK m.5/1-j istisnayi yalnizca 'kurumlar tarafindan' yapilan satislara taniyor; GVK m.38, m.40, m.81 ve muk. m.80'de ferdi isletmeler icin sat-kirala-geri al kazanc istisnasi bulunmuyor. Istisna kurumlar vergisi mukelleflerine ozgudur."
   kvk: "VAR — m.5/1-j istisnasi %100; kazanc ozel fona alinir; fonun amac disi kullanimi vergi ziyai cezasi dogurur."
-  damga_harc: "SUPHELI — 6361 sayili Kanun kapsamindaki finansal kiralama sozlesmelerinin damga vergisi karsiligi bu cikarimda taranmadi [TEYIT: 488 s.K. ve 6361 s.K. m.37 kontrol edilmeli]."
+  damga_harc: "VAR (teyit turu 01, 09.09.2026) — 6361 s.K. m.37/1: finansal kiralama sozlesmeleri, devir/tadil kagitlari, kiralayan-satici sozlesmeleri ve teminat kagitlari DAMGA VERGISINDEN, bu kagitlarla ilgili islemler HARCTAN mustesnadir (finansal kiralama konusu gayrimenkullerin kiralayanlarca devir alinmasina iliskin tapu islemleri haric). m.37/2: sat-kirala-geri al taşinmazlarinin sure sonunda kiraci adina tescili de tapu harcindan mustesna."
   donem_sarkmasi: "VAR — GUCLU. (a) Istisna satisin yapildigi donemde uygulanir, pesin/vadeli fark etmez. (b) Fona alma suresi: satisi izleyen hesap donemi basindan, kazancin beyan edildigi doneme ait KV beyannamesinin verildigi tarihe kadar. (c) Gecici vergi donemlerinde de yararlanilir; suresinde fona alinmazsa gecici vergiden dogan vergi ziyai cezasi ve gecikme faizi AYRICA aranir. (d) Amortisman farki kira suresi boyunca ve geri alim sonrasina sarkar."
   muhasebe_tms: "VAR — ozel fon hesabi acilir; geri alim sonrasi amortisman IKIYE BOLUNUR (bir kismi kurum kazancindan gider, kalani yalniz fondan mahsup); KDV tarafinda 'Ilave edilecek KDV' beyani."
-gecerlilik_donemi: "[TEYİT: 2026 yürürlük doğrulanmadı]"
+gecerlilik_donemi: 2026
 son_dogrulama: 2026-09-09
-dogrulama_durumu: KAYNAKTAN_OKUNDU_GUNCELLIK_TEYIT_BEKLIYOR
+dogrulama_durumu: TEYITLI
+teyit_kapsami: "Kanun metni duzeyinde teyit edildi (Gorev S / teyit-turu-01, bedesten.adalet.gov.tr). TEBLIG duzeyi (KVKUGT 5.15, KDVUGT II/4.21) TARANMADI."
 kaynak: vtr-vir/mevzuat/{KVKUGT,KDV,KDVUGT,VUK}.md — yerel korpus, birebir okundu
 ---
 
@@ -134,15 +137,19 @@ tekrarlanan işlemlerde o tarihten itibaren ayrılan toplam amortismanı — kir
 
 ## Sınırlar
 
-- **Bent harfi çelişkisi `[TEYİT]`:** KVKUGT istisnayı "(j) bendi" diye anıyor; ancak
-  yerel `KVK.md` dosyasındaki m.5/1 listesinde **(j) bendi kooperatif risturn
-  istisnasıdır.** Sebebi: `KVK.md`, 5520 sayılı Kanunun **2006 tarihli orijinal gerekçe
-  metnidir**; sat-kirala-geri al 2016'da (6728 s.K.) eklendiği için o dosyada yer almaz.
-  **Kesin bent harfi güncel kanun metninden doğrulanmalıdır.**
-  → Bu aynı zamanda bir **korpus bulgusudur:** yerel `KVK.md` güncel kanun metni değildir.
+- ~~**Bent harfi çelişkisi**~~ → ✅ **ÇÖZÜLDÜ (teyit turu 01, 09.09.2026).** Bent
+  **kesinlikle (j)**'dir *(Ek: 15/7/2016-6728/56 md.)*. Çelişkinin kök nedeni ilginç:
+  güncel kanunda **(ı)** bendi eğitim/kreş-rehabilitasyon istisnası, **(i)** bendi
+  kooperatif risturn istisnasıdır — yerel `KVK.md` dosyasında Türkçe **ı/i harflerinin
+  ASCII dönüşümü** iki bendi çakıştırmış ve sıralama bir harf kaymış görünmüştür.
+  Ayrıca o dosya 2006 gerekçe metni olduğu için 2016 eklemesini zaten içermiyor.
+  → **Korpus bulgusu olarak kayıtlı:** yerel `KVK.md` güncel kanun metni değildir *ve*
+  Türkçe harf dönüşümü bent sıralamasını bozmaktadır.
 - **Güncellik teyidi yok** — Mevzuat MCP bağlanamadı; 2026 yürürlüğü doğrulanmadı.
-- **Damga vergisi şeridi taranmadı** (ŞÜPHELİ) — 6361 s.K. kapsamındaki sözleşmelerin
-  damga vergisi durumu bu çıkarımda aranmadı.
-- **GVK paraleli araştırılmadı** (ŞÜPHELİ) — istisna kurumlar vergisi mükelleflerine
-  tanınmış; gerçek kişi tarafı incelenmedi.
+- ~~Damga vergisi şeridi~~ → ✅ **ÇÖZÜLDÜ:** 6361 s.K. m.37/1 damga vergisi ve harç
+  istisnası getiriyor (tapu işlemlerinde bir istisna hariç). Künyede tam metin.
+- ~~GVK paraleli~~ → ✅ **ÇÖZÜLDÜ:** GVK'da paralel hüküm **yok**; istisna yalnız
+  kurumlar vergisi mükelleflerine özgü.
+- **Tebliğ düzeyi doğrulanmadı** — teyit turu 01 yalnız **kanun metinlerini** taradı.
+  KVKUGT 5.15 ve KDVUGT II/4.21 açıklamalarının güncelliği ayrıca kontrol edilmeli.
 - Sayısal örnek **KVKUGT'nin kendi resmî örneğidir**, tarafımdan üretilmemiştir.

@@ -56,6 +56,9 @@ uydurulmuş bir liste değil, fiilen kullanılan kategoriler.)*
 | G-016 | Kur farkı | KVK m.12 | KVK m.11/1-i | **Aynı kalem, zıt muamele:** örtülü sermayede kur farkı kâr payı sayılmaz ve geliri de kazanca alınmaz; FGK'da kur farkı **kapsam içindedir** | aynı |
 | G-017 | Örtülü kazanç | KVK m.13 | **KDV m.30/d** | 30/d parantezinde **yalnız m.13** anılıyor, **m.12 anılmıyor** — üçüncü zıt çift adayı `[ÇIKARIM]`, metne dayalı kural değil | aynı |
 | G-018 | Faizsiz borçlanma | KVK m.12 | KDV m.27 + m.9 | KV'de faiz yok ama emsal bedel üzerinden KDV doğduğu iddia ediliyor — **dayanak korpusta bulunamadı** `[TEYİT]` | aynı |
+| G-019 | Bağış — damga vergisi | KVK m.10/1-c · KDV m.13/1-k | **488 s.K. (2) sayılı tablo IV/55** | Kamu idareleri/il özel idareleri/YİKOB/belediye/köylere yapılacak bağışlara ilişkin, ilgili idare ile bağışlayan arasında düzenlenen kâğıtlar **damga vergisinden istisna** *(Ek: 14/10/2021-7338/54)*. Ayrıca DVK m.8: resmî daireler muaf | `10-poster/bagis-ve-yardimlar-kv-kdv.md` |
+| G-020 | Sat-kirala — damga ve harç | KVK m.5/1-j | **6361 s.K. m.37** | Finansal kiralama sözleşmeleri, devir/tadil kâğıtları, kiralayan-satıcı sözleşmeleri ve teminat kâğıtları **damga vergisinden**, ilgili işlemler **harçtan** müstesna (kiralayanlarca devralmaya ilişkin tapu işlemleri hariç). m.37/2: süre sonunda kiracı adına tescil tapu harcından müstesna | `10-poster/sat-kirala-geri-al.md` |
+| G-021 | Sat-kirala — kurum/gerçek kişi | KVK m.5/1-j | GVK (paralel **YOK**) | **ASİMETRİ:** GVK'da sat-kirala-geri al istisnasının karşılığı yoktur; istisna yalnız kurumlar vergisi mükelleflerine özgüdür | aynı |
 
 ## Ters dizin — hangi maddeden nereye gidilir
 
@@ -100,11 +103,11 @@ kural değil, açık uç (A-007). Doğrulanmadan kullanılmamalı.
 
 | # | Soru | Neden açık | Nereden bakılmalı |
 |---|---|---|---|
-| A-001 | KDV m.13/1-k için zorunlu **bağış protokolü** damga vergisine tabi mi? | İncelenmedi | 488 s. Damga Vergisi Kanunu (1) sayılı tablo `[TEYİT: kaynak gerekli]` |
-| A-002 | KVK m.10/1-c'de kalkınmada öncelikli yöre ayrımı gerçekten yok mu? | Tebliğ okundu, **kanun metni okunmadı** | KVK m.10/1-c kanun metni |
-| A-003 | 6361 s.K. kapsamındaki finansal kiralama sözleşmeleri damga vergisinden istisna mı? | Taranmadı | 488 s.K. (2) sayılı tablo · 6361 s.K. m.37 `[TEYİT: kaynak gerekli]` |
-| A-004 | Sat-kirala-geri al istisnasının gerçek kişi/ferdi işletme karşılığı var mı? | İstisna KV mükelleflerine tanınmış; GVK tarafı incelenmedi | GVK m.40 / m.89 `[TEYİT: kaynak gerekli]` |
-| A-005 | KVK'da sat-kirala-geri al istisnasının **gerçek bent harfi** nedir? | KVKUGT "(j)" diyor; yerel KVK.md'de (j) risturn istisnası | Güncel KVK m.5/1 kanun metni |
+| ~~A-001~~ | ✅ **KAPANDI** (teyit turu 01) — bağış protokolü damga vergisinden **istisna**; 488 s.K. (2) sayılı tablo IV/55 → G-019 |
+| ~~A-002~~ | ✅ **KAPANDI** (teyit turu 01) — KVK m.10/1-c'de yöre ayrımı **YOK**, oran Türkiye genelinde %5. GVK m.89/4'teki %10 farkı **kanun düzeyinde kesinleşmiş asimetri** → G-005 doğrulandı |
+| ~~A-003~~ | ✅ **KAPANDI** (teyit turu 01) — 6361 s.K. m.37 damga ve harç istisnası → G-020 |
+| ~~A-004~~ | ✅ **KAPANDI** (teyit turu 01) — GVK'da paralel hüküm **yok** → G-021 |
+| ~~A-005~~ | ✅ **KAPANDI** (teyit turu 01) — bent **kesinlikle (j)** *(Ek: 15/7/2016-6728/56)*. Kök neden: güncel kanunda (ı)=eğitim, (i)=risturn, (j)=sat-kirala; yerel dosyada **Türkçe ı/i ASCII çakışması** sıralamayı kaydırmış |
 | A-006 | Faizsiz borçlanmada emsal bedel üzerinden KDV doğduğunun mevzuat dayanağı nedir? | KDV m.27 ve m.9 metinleri var ama faizsiz borç vermeye özgü KDVUGT açıklaması bulunamadı | KDVUGT tam tarama · sınav cevap anahtarı `[TEYİT]` |
 | A-007 | Örtülü sermaye (m.12) kaynaklı KKEG dolayısıyla ödenen KDV, m.30/d karşısında ne olur? | 30/d parantezi yalnız m.13'ü anıyor; m.12'ye özgü hüküm korpusta yok | KDV m.30/d + özelge/içtihat `[TEYİT]` |
 | A-008 | Grup içi kredi aktarım sözleşmeleri damga vergisine tabi mi? | Taranmadı | 488 s.K. `[TEYİT: kaynak gerekli]` |
@@ -115,6 +118,8 @@ kural değil, açık uç (A-007). Doğrulanmadan kullanılmamalı.
 
 | Dosya | Sorun | Etki |
 |---|---|---|
+| `vtr-vir/mevzuat/KVK.md` | **Türkçe ı/i harfleri ASCII dönüşümünde çakışıyor** — m.5/1'de (ı) eğitim, (i) risturn bentleri ayırt edilemiyor, bent sıralaması bir harf kaymış görünüyor. | Bent harfi bu dosyadan okunamaz. *(teyit turu 01'de tespit edildi)* |
+| `vtr-vir/mevzuat/KVKUGT.md` | **"Bakanlar Kurulunca vergi muafiyeti tanınan vakıflar"** ifadesi 15 yerde geçiyor; güncel kanun **"Cumhurbaşkanınca"** diyor (2018 sonrası). | Tebliğ metni bu yönden bayat; kurum adları kanun metninden alınmalı. |
 | `vtr-vir/mevzuat/KVK.md` | **Madde 12 metni dosyada İKİ KEZ geçiyor ve ölçüler farklı:** birinci nüsha "öz sermayenin **iki katı**", ikinci nüsha "**üç katı**". KVKUGT üç katıyı teyit ediyor. | Tek nüshaya bakarak oran alınamaz; hangi nüshanın okunduğu belirtilmeli. |
 | `vtr-vir/mevzuat/KVK.md` | **5520 s.K.'nin 2006 tarihli orijinal gerekçe metnidir**, güncel kanun metni değildir. 2016'da 6728 s.K. ile eklenen sat-kirala-geri al istisnası bu dosyada yoktur; madde 5/1 bent harfleri güncel kanunla uyuşmuyor. | Bu dosyadan bent harfi veya sonradan eklenmiş hüküm doğrulanamaz. KVKUGT daha güncel. |
 
