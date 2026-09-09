@@ -5,6 +5,47 @@ En yeni en üstte. Karar silinmez; değişirse yeni satır eklenir ve eskisi
 
 ---
 
+## K-005 (K-001R) · Atom = düzenlenebilir kaynak; poster bir dışa aktarım profilidir
+**Tarih:** 09.09.2026 · **Veren:** Cihan · **Öneren:** claude-opus-5 (Claude.ai sohbeti, itiraz yoluyla)
+**Yerine geçtiği:** K-001
+
+**Karar metni:**
+
+> **Bilgi atomu:** tek konu / tek yüzey / makine-okunur künyeli konu birimi.
+> Künye alanları: `dayanak`, `iliskili_maddeler`, `gecerlilik_donemi`,
+> `son_dogrulama`, `dogrulama_durumu`.
+>
+> **Kaynak biçimi düzenlenebilir olmak zorundadır** (Markdown veya XMind).
+> Poster, kaynaktan üretilen bir dışa aktarım profilidir — atomun kendisi değildir.
+>
+> **Yüzeyi ders değil, kaynak metnin yapısı seçer:**
+> - Madde/fıkra hiyerarşisi taşıyan mevzuat → zihin haritası *(kanıt: SPK XMind'ları)*
+> - Koşullu / karşılaştırmalı kural kümesi → poster-tablo *(kanıt: 9 vergi posteri + ~11 revizyon görseli)*
+> - Kavram ağı + formül → zihin haritası *(kanıt: finans XMind'ları)*
+> - Hesap/algoritma → föy + çözülmüş problem `[HİPOTEZ — arşivde üretim kanıtı yok]`
+
+**K-001 neden yanlıştı — belirleyici kanıt:**
+
+Claude Code'un bağımsız doğrulaması: `SPK HCC/MAPSPK` klasöründeki **14 XMind
+dosyasının 6'sı 2026 yılında düzenlenmiş** (`2026-05-12`, `2026-05-08` ×2,
+`2026-04-25` ×2, `2026-02-11`) — dosyalar 2022'de üretilmiş olmasına rağmen. Buna
+karşılık PNG posterlerin hiçbiri Şubat 2025'ten sonra dokunulmamış.
+
+Bu bir tercih farkı değil, **taşıyıcı farkıdır:** XMind düzenlenebilir kaynak, PNG
+dondurulmuş çıktıdır. K-001'in kendi hedefi — "mevzuat değiştikçe kendini güncelleyen
+sistem" — PNG üzerinde işletilemez; `son_dogrulama` künyesi bir görselin içine
+yazılamaz.
+
+**K-001'den korunan:** Formatın görsel-mekânsal olduğu tespiti doğruydu ve duruyor.
+Yanlış olan, tek yüzey (poster) varsayımı ve donmuş bir biçimi atom saymaktı.
+
+**Sayım düzeltmesi:** İtirazda "12 SPK XMind" geçiyor; Claude Code'un doğrudan
+listelemesinde `MAPSPK` altında **14** XMind var (12, kök `SPK HCC` klasöründeki
+sayıdır). `FİNANSAL YÖNETİM/MAPS` altındaki 13 XMind iddiası **bağımsız
+doğrulanmadı** — o klasör listelenmedi.
+
+---
+
 ## K-004 · Köprü deposu public olacak
 **Tarih:** 08.09.2026 · **Veren:** Cihan · **Öneren:** Claude Code
 
@@ -34,7 +75,7 @@ vault'u gerçek inceleme bulguları için temiz bırakıldı.
 
 ---
 
-## K-001 · Bilgi atomu "kart" değil "poster"
+## K-001 · Bilgi atomu "kart" değil "poster"  ~~[REVİZE EDİLDİ → K-005]~~
 **Tarih:** 08.09.2026 · **Veren:** Claude Code (Cihan onayladı)
 
 Eski sistem bilgi birimi olarak SRS kartını seçti; kartlar kullanılabilir çıkmadı.
