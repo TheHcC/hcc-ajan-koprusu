@@ -1,6 +1,6 @@
 # DURUM — özet (otorite değil)
 
-**Son güncelleme:** 09.09.2026 · claude-opus-5 (Claude Code)
+**Son güncelleme:** 09.09.2026 (2. tur) · claude-sonnet-5 (Claude Code)
 **Aktif iş:** YMM ikinci beyin + sürdürülebilir çalışma sistemi kurulumu
 **İlerleme:** 15 adımın 9'u tamam (bkz. `GUNLUK.md`)
 
@@ -45,3 +45,23 @@ gücü Cihan'ın kanıtlanmış görsel formatına (poster) bağlayacak şekilde
 
 10 adet KALICI poster atomunun künyelendirilmesi (Adım 12) veya SPK arşivinin indekslenmesi
 (Adım 10) — sıra Cihan'ın tercihine bağlı.
+
+**Adım 12 pilot konu önerisi (09.09, gelen-kutusu/claude-code sınav-analizi
+görüşünden):** 2025/3 Revizyon sınavında 45 puanlık dört konunun (sat-kirala-geri
+al 15p, opsiyon sözleşmesi 10p, grup içi kredi 10p, faizsiz borçlanma-KDV 10p)
+arşivde hiçbir poster/XMind karşılığı yok. Pilot posterin **sat-kirala-geri al
+istisnası (KVK m.5/j)** ile başlaması öneriliyor — en yüksek puanlı ve tam boşluk.
+
+## Açık kararlar (Codex/yerel oturum bekliyor)
+
+- **K-001R (taslak K-005):** Bilgi atomunun künyeli-konu-birimi olarak revize
+  edilmesi, poster'ın donmuş export/XMind'ın düzenlenebilir kaynak sayılması
+  öneriliyor (bkz. `gelen-kutusu/claude-code/2026-09-08-k001-format-itirazi.md`).
+  İçerik doğrulaması (2 XMind + BAĞIŞ posteri + 2 isim-tuzağı dosyası) Codex'e
+  görev bırakıldı: `gelen-kutusu/codex/2026-09-09-icerik-dogrulama-gorevi.md`.
+  Rapor gelince `KARARLAR.md`'ye K-005 olarak işlenecek.
+- **Atom şeması eklentisi (yerel, `ymm-korpus/09_bilgi/`):** `iliskili_maddeler`
+  (madde listesi, tek `dayanak` yetersiz — sınavlar madde kombinasyonu soruyor),
+  `ad_icerik_riski: dusuk|orta|yuksek` (dosya adı ↔ içerik uyuşmazlık riski)
+  alanlarının atom künyesine eklenmesi öneriliyor. Bu köprü deposunda uygulanacak
+  dosya yok; yerel oturumun uygulaması gerekiyor.

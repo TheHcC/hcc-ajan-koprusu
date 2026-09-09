@@ -5,6 +5,47 @@ sorusunun cevabıdır. Sohbete yeni katılan bir model önce burayı okur.
 
 ---
 
+## 2026-09-09 (2. tur) · claude-sonnet-5 (Claude Code) — İki inbox item işlendi, Codex'e görev bırakıldı
+
+### Yapılan
+
+Cihan'ın dün gece Claude Code dışında (Claude.ai sohbetinden, elle) pushladığı
+iki `gelen-kutusu/claude-code/` dosyası (K-001 format itirazı, 2025/3 revizyon
+sınav analizi) değerlendirildi. İkisi de metodolojik olarak aynı sınırı taşıyor:
+tüm bulgular Drive dosya listesi metadata'sından (ad, boyut, tarih), **hiçbir
+dosya içeriği açılmadı.**
+
+- Sınav analizinin somut, doğrulanabilir kısmı (45 puanlık dört konunun arşivde
+  boşluk olduğu) kabul edildi ve adım 12'nin pilot konusu "sat-kirala-geri al
+  istisnası"na sabitlendi (DURUM.md).
+- İtirazın K-001 revizyonu (poster donmuş export, XMind/Markdown düzenlenebilir
+  kaynak olmalı) prensipte kabul edildi ama **resmi karara (K-005) çevrilmedi** —
+  itirazın kendisi de içerik doğrulamadığını itiraf ediyor; kör onaylamak K-001'in
+  düştüğü hatayı (biçim ≠ kullanılabilirlik) tekrarlardı.
+- Kalan doğrulama işi (BAĞIŞ posterinin sınavdaki 4 alt tipi karşılayıp
+  karşılamadığı, 2 XMind'ın gerçek yapısı, 2 "isim tuzağı" dosyasının içeriği)
+  `gelen-kutusu/codex/2026-09-09-icerik-dogrulama-gorevi.md` olarak Codex'e
+  görev bırakıldı — bu köprü deposundan Drive'a erişim yok.
+- İki inbox dosyası `## Yanıt` ile kapatıldı; atom şemasına önerilen
+  `iliskili_maddeler` / `ad_icerik_riski` alanları not edildi ama uygulanacak
+  dosya bu depoda değil (`ymm-korpus/09_bilgi/`, yerel).
+
+### Paralel oturum notu
+
+Bu değerlendirme sürerken **aynı anda başka bir Claude Code oturumu** (yerel
+terminal, `bjxyjg3-vivid-frog`) adım 9'u tamamlayıp pushladı (aşağıdaki giriş).
+Cross-session mesajlaşma bu ortamdan o oturuma ulaşamadı (farklı makine, kanal
+açık değil); çakışma `git fetch` ile pull edilip güncel DURUM.md/GUNLUK.md
+üzerine ekleme yapılarak yönetildi, üzerine yazılmadı.
+
+### Sıradaki
+
+Codex'in içerik doğrulama raporu bekleniyor. Rapor gelince: (1) K-005 kararı
+`KARARLAR.md`'ye işlenir, (2) BAĞIŞ posteri sonucu kaydedilir, (3) atom şeması
+önerisi yerel oturumda uygulanır.
+
+---
+
 ## 2026-09-09 · claude-opus-5 + claude-sonnet-5 (Claude Code) — Revizyon arşivi indekslendi
 
 ### Yapılan
