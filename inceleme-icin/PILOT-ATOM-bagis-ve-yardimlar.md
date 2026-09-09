@@ -4,7 +4,6 @@
 > altına ayrı bir dosya olarak bırakın, kaynak sürüm oradan güncellenir.
 
 ---
-
 ---
 konu: Bağış ve yardımlar — KV indirimi ile KDV boyutunun birlikte değerlendirilmesi
 ders: [Revizyon, Vergi Tekniği]
@@ -21,6 +20,14 @@ iliskili_maddeler:
   - VUK m.267           # ayni bağışta takdir komisyonu değeri
   - KVKUGT 10.3, 10.3.2 # tebliğ açıklamaları
   - KDVUGT II/B-15      # tesis inşası istisnasının usulü
+gecis_kontrolu:   # ZORUNLU — her şerit ya bulgu ya gerekçeli YOK taşır, boş bırakılamaz
+  kdv: "VAR — m.17/2-b bedelsiz teslim istisnası; m.30/a bu istisnayı indirim iptalinin DIŞINDA bırakır (yüklenilen KDV indirilir); m.13/1-k tesis inşasında bağışçıya yapılan teslimler ayrı ve tam istisna"
+  vuk: "VAR — ayni bağışta maliyet bedeli/kayıtlı değer, yoksa takdir komisyonu değeri; işletmeden çekilende fatura + arka yüz şerhi (belge düzeni)"
+  gvk: "VAR + ASİMETRİ — m.89/4-5 gerçek kişi paraleli mevcut. (a) Oran: GVK'da kalkınmada öncelikli yörelerde %10, KVKUGT 10.3.2.1'de yöre ayrımı görülmedi [TEYİT: KVK m.10/1-c kanun metni ayrıca okunmalı]. (b) Taban: GVK'da 'beyan edilecek gelir', KVK'da 'ticari bilanço kârı − (iştirak kazançları istisnası + geçmiş yıl zararları)'"
+  kvk: "VAR — m.11 gereği bağış önce KKEG'e eklenir, sonra beyannamede ayrıca indirilir"
+  damga_harc: "ŞÜPHELİ — KDV m.13/1-k'nin zorunlu tuttuğu bağış protokolünün damga vergisi karşılığı incelenmedi [TEYİT: kaynak gerekli]"
+  donem_sarkmasi: "YOK — kanun açık: indirilemeyen kısım sonraki yıla devretmez (KVKUGT 10.3.2.1). Sarkma imkânı bilinçli kapatılmış"
+  muhasebe_tms: "VAR — bağış kayıtlarda gider yazılır, KKEG olarak matraha eklenir, beyannamede ayrıca indirilir; ticari kâr ile mali kâr arasında yapısal fark doğurur"
 gecerlilik_donemi: "[TEYİT: 2026 yürürlük doğrulanmadı]"
 son_dogrulama: 2026-09-09
 dogrulama_durumu: KAYNAKTAN_OKUNDU_GUNCELLIK_TEYIT_BEKLIYOR

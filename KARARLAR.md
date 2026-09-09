@@ -5,6 +5,41 @@ En yeni en üstte. Karar silinmez; değişirse yeni satır eklenir ve eskisi
 
 ---
 
+## K-006 · Kanunlar arası geçiş, atomun zorunlu parçasıdır
+**Tarih:** 09.09.2026 · **Veren:** Cihan · **Öneren:** Claude Code
+
+**Teşhis:** Bir kanun üzerinde çalışan ajan komşu kanuna **kendiliğinden geçmez** —
+görev "bağış indirimi" diye tanımlandığında KVK yeterli görünür. Sorun bilgi eksikliği
+değil, kapsam daralmasıdır. Nitekim pilot atomdaki KDV köprüsü, ancak Cihan "KDVUGT'ye
+de bak" dediği için bulundu.
+
+**Karar:** Atom künyesine **zorunlu `gecis_kontrolu` bloğu** eklenir. Yedi şerit
+(`kdv`, `vuk`, `gvk`, `kvk`, `damga_harc`, `donem_sarkmasi`, `muhasebe_tms`), üç durumlu
+sonuç: `VAR` (madde + etki) / `YOK` (**gerekçe zorunlu**) / `ŞÜPHELİ` (`[TEYİT]`).
+Hiçbiri boş bırakılamaz — "bakılmadı" ile "yok" ayrı şeylerdir.
+
+**Zincir kuralı:** Komşu kanunda madde bulunduğunda ilk isabette durulmaz; istisna /
+hariç tutma zinciri de açılır. *Kanıt: KDV m.17/2-b tek başına okunursa "yüklenilen KDV
+indirilemez" sonucu çıkar; m.30/a açılmadan bu yanlıştır.*
+
+**Sicil:** Her `VAR` satırı `20-mevzuat-izleme/gecis-haritasi.md` siciline, her `ŞÜPHELİ`
+satırı oranın açık uçlar tablosuna düşer. Sicil çift yönlüdür.
+
+**Şeritler nereden geldi:** Uydurulmadı — `TEKNO AI HcC/vergi-incelemeler` vault
+taksonomisinden (KDV, KV, Muhasebe-Anomali, Kanun-Uygulaması, Dönem-Sarkıtması)
+türetildi.
+
+**Skill yazılmadı, bilinçli:** Değeri sahada kanıtlanmamış makine kurmak bu projenin
+daha önce battığı yoldur. On atom sonra şeritler denetlenip terfi değerlendirilecek.
+`OKUBEN.md`'deki bölüm bu terfiyi kolaylaştıracak biçimde (prosedür olarak) yazıldı.
+
+**İlk tur çıktısı — şerit hemen değer üretti:** GVK m.89/4 ile KVK m.10/1-c arasında
+iki asimetri bulundu: *(a) oran* — GVK'da kalkınmada öncelikli yörelerde %10, KV
+tarafında yöre ayrımı görülmedi; *(b) matrah tabanı* — GVK "beyan edilecek gelir",
+KVK "ticari bilanço kârı − (iştirak kazançları istisnası + geçmiş yıl zararları)".
+
+---
+
 ## K-005 (K-001R) · Atom = düzenlenebilir kaynak; poster bir dışa aktarım profilidir
 **Tarih:** 09.09.2026 · **Veren:** Cihan · **Öneren:** claude-opus-5 (Claude.ai sohbeti, itiraz yoluyla)
 **Yerine geçtiği:** K-001
