@@ -50,6 +50,12 @@ uydurulmuş bir liste değil, fiilen kullanılan kategoriler.)*
 | G-010 | Sat-kirala-geri al | KVK m.5/1-j | VUK mük. m.290 | Kiracıda kullanma hakkı rayiç bedel ile kira ödemelerinin bugünkü değerinden düşük olanı ile değerlenir; amortismana tabi | aynı |
 | G-011 | Sat-kirala-geri al | KVK m.5/1-j | Amortisman / özel fon | Satış bedeli üzerinden amortisman ayrılır ama eski net bilanço aktif değerini aşan kısım yalnız fondan mahsup edilir — istisna af değil erteleme | aynı |
 | G-012 | Sat-kirala-geri al | KVK m.5/1-j | Geçici vergi | Geçici vergi dönemlerinde de yararlanılır; süresinde fona alınmazsa geçici vergiden doğan vergi ziyaı cezası ve gecikme faizi ayrıca aranır | aynı |
+| G-013 | İlişkili kişiden borçlanma | KVK m.12 | KVK m.11/1-b | Örtülü sermaye faizi **ve kur farkı gideri** KKEG — gider yazılamaz | `10-poster/iliskili-kisiden-borclanma.md` |
+| G-014 | İlişkili kişiden borçlanma | KVK m.12 | GVK stopaj | Borç veren dar mükellef/gerçek kişi/muaf ise faiz **net kâr payı** sayılır, brüte tamamlanır, stopaja tabi. **Kur farkı bu kapsamda değil** | aynı |
+| G-015 | Grup içi kredi aktarımı | KVK m.12 (muafiyet) | **KVK m.11/1-i** | Banka kredisi aynı şartlarla aktarılırsa örtülü sermaye **değil** — ama FGK'nın tetikleyicisi farklı (yabancı kaynak > öz kaynak), **FGK yine uygulanır.** Muafiyet zinciri kurulamaz | aynı |
+| G-016 | Kur farkı | KVK m.12 | KVK m.11/1-i | **Aynı kalem, zıt muamele:** örtülü sermayede kur farkı kâr payı sayılmaz ve geliri de kazanca alınmaz; FGK'da kur farkı **kapsam içindedir** | aynı |
+| G-017 | Örtülü kazanç | KVK m.13 | **KDV m.30/d** | 30/d parantezinde **yalnız m.13** anılıyor, **m.12 anılmıyor** — üçüncü zıt çift adayı `[ÇIKARIM]`, metne dayalı kural değil | aynı |
+| G-018 | Faizsiz borçlanma | KVK m.12 | KDV m.27 + m.9 | KV'de faiz yok ama emsal bedel üzerinden KDV doğduğu iddia ediliyor — **dayanak korpusta bulunamadı** `[TEYİT]` | aynı |
 
 ## Ters dizin — hangi maddeden nereye gidilir
 
@@ -74,6 +80,11 @@ okunduğunda ikisi de "KDV istisnası" görünür.
 | Telafi | gerekmez | "İlave edilecek KDV" → **gider** yazılır |
 | Kayıt | G-002 | G-009 |
 
+**Üçüncü aday `[ÇIKARIM — doğrulanmadı]`:** KDV m.30/d parantezinde KVK **m.13** (transfer
+fiyatlandırması) açıkça anılıyor, **m.12** (örtülü sermaye) anılmıyor. Aynı olumsuz-delil
+deseni ama bu kez metinde örtülü sermayeye özgü bir KDV hükmü **hiç yok** — bu yüzden
+kural değil, açık uç (A-007). Doğrulanmadan kullanılmamalı.
+
 **Teşhis yöntemi — her KDV istisnasında sor:**
 
 1. Bu bent m.30/a'nın parantez içi listesinde sayılıyor mu?
@@ -94,6 +105,9 @@ okunduğunda ikisi de "KDV istisnası" görünür.
 | A-003 | 6361 s.K. kapsamındaki finansal kiralama sözleşmeleri damga vergisinden istisna mı? | Taranmadı | 488 s.K. (2) sayılı tablo · 6361 s.K. m.37 `[TEYİT: kaynak gerekli]` |
 | A-004 | Sat-kirala-geri al istisnasının gerçek kişi/ferdi işletme karşılığı var mı? | İstisna KV mükelleflerine tanınmış; GVK tarafı incelenmedi | GVK m.40 / m.89 `[TEYİT: kaynak gerekli]` |
 | A-005 | KVK'da sat-kirala-geri al istisnasının **gerçek bent harfi** nedir? | KVKUGT "(j)" diyor; yerel KVK.md'de (j) risturn istisnası | Güncel KVK m.5/1 kanun metni |
+| A-006 | Faizsiz borçlanmada emsal bedel üzerinden KDV doğduğunun mevzuat dayanağı nedir? | KDV m.27 ve m.9 metinleri var ama faizsiz borç vermeye özgü KDVUGT açıklaması bulunamadı | KDVUGT tam tarama · sınav cevap anahtarı `[TEYİT]` |
+| A-007 | Örtülü sermaye (m.12) kaynaklı KKEG dolayısıyla ödenen KDV, m.30/d karşısında ne olur? | 30/d parantezi yalnız m.13'ü anıyor; m.12'ye özgü hüküm korpusta yok | KDV m.30/d + özelge/içtihat `[TEYİT]` |
+| A-008 | Grup içi kredi aktarım sözleşmeleri damga vergisine tabi mi? | Taranmadı | 488 s.K. `[TEYİT: kaynak gerekli]` |
 
 ---
 
@@ -101,6 +115,7 @@ okunduğunda ikisi de "KDV istisnası" görünür.
 
 | Dosya | Sorun | Etki |
 |---|---|---|
+| `vtr-vir/mevzuat/KVK.md` | **Madde 12 metni dosyada İKİ KEZ geçiyor ve ölçüler farklı:** birinci nüsha "öz sermayenin **iki katı**", ikinci nüsha "**üç katı**". KVKUGT üç katıyı teyit ediyor. | Tek nüshaya bakarak oran alınamaz; hangi nüshanın okunduğu belirtilmeli. |
 | `vtr-vir/mevzuat/KVK.md` | **5520 s.K.'nin 2006 tarihli orijinal gerekçe metnidir**, güncel kanun metni değildir. 2016'da 6728 s.K. ile eklenen sat-kirala-geri al istisnası bu dosyada yoktur; madde 5/1 bent harfleri güncel kanunla uyuşmuyor. | Bu dosyadan bent harfi veya sonradan eklenmiş hüküm doğrulanamaz. KVKUGT daha güncel. |
 
 *Bu tablo, atom üretirken kaynağın kendisinde bulunan boşlukları kaydeder. Mevzuat MCP
