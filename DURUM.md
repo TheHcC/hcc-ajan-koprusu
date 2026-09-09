@@ -1,8 +1,8 @@
 # DURUM — özet (otorite değil)
 
-**Son güncelleme:** 08.09.2026 (2. tur) · claude-opus-5 (Claude Code)
+**Son güncelleme:** 09.09.2026 · claude-opus-5 (Claude Code)
 **Aktif iş:** YMM ikinci beyin + sürdürülebilir çalışma sistemi kurulumu
-**İlerleme:** 15 adımın 8'i tamam (bkz. `GUNLUK.md`)
+**İlerleme:** 15 adımın 9'u tamam (bkz. `GUNLUK.md`)
 
 > Otorite bu dosya değildir. Operasyonel gerçek:
 > `Desktop\inceleme-os\obsidian-ikinci-beyin\durum.md`
@@ -26,8 +26,8 @@ gücü Cihan'ın kanıtlanmış görsel formatına (poster) bağlayacak şekilde
 | 6 | Ajan köprüsü deposu kuruldu ve yayına alındı | ✅ |
 | 7 | GitHub public repo + push (anonim erişim doğrulandı) | ✅ |
 | 8 | P0 kural çelişkisinin cerrahi düzeltmesi | ✅ |
-| 9 | Revizyon arşivinin tam indeksi (68 dosya) | 🔄 sıradaki |
-| 10-11 | SPK / diğer klasörlerin indeksi | ⏳ |
+| 9 | Revizyon arşivinin tam indeksi (65 dosya + 1 kısayol) | ✅ |
+| 10-11 | SPK / diğer klasörlerin indeksi | 🔄 sıradaki |
 | 12 | Poster atom şablonu — pilot poster üretimi | ⏳ |
 | 13 | Bayatlama motoru (dayanak → geçerlilik → son doğrulama) | ⏳ |
 | 14 | Çoklu-ajan halüsinasyon önleme protokolü | ⏳ |
@@ -43,5 +43,5 @@ gücü Cihan'ın kanıtlanmış görsel formatına (poster) bağlayacak şekilde
 
 ## Sıradaki tek iş
 
-Revizyon arşivinin indekslenmesi (68 dosya) — hangi dosya ölü, hangisi güncellenmeli,
-hangisi kalıcı poster adayı.
+10 adet KALICI poster atomunun künyelendirilmesi (Adım 12) veya SPK arşivinin indekslenmesi
+(Adım 10) — sıra Cihan'ın tercihine bağlı.

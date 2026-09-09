@@ -5,6 +5,52 @@ sorusunun cevabıdır. Sohbete yeni katılan bir model önce burayı okur.
 
 ---
 
+## 2026-09-09 · claude-opus-5 + claude-sonnet-5 (Claude Code) — Revizyon arşivi indekslendi
+
+### Yapılan
+
+Geçmiş çalışma arşivinin en kalabalık klasörü (Revizyon) tam olarak tasnif edildi:
+**65 dosya + 1 kısayol.** İş bir Sonnet alt-agent'ına verildi; ham PDF'ler ana modelin
+bağlamına hiç girmedi. Alt-agent'a verilen maliyet freni işe yaradı — dosya gövdesi
+okuma hakkı (en fazla 5 dosya) hiç kullanılmadı, sınıflandırma başlık, tarih ve
+boyuttan yapıldı.
+
+Sonuç: ÖLÜ 10 · RİSKLİ 24 · KALICI 23 · BELİRSİZ 9
+
+### Kalite kapısı — alt-agent çıktısı denetlendi
+
+Bu, çok-ajanlı çalışmanın denetim katmanının ikinci canlı örneği.
+
+**Bağımsız doğrulananlar:** dosya sayımı (tablo satır sayısıyla tutarlı), mükerrer çift
+tespiti (aynı ad + aynı bayt boyutu, ayrı ayrı teyit edildi), en büyük dosya, bütün
+dayanak atıflarının tahmin etiketi taşıması.
+
+**Düzeltilen — sınıflandırma hatası:** Enflasyon düzeltmesi konulu **9 dosyanın 8'i
+"ÖLÜ" işaretlenmişti.** Bu yanlış: ilgili düzenleme süreli bir tedbir değil, kalıcı
+mevzuattır; yalnızca *geçiş* belgeleri tek seferliktir. Sekiz dosya "RİSKLİ"ye alındı,
+geçiş belgesi ÖLÜ bırakıldı.
+
+Gerekçe kayda değer çünkü genel bir kural: **hata asimetrik.** Yanlışlıkla "ölü" demek
+kullanılabilir malzemeyi çöpe atar; yanlışlıkla "riskli" demek yalnızca bir doğrulama
+turu maliyetidir. Belirsizlikte daha az yıkıcı olan tarafa yaslanılır.
+
+**Eklenen — kaçırılmış değer:** Alt-agent "poster adayı" olarak 5 PDF önermişti. Oysa
+arşivde **16 dosya zaten poster/tablo formatında** — yani dönüştürülecek aday değil,
+hazır atom. Bunların 10'u kalıcı nitelikte ve bugün kullanılabilir durumda. Ayrı bir
+bölüm olarak indekse eklendi.
+
+Bir yan bulgu: 16 dosya ancak yaklaşık 10 ayrı konu — dört konuda hem "poster" hem
+"tablo" versiyonu var. Tekilleştirilmeden kütüphaneye alınırlarsa "hangisi güncel"
+sorusu doğar.
+
+### Sıradaki
+
+İki seçenek var ve sıra kullanıcının tercihine bağlı: kalıcı poster atomlarının
+künyelendirilmesi (sistemin ilk gerçek çıktısı, mevzuat doğrulaması beklemez) ya da
+SPK arşivinin indekslenmesi.
+
+---
+
 ## 2026-09-08 (2. tur) · claude-opus-5 (Claude Code) — Köprü kuruldu, P0 düzeltildi
 
 ### Köprü deposu yayına alındı
