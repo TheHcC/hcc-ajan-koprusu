@@ -45,6 +45,11 @@ uydurulmuş bir liste değil, fiilen kullanılan kategoriler.)*
 | G-005 | Bağış — kurum/gerçek kişi | KVK m.10/1-c | GVK m.89/4 | **ASİMETRİ (oran):** GVK'da kalkınmada öncelikli yörelerde %10; KVKUGT 10.3.2.1'de yöre ayrımı görülmedi | aynı |
 | G-006 | Bağış — matrah tabanı | KVK m.10/1-c | GVK m.89/4 | **ASİMETRİ (taban):** GVK "beyan edilecek gelir"; KVK "ticari bilanço kârı − (iştirak kazancı istisnası + geçmiş yıl zararları)" | aynı |
 | G-007 | Bağış — muhasebe | KVK m.11 | Beyanname düzeni | Önce KKEG, sonra beyannamede ayrıca indirim; ticari kâr ↔ mali kâr yapısal farkı | aynı |
+| G-008 | Sat-kirala-geri al | KVK m.5/1-j | KDV m.17/4-y | Aynı işlem hem KV kazanç istisnası hem KDV istisnası doğurur | `10-poster/sat-kirala-geri-al.md` |
+| G-009 | Sat-kirala-geri al | KDV m.17/4-y | **KDV m.30/a** | 17/4-y bu listede **YOK** → indirim iptali İŞLER; indirilemeyen kısım "İlave edilecek KDV" olarak beyan edilip gider yazılır | aynı |
+| G-010 | Sat-kirala-geri al | KVK m.5/1-j | VUK mük. m.290 | Kiracıda kullanma hakkı rayiç bedel ile kira ödemelerinin bugünkü değerinden düşük olanı ile değerlenir; amortismana tabi | aynı |
+| G-011 | Sat-kirala-geri al | KVK m.5/1-j | Amortisman / özel fon | Satış bedeli üzerinden amortisman ayrılır ama eski net bilanço aktif değerini aşan kısım yalnız fondan mahsup edilir — istisna af değil erteleme | aynı |
+| G-012 | Sat-kirala-geri al | KVK m.5/1-j | Geçici vergi | Geçici vergi dönemlerinde de yararlanılır; süresinde fona alınmazsa geçici vergiden doğan vergi ziyaı cezası ve gecikme faizi ayrıca aranır | aynı |
 
 ## Ters dizin — hangi maddeden nereye gidilir
 
@@ -56,12 +61,50 @@ uydurulmuş bir liste değil, fiilen kullanılan kategoriler.)*
 | GVK m.89/4-5 | KVK m.10/1-c,ç | G-005, G-006 |
 | KVK m.11 | KVK m.10 (indirim sırası) | G-007 |
 
+## ⚠️ Zıt çiftler — benzer görünüp ters çalışanlar
+
+İki atom sonunda beliren en değerli yapı bu. Aynı kanunun aynı maddesinde, aynı
+"istisna" adı altında, **birbirinin tersi** sonuç doğuran hükümler var. Tek başına
+okunduğunda ikisi de "KDV istisnası" görünür.
+
+| Konu | Bağış — KDV m.17/2-b | Sat-kirala-geri al — KDV m.17/4-y |
+|---|---|---|
+| m.30/a listesinde | ✅ **VAR** | ⛔ **YOK** |
+| Yüklenilen KDV | **İndirilir** | **İndirilemez** |
+| Telafi | gerekmez | "İlave edilecek KDV" → **gider** yazılır |
+| Kayıt | G-002 | G-009 |
+
+**Teşhis yöntemi — her KDV istisnasında sor:**
+
+1. Bu bent m.30/a'nın parantez içi listesinde sayılıyor mu?
+2. Sayılmıyorsa, **bendin kendi metninde** "30 uncu maddenin birinci fıkrasının (a)
+   bendi hükmü uygulanmaz" benzeri açık bir cümle var mı?
+3. İkisi de yoksa → **indirim iptali işler.** Bendin sunduğu telafi (varsa) indirim
+   hakkı değil, gider yazma imkânıdır.
+
+*Olumsuz delil kuralı:* (i) ve (z) bentlerinde bu açık cümle **vardır**, (y) bendinde
+**yoktur**. Kardeş bentlerdeki bir hükmün yokluğu, tesadüf değil bilinçli tercihtir.
+
 ## Açık uçlar — ŞÜPHELİ kalanlar
 
 | # | Soru | Neden açık | Nereden bakılmalı |
 |---|---|---|---|
 | A-001 | KDV m.13/1-k için zorunlu **bağış protokolü** damga vergisine tabi mi? | İncelenmedi | 488 s. Damga Vergisi Kanunu (1) sayılı tablo `[TEYİT: kaynak gerekli]` |
 | A-002 | KVK m.10/1-c'de kalkınmada öncelikli yöre ayrımı gerçekten yok mu? | Tebliğ okundu, **kanun metni okunmadı** | KVK m.10/1-c kanun metni |
+| A-003 | 6361 s.K. kapsamındaki finansal kiralama sözleşmeleri damga vergisinden istisna mı? | Taranmadı | 488 s.K. (2) sayılı tablo · 6361 s.K. m.37 `[TEYİT: kaynak gerekli]` |
+| A-004 | Sat-kirala-geri al istisnasının gerçek kişi/ferdi işletme karşılığı var mı? | İstisna KV mükelleflerine tanınmış; GVK tarafı incelenmedi | GVK m.40 / m.89 `[TEYİT: kaynak gerekli]` |
+| A-005 | KVK'da sat-kirala-geri al istisnasının **gerçek bent harfi** nedir? | KVKUGT "(j)" diyor; yerel KVK.md'de (j) risturn istisnası | Güncel KVK m.5/1 kanun metni |
+
+---
+
+## Korpus sağlığı — yerel mevzuat dosyalarında tespit edilen boşluklar
+
+| Dosya | Sorun | Etki |
+|---|---|---|
+| `vtr-vir/mevzuat/KVK.md` | **5520 s.K.'nin 2006 tarihli orijinal gerekçe metnidir**, güncel kanun metni değildir. 2016'da 6728 s.K. ile eklenen sat-kirala-geri al istisnası bu dosyada yoktur; madde 5/1 bent harfleri güncel kanunla uyuşmuyor. | Bu dosyadan bent harfi veya sonradan eklenmiş hüküm doğrulanamaz. KVKUGT daha güncel. |
+
+*Bu tablo, atom üretirken kaynağın kendisinde bulunan boşlukları kaydeder. Mevzuat MCP
+bağlandığında ilk iş buradaki satırların kapatılmasıdır.*
 
 ---
 
