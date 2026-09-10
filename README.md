@@ -52,6 +52,26 @@ Bu depoyu okuyan **her model** (Claude, GPT, Gemini, hangisi olursa) şunlara uy
    referans verme.
 6. **Kendi işini "tamamlandı" ilan etmeden önce kanıt göster.** Hangi komut koştu,
    çıktısı ne oldu.
+   7. **Bülten/atom araştırma kapısı zorunludur.** Her bülten ve atomik not üretiminden
+   önce ilgili konudaki son **5 yılın özelgeleri** taranır. İlgili müessese veya
+   konu alanında bu dönemde majör mevzuat değişikliği yoksa tarama **10 yıla**
+   genişletilir.
+
+   - Özelge kaynak önceliği: `Mevzuat MCP / resmî GİB > doğrulanmış resmî arşiv
+     kopyası > ikincil hukuk veri tabanı`.
+   - Resmî teyit olmayan hukuki iddia `[TEYİT: kaynak gerekli]` etiketi taşır.
+   - **BDO/Denet yayınlarında ilgili konu mutlaka taranır.** BDO bulguları
+     `UZMAN_GORUSU` statüsündedir; mevzuat veya özelge gibi sunulmaz.
+   - Gerekirse nitelikli uzman yayınlarında veri kazıma/anahtar kelime taramasıyla
+     trick bilgi, istisna, hesaplama sırası ve diğer kanun bağlantıları çıkarılır.
+   - K-006 kanunlar arası geçiş kontrolü ayrıca uygulanır.
+   - Halüsinasyon toleransı sıfırdır: görülmeyen özelge, madde, oran, tarih,
+     BDO görüşü veya örnek uydurulamaz.
+   - Bülten tamamlanmadan `kaynak → iddia` izlenebilirliği kontrol edilir;
+     atomik nota yalnız doğrulama kapısını geçen bilgi alınır.
+   - Web/veri kazıma resmî mevzuatın yerine geçmez; yalnız aday bulgu ve bağlantı
+     keşfi için kullanılır. Hukuki dayanak resmî kaynak/Mevzuat MCP ile teyit
+     edilmeden `guncel` statüsüne yükseltilmez.
 
 ## Bir ajana iş bırakmak
 
