@@ -173,3 +173,59 @@ düştüğü "değeri kanıtlanmadan makine kurma" hatasını tekrarlama riski t
 | 5. son_dogrulama ayrı tutulmuş | ✅ |
 
 durum: kapandi
+
+---
+
+## Entegrasyon tamamlandı (Claude Code / claude-sonnet-5, 10.09.2026, ikinci geçiş)
+
+Cihan onay verdi. Mimari **eleştirilerek kabul edildi** (bkz. `KARARLAR.md` K-007)
+ve kanonik `ymm-korpus/09_bilgi/` sistemine tam entegre edildi.
+
+### Kabul edilen hususlar
+- Üç katmanlı üretim (atom/bülten/atomik-tekrar), ortak araştırma tabanından türeme
+- Kaynak statüsü taksonomisi (RESMI/OZELGE/UZMAN_GORUSU/SINAV_KAYNAK/YARGI/CIKARIM/TEYIT)
+- NODE/EDGE şeması ve ilişki tipi sözlüğü
+- Araştırma kapısı ilkeleri (kaynak önceliği, sıfır halüsinasyon toleransı)
+
+### Değiştirilen hususlar
+- "Atomik Tekrar" adı `15-atomik-tekrar/` oldu — K-005'teki "atom" terimiyle
+  (10-poster) çakışmasın diye
+- Bülten **zorunlu değil**, isteğe bağlı derinlik katmanı yapıldı (hacim riski)
+- Araştırma kapısı **aspirasyonel** işaretlendi — Mevzuat MCP çalışmadan
+  özelge taraması RESMI sayılmayacak
+
+### Reddedilen / ertelenen hususlar
+- Özelge numaraları (5 adet) ve Danıştay kararı atomlara/bültene dayanak
+  olarak eklenmedi — doğrulanamadı
+- XMind/Miro otomatik exporter'ı yazılmadı — bilinçli, K-006 emsaliyle 10 atom
+  sonrasına bırakıldı
+
+### Oluşturulan/değiştirilen gerçek dosyalar
+- `09_bilgi/OKUBEN.md` — şablonlar + araştırma kapısı
+- `09_bilgi/25-bulten/BULTEN-001-iliskili-kisiden-borclanma.md` (yeni, kanonik)
+- `09_bilgi/15-atomik-tekrar/ATOM3-nodes.md` (yeni, 12 node)
+- `09_bilgi/10-poster/iliskili-kisiden-borclanma.md` — ana tez + 3 yeni bölüm
+- `09_bilgi/20-mevzuat-izleme/gecis-haritasi.md` — G-022..G-025, A-009..A-011
+- `scripts/dogrula_09bilgi_sayisal.py` — Ö3 (mükerrer KKEG), 9/9 PASS
+- `ajan-koprusu/DURUM.md` — markdown bozulması düzeltildi + güncellendi
+- `ajan-koprusu/KARARLAR.md` — K-007
+
+### Yapılan teyitler (yerel korpus, RESMİ)
+- KVKUGT 11.13.9 (mükerrer KKEG) — satır 11756, resmî örnekle
+- KVKUGT 12.1.6 (ticari borç/vade, sipariş avansı) — satır 12311
+- KVKUGT 11.13 (köprü kredi) — satır ~11199
+- KVK m.30 (dar mükellef stopajı, %15) — satır 2699
+
+### Yapılamayan teyitler
+- 5 özelge numarası — `gib.gov.tr` JS-render, `WebFetch` içini göremedi
+- BDO 2024/014 PDF linki — temiz 404
+- Danıştay 9. Daire E.2023/4917, K.2024/2755 — Yargı MCP `CONNECT_TIMEOUT`
+- Dar mükellef stopajının 2026 güncel oranı/ÇVÖA indirimi
+
+### Açık uçlar
+A-009, A-010, A-011 (bkz. `gecis-haritasi.md`)
+
+### Sonraki tek iş
+SPK+Finansal Yönetim indeksi veya atom 4/10 — Cihan'ın tercihine bağlı.
+
+durum: kapandi
