@@ -5,6 +5,47 @@ En yeni en üstte. Karar silinmez; değişirse yeni satır eklenir ve eskisi
 
 ---
 
+## K-008 · Üç katman artık zorunlu; uzman kaynak arşivi eklendi
+**Tarih:** 10.09.2026 · **Veren:** Cihan
+
+### Karar
+
+K-007'deki *"bülten zorunlu değil, hacim riski nedeniyle isteğe bağlı"* hükmü
+**kaldırıldı.** Bundan sonra her yeni konu üretimi **üçünü birden** üretir:
+
+> `10-poster/` (atom) + `25-bulten/` (bülten) + `15-atomik-tekrar/` (node seti)
+> — **tek başına atom üretimi kabul edilmez.**
+
+Ayrıca: araştırma kapısındaki özelge/BDO taraması artık sembolik değil —
+**fiilen çalıştırılır** ve bulunan BDO/Denet/uzman belgeleri indirilip
+`ymm-korpus/09_bilgi/26-uzman-kaynak-arsivi/<konu>/` altına konur, yalnız
+metadata (`KAYNAKLAR.md`) köprüye taşınır, belgenin kendisi **public köprüye
+asla kopyalanmaz.**
+
+### Gerekçe — somut kanıt
+
+Atom 4 (değersiz/şüpheli/vazgeçilen alacak, 10.09.2026, Görev T) K-007'nin
+"isteğe bağlı" esnekliğini kullanarak **yalnız poster olarak üretildi** —
+bülten ve node seti atlandı. Atomun içeriği kaliteliydi (sayısal doğrulama,
+gerçek sınav örneği, tek bir gerçek özelge bulundu) ama K-007'nin amacı olan
+"aynı araştırmadan üç yüzey" ilkesi fiilen çalışmadı. Cihan bunu fark etti;
+esneklik kaldırıldı çünkü esneklik verildiğinde atlanıyor.
+
+### Uzman kaynak arşivi neden gerekli
+
+Bültenlerde `UZMAN_GORUSU` statüsündeki bulgular şimdiye kadar yalnız URL
+olarak anılıyordu (bkz. BDO 2024/014 linkinin 404 vermesi, 09.09.2026 gecesi).
+Kaynak siteden kalkarsa atıf doğrulanamaz hâle gelir. Artık bulunan belge
+**indirilip arşivlenir** — bkz. `ymm-korpus/09_bilgi/26-uzman-kaynak-arsivi/OKUBEN.md`.
+
+### Retrofit
+
+Atom 4 geriye dönük tamamlanacak: `BULTEN-002` ve `ATOM4-nodes.md` aynı
+araştırma tabanından üretilecek, gerçek bir özelge/BDO taraması yapılacak
+(tek bir özelge bulmakla yetinilmeyecek), bulunan belgeler arşive indirilecek.
+
+---
+
 ## K-007 · Bülten + Atomik Tekrar — üç katmanlı üretim mimarisi (eleştirilerek kabul edildi)
 **Tarih:** 10.09.2026 · **Veren:** Cihan · **Öneren:** gpt-5.6-sol (ChatGPT), taslak · **Denetleyen/Uygulayan:** claude-sonnet-5
 
