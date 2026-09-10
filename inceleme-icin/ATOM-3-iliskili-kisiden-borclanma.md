@@ -12,14 +12,15 @@ iliskili_maddeler:
   - KDV m.9           # vergi sorumlusu
   - KDV m.30/d        # KKEG dolayısıyla ödenen KDV — m.13 anılıyor, m.12 anılmıyor
   - GVK m.41/1-5      # işletme aleyhine oluşan farklar (30/d parantezinde)
-  - KVKUGT 11.13, 11.13.9, 12, 13
+  - KVKUGT 11.13, 11.13.9, 12, 12.1.6, 12.2.2, 12.3, 12.4, 13
+  - KVK m.30           # dar mukellef stopaji, genel oran %15
 gecis_kontrolu:
   kdv: "VAR + ACIK UC — (a) Faizsiz borclanmada emsal bedel (m.27) ve sorumlu sifatiyla KDV (m.9) gundeme gelebilir; ANCAK korpusta 'iliskili kisiye faizsiz borc verme' icin ozel KDVUGT aciklamasi BULUNAMADI. (b) KDV m.30/d parantezi acikca yalniz KVK m.13'u (transfer fiyatlandirmasi) aniyor, m.12'yi (ortulu sermaye) ANMIYOR — ucuncu zit cift adayi, ancak [CIKARIM], metinde yazili degil."
   vuk: "VAR — oz sermaye VUK'a gore tespit edilmis HESAP DONEMI BASINDAKI oz sermayedir (donem sonu degil). Emsal bedel icin VUK m.267 mantigi KDV m.27'ye baglanir."
   gvk: "VAR — borc veren dar mukellef/gercek kisi/vergiden muaf ise ortulu sermaye faizi NET kar payi sayilir, brute tamamlanir ve stopaja tabi tutulur. Kur farki bu kapsamda DEGIL."
   kvk: "VAR + DUZELTME (10.09.2026) — uc muessese ayni olayda ayri tetikleyicilerle calisir; birinden muafiyet digerini kapatmaz. AMA bagimsiz test mukerrer ceza demek degildir: KVKUGT 11.13.9 geregi bir kapida zaten KKEG sayilan tutar sonraki kapinin (FGK) hesabina bir daha girmez. Kaynak: KVKUGT.md satir 11756, resmi ornekle dogrulandi (scripts/dogrula_09bilgi_sayisal.py Ö3, 9/9 PASS)."
   damga_harc: "SUPHELI — grup ici kredi aktarim sozlesmelerinin damga vergisi durumu bu cikarimda taranmadi [TEYIT: kaynak gerekli]."
-  donem_sarkmasi: "VAR — GUCLU. (a) Ortulu sermaye olcusu 'hesap donemi icinde HERHANGI BIR TARIHTE' asilmasina baglidir; tek gunluk asim yil boyu sonuc dogurur. (b) Kar payi sayilma ani hesap doneminin SON GUNUdur. (c) Gecici vergi doneminde sartlar gerceklesirse duzeltme o donemde yapilabilir. (d) Karsi tarafta duzeltme icin tarh edilen vergilerin KESINLESMIS VE ODENMIS olmasi sart — duzeltme yillar sonraya sarkabilir."
+  donem_sarkmasi: "VAR — GUCLU + ZIT ZAMAN TESTI dogrulandi (10.09.2026). (a) Ortulu sermaye olcusu 'hesap donemi icinde HERHANGI BIR TARIHTE' asilmasina baglidir. (b) FGK ise 'DONEM SONU' bilancosuyla olculur (KVKUGT 11.13 resmi ornek: 'donem sonu itibariyla'). Ayni yil icinde gecici asim ikisini FARKLI etkileyebilir. (c) Kar payi sayilma ani hesap doneminin SON GUNUdur. (d) Karsi tarafta duzeltme icin tarh edilen vergilerin KESINLESMIS VE ODENMIS olmasi sart — yillar sonraya sarkabilir."
   muhasebe_tms: "VAR — ortulu sermaye faizi gider yazilamaz (KKEG), kur farki GELIRI de kurum kazancina alinmaz (simetri); FGK'da asan kisma isabet eden giderin %10'u KKEG."
 gecerlilik_donemi: "[TEYİT: 2026 yürürlük doğrulanmadı]"
 son_dogrulama: 2026-09-09
@@ -30,9 +31,11 @@ kaynak: vtr-vir/mevzuat/{KVK,KVKUGT,KDV,KDVUGT}.md — yerel korpus, birebir oku
 
 # İlişkili Kişiden Borçlanma — Üç Müessesenin Kesişimi
 
-> **Atomun tezi:** Bir şirket ilişkili kişiden borçlandığında üç müessese **aynı anda ve
-> birbirinden bağımsız** bakar. Birinden muaf olmak diğerinden muaf kılmaz. Sınavın
-> tuzağı tam olarak bu varsayımdır.
+> **Atomun tezi (10.09.2026'da hassaslaştırıldı):** Üç müessesenin **tetikleyicileri**
+> birbirinden bağımsızdır — birinden muaf olmak diğerinden muaf kılmaz (Tuzak 1).
+> **Ama vergisel sonuçların hesaplanmasında sıra ve mükerrer KKEG yasağı vardır**
+> (Tuzak 3, §6b) — bağımsız test etmek mükerrer cezalandırmak değildir. Ayrıntılı
+> anlatım ve kaynaklar: `../25-bulten/BULTEN-001-iliskili-kisiden-borclanma.md`.
 
 ## 1. Karar tablosu — üç ayrı tetikleyici
 
@@ -73,6 +76,25 @@ kısıtlamasının tetikleyicisi bambaşkadır (**yabancı kaynak > öz kaynak**
 kredi de bir yabancı kaynaktır. **FGK uygulanmaya devam eder.**
 
 `[SINAV-KAYNAK]` 2025/3 Revizyon S8 (10 puan) tam olarak bunu sormuş.
+
+## 3b. ⚠️ Tuzak 4 — "ticari borç" etiketi korumaz (RESMİ, 10.09.2026)
+
+`[SINAV-KAYNAK doğrulaması: KVKUGT 12.1.6, satır 12311]` Yanlış soru: *"bu borç
+ticari mi, finansman mı?"* Doğru soru: **piyasa/teamül vadesi aşıldı mı?**
+
+> *"Piyasa koşulları ve ticari teamüllere göre yapılan vadeli mal ve hizmet
+> alımları... örtülü sermayenin tespitinde dikkate alınmayacaktır. **Söz konusu
+> süreleri aşan** vadeli alımlar... dikkate alınacak."*
+
+**Sipariş avansı da aynı kapıdan girer:** *"Alınan avanslar da işletme bakımından
+alınan borç olarak değerlendirilecek ve örtülü sermaye hesaplamasında dikkate
+alınacaktır"* — istisna: inşaatta iş kısmıyla orantılı **istihkak bedelleri.**
+
+## 3c. ⚠️ Köprü kredi — yük fiilen kullanan şirkette kalır (RESMİ, 10.09.2026)
+
+`[KVKUGT 11.13, satır ~11199]` Banka kredisi yüksüz olarak grup şirketine
+aktarılırsa, **FGK yükü krediyi ilk alan değil, fiilen kullanan şirkette kalır.**
+Kırılan ezber: *"bankadan krediyi ilk alan şirket yükü her zaman taşır."*
 
 ## 4. Kur farkının özel rejimi — üç yönlü
 

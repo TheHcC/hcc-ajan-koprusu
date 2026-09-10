@@ -61,6 +61,9 @@ uydurulmuş bir liste değil, fiilen kullanılan kategoriler.)*
 | G-020 | Sat-kirala — damga ve harç | KVK m.5/1-j | **6361 s.K. m.37** | Finansal kiralama sözleşmeleri, devir/tadil kâğıtları, kiralayan-satıcı sözleşmeleri ve teminat kâğıtları **damga vergisinden**, ilgili işlemler **harçtan** müstesna (kiralayanlarca devralmaya ilişkin tapu işlemleri hariç). m.37/2: süre sonunda kiracı adına tescil tapu harcından müstesna | `10-poster/sat-kirala-geri-al.md` |
 | G-021 | Sat-kirala — kurum/gerçek kişi | KVK m.5/1-j | GVK (paralel **YOK**) | **ASİMETRİ:** GVK'da sat-kirala-geri al istisnasının karşılığı yoktur; istisna yalnız kurumlar vergisi mükelleflerine özgüdür | aynı |
 | G-022 | Mükerrer KKEG engeli | KVK m.12 / m.13 KKEG | **KVKUGT 11.13.9** | Örtülü sermaye veya transfer fiyatlandırması nedeniyle zaten KKEG sayılan finansman gideri, FGK (m.11/1-i) hesabına bir daha girmez — üç müessese bağımsız test edilir ama mükerrer cezalandırılmaz. Resmî örnekle doğrulandı (Python, 9/9 PASS) | `10-poster/iliskili-kisiden-borclanma.md` §6b |
+| G-023 | Ticari borç → finansman | KVK m.12 | KVKUGT 12.1.6 | "Ticari borç" etiketi korumaz — piyasa/teamül vadesi aşılırsa örtülü sermaye testine girer. RESMİ, özelge değil | `10-poster/iliskili-kisiden-borclanma.md` §3b, `15-atomik-tekrar/ATOM3-nodes.md` N-03 |
+| G-024 | Sipariş avansı → yabancı kaynak | KVK m.12 | KVKUGT 12.1.6 | Alınan avanslar örtülü sermaye hesabında borç sayılır (inşaat istihkakı hariç). RESMİ | aynı, N-04 |
+| G-025 | Köprü kredi → FGK yükü | KVK m.11/1-i | KVKUGT 11.13 | Yüksüz aktarılan kredide FGK yükü fiilen kullanan şirkette kalır, ilk alanda değil. RESMİ | aynı, N-05 |
 
 ## Ters dizin — hangi maddeden nereye gidilir
 
@@ -113,6 +116,9 @@ kural değil, açık uç (A-007). Doğrulanmadan kullanılmamalı.
 | A-006 | Faizsiz borçlanmada emsal bedel üzerinden KDV doğduğunun mevzuat dayanağı nedir? | KDV m.27 ve m.9 metinleri var ama faizsiz borç vermeye özgü KDVUGT açıklaması bulunamadı | KDVUGT tam tarama · sınav cevap anahtarı `[TEYİT]` |
 | A-007 | Örtülü sermaye (m.12) kaynaklı KKEG dolayısıyla ödenen KDV, m.30/d karşısında ne olur? | 30/d parantezi yalnız m.13'ü anıyor; m.12'ye özgü hüküm korpusta yok | KDV m.30/d + özelge/içtihat `[TEYİT]` |
 | A-008 | Grup içi kredi aktarım sözleşmeleri damga vergisine tabi mi? | Taranmadı | 488 s.K. `[TEYİT: kaynak gerekli]` |
+| A-009 | Özelge numaralarının (5 adet, BULTEN-001'de) gerçekliği | GİB sitesi JS-render, WebFetch içini göremedi — ölçüm sınırı, uydurma kanıtı değil | Mevzuat MCP veya browserclaw `[TEYİT]` |
+| A-010 | Danıştay 9. Daire E.2023/4917, K.2024/2755 — gerçek içerik | Yargı MCP CONNECT_TIMEOUT | Yargı MCP `[TEYİT: MCP bağlantısı başarısız]` |
+| A-011 | Dar mükellefe faiz stopajının 2026 güncel oranı ve ÇVÖA indirimi | Genel oran (%15) doğrulandı, ÇVÖA istisnası/indirim güncelliği doğrulanmadı | Mevzuat MCP `[TEYİT]` |
 
 ---
 
