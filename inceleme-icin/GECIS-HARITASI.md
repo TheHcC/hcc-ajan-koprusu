@@ -64,6 +64,7 @@ uydurulmuş bir liste değil, fiilen kullanılan kategoriler.)*
 | G-023 | Ticari borç → finansman | KVK m.12 | KVKUGT 12.1.6 | "Ticari borç" etiketi korumaz — piyasa/teamül vadesi aşılırsa örtülü sermaye testine girer. RESMİ, özelge değil | `10-poster/iliskili-kisiden-borclanma.md` §3b, `15-atomik-tekrar/ATOM3-nodes.md` N-03 |
 | G-024 | Sipariş avansı → yabancı kaynak | KVK m.12 | KVKUGT 12.1.6 | Alınan avanslar örtülü sermaye hesabında borç sayılır (inşaat istihkakı hariç). RESMİ | aynı, N-04 |
 | G-025 | Köprü kredi → FGK yükü | KVK m.11/1-i | KVKUGT 11.13 | Yüksüz aktarılan kredide FGK yükü fiilen kullanan şirkette kalır, ilk alanda değil. RESMİ | aynı, N-05 |
+| G-026 | Karşı düzeltme — zarar istisnası | KVK m.12/7 | **Danıştay 9. Daire E.2023/4917 K.2024/2755** | Kesinleşme+ödeme şartı yalnız borç alanın o yıl vergiye tabi kazancı çıktığı durumda aranır; zarar beyanında aranmaz. Alt mahkemeler tersini söylemişti, Danıştay bozdu | `10-poster/iliskili-kisiden-borclanma.md` §5, `15-atomik-tekrar/ATOM3-nodes.md` N-09 |
 
 ## Ters dizin — hangi maddeden nereye gidilir
 
@@ -117,7 +118,7 @@ kural değil, açık uç (A-007). Doğrulanmadan kullanılmamalı.
 | A-007 | Örtülü sermaye (m.12) kaynaklı KKEG dolayısıyla ödenen KDV, m.30/d karşısında ne olur? | 30/d parantezi yalnız m.13'ü anıyor; m.12'ye özgü hüküm korpusta yok | KDV m.30/d + özelge/içtihat `[TEYİT]` |
 | A-008 | Grup içi kredi aktarım sözleşmeleri damga vergisine tabi mi? | Taranmadı | 488 s.K. `[TEYİT: kaynak gerekli]` |
 | A-009 | Özelge numaralarının (5 adet, BULTEN-001'de) gerçekliği | GİB sitesi JS-render, WebFetch içini göremedi — ölçüm sınırı, uydurma kanıtı değil | Mevzuat MCP veya browserclaw `[TEYİT]` |
-| A-010 | Danıştay 9. Daire E.2023/4917, K.2024/2755 — gerçek içerik | Yargı MCP CONNECT_TIMEOUT | Yargı MCP `[TEYİT: MCP bağlantısı başarısız]` |
+| ~~A-010~~ | ✅ **KAPANDI (10.09.2026)** — Danıştay 9. Daire E.2023/4917 K.2024/2755, Bedesten API'den doğrudan doğrulandı: kesinleşme+ödeme şartı zarar durumunda aranmaz → G-026 |
 | A-011 | Dar mükellefe faiz stopajının 2026 güncel oranı ve ÇVÖA indirimi | Genel oran (%15) doğrulandı, ÇVÖA istisnası/indirim güncelliği doğrulanmadı | Mevzuat MCP `[TEYİT]` |
 
 ---

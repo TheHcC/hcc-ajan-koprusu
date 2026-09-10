@@ -108,16 +108,22 @@ links:
   - EDGE: N-08 --[DONEME_SARKAR]--> N-01
 
 id: N-09
-node: IDARI_YARGI_CARPISMASI
+node: KESINLESME_SARTI_ZARAR_ISTISNASI
 claim: >
-  Borç veren tarafta zarar/vergi ödenmemesi durumunda düzeltmenin akıbeti
-  konusunda idari ve yargısal görüş çarpışabilir — bu oturumda tam teyit
-  edilemedi.
-source_status: TEYIT
-source: "[TEYİT: MCP bağlantısı başarısız — Yargı MCP CONNECT_TIMEOUT verdi]"
-trap: "Danıştay 9. Daire E.2023/4917, K.2024/2755 atfı ChatGPT taslağında var; tam metin görülmeden kesin kural yazılmaz."
+  "Kesinleşmiş ve ödenmiş vergi" şartı yalnız borç alan kurumun o yıl vergiye
+  tabi kazancı ÇIKTIĞI durumlarda aranır. Borç alan zarar beyan ettiyse (vergi
+  hiç tahakkuk etmediyse), şart aranmaz — borç veren yine de kâr payı/iştirak
+  kazancı istisnasından yararlanır.
+source_status: YARGI
+source: >
+  Danıştay 9. Daire, 16.05.2024, E.2023/4917, K.2024/2755 (kesin, oybirliği) —
+  Bedesten API'den 10.09.2026'da doğrudan doğrulandı (yargi-mcp'nin dağıtımı
+  ölü, ama altındaki resmi API client'ı çalışıyor, sarmalayıcıyı bypass ettik)
+trap: >
+  "Kesinleşme+ödeme şartı her zaman koşulsuz aranır" varsayımı — alt mahkemeler
+  (Vergi Mahkemesi + BİM) tam bunu söylemişti, Danıştay BOZDU.
 links:
-  - EDGE: N-08 --[ACIK_UC]--> N-09
+  - EDGE: N-08 --[HARIC_TUTAR]--> N-09
 
 id: N-10
 node: KDV_M30D_ACIK_UC

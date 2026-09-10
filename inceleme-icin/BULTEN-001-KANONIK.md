@@ -215,12 +215,14 @@ nezdinde dağıtılmış kâr payı sayılır. Karşı tarafta düzeltme için:
 | Tam mükellef kurum | Karşılıklı düzeltme; geçici vergi döneminde de yapılabilir |
 | Dar mükellef kurum / gerçek kişi / muaf kişi | Faiz **net kâr payı** sayılır → brüte tamamlanır → stopaj (KVK m.30, genel oran **%15** — güncel oran/ÇVÖA indirimi `[TEYİT: kaynak gerekli]`) |
 
-**Açık uç — idari/yargısal ayrım:** "Borç veren tarafta zarar varsa veya vergi
-ödenmemişse düzeltme yapılır mı" sorusunun idari ve yargısal görüşü bu
-oturumda görülmedi. `IDARI_GORUS` ile `YARGI_GORUSU` **çarpışabilir**;
-ChatGPT'nin atıfta bulunduğu Danıştay 9. Daire E.2023/4917, K.2024/2755
-kararının tam metni bu ortamda **doğrulanamadı** → `[TEYİT: MCP bağlantısı
-başarısız, Yargı MCP bu oturumda bağlanamadı]`.
+**✅ ÇÖZÜLDÜ (10.09.2026) — idari/yargısal çarpışma gerçekmiş.** Danıştay 9. Daire,
+E.2023/4917, K.2024/2755 (16.05.2024, kesin, oybirliği) — Bedesten API'den doğrudan
+doğrulandı (yargi-mcp'nin uzak dağıtımı ölü ama altındaki resmî API client'ı
+çalışıyor). Vergi Mahkemesi + BİM, kesinleşme+ödeme şartının **koşulsuz** arandığını
+söylemişti; Danıştay **bozdu**: *"bu şartın... kurumlar vergisine tabi kazancının
+çıktığı durumlar için geçerli olduğu, ancak dönem zararı... halinde... şartının
+aranmasına gerek bulunmamaktadır."* Zarar durumunda borç veren yine de iştirak
+kazancı istisnasından yararlanır.
 
 ---
 

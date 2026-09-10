@@ -20,7 +20,7 @@ gecis_kontrolu:
   gvk: "VAR — borc veren dar mukellef/gercek kisi/vergiden muaf ise ortulu sermaye faizi NET kar payi sayilir, brute tamamlanir ve stopaja tabi tutulur. Kur farki bu kapsamda DEGIL."
   kvk: "VAR + DUZELTME (10.09.2026) — uc muessese ayni olayda ayri tetikleyicilerle calisir; birinden muafiyet digerini kapatmaz. AMA bagimsiz test mukerrer ceza demek degildir: KVKUGT 11.13.9 geregi bir kapida zaten KKEG sayilan tutar sonraki kapinin (FGK) hesabina bir daha girmez. Kaynak: KVKUGT.md satir 11756, resmi ornekle dogrulandi (scripts/dogrula_09bilgi_sayisal.py Ö3, 9/9 PASS)."
   damga_harc: "SUPHELI — grup ici kredi aktarim sozlesmelerinin damga vergisi durumu bu cikarimda taranmadi [TEYIT: kaynak gerekli]."
-  donem_sarkmasi: "VAR — GUCLU + ZIT ZAMAN TESTI dogrulandi (10.09.2026). (a) Ortulu sermaye olcusu 'hesap donemi icinde HERHANGI BIR TARIHTE' asilmasina baglidir. (b) FGK ise 'DONEM SONU' bilancosuyla olculur (KVKUGT 11.13 resmi ornek: 'donem sonu itibariyla'). Ayni yil icinde gecici asim ikisini FARKLI etkileyebilir. (c) Kar payi sayilma ani hesap doneminin SON GUNUdur. (d) Karsi tarafta duzeltme icin tarh edilen vergilerin KESINLESMIS VE ODENMIS olmasi sart — yillar sonraya sarkabilir."
+  donem_sarkmasi: "VAR — GUCLU + ZIT ZAMAN TESTI + YARGI ISTISNASI dogrulandi (10.09.2026, Danistay 9. Daire E.2023/4917 K.2024/2755, Bedesten API). Kesinlesme+odeme sarti SADECE borc alanin o yil vergiye tabi kazanci ciktiysa aranir; zarar durumunda aranmaz. (a) Ortulu sermaye olcusu 'hesap donemi icinde HERHANGI BIR TARIHTE' asilmasina baglidir. (b) FGK ise 'DONEM SONU' bilancosuyla olculur (KVKUGT 11.13 resmi ornek: 'donem sonu itibariyla'). Ayni yil icinde gecici asim ikisini FARKLI etkileyebilir. (c) Kar payi sayilma ani hesap doneminin SON GUNUdur. (d) Karsi tarafta duzeltme icin tarh edilen vergilerin KESINLESMIS VE ODENMIS olmasi sart — yillar sonraya sarkabilir."
   muhasebe_tms: "VAR — ortulu sermaye faizi gider yazilamaz (KKEG), kur farki GELIRI de kurum kazancina alinmaz (simetri); FGK'da asan kisma isabet eden giderin %10'u KKEG."
 gecerlilik_donemi: "[TEYİT: 2026 yürürlük doğrulanmadı]"
 son_dogrulama: 2026-09-09
@@ -125,6 +125,22 @@ Yani düzeltme, tarhiyatın kesinleşip ödenmesine bağlıdır — **yıllar so
 |---|---|
 | Tam mükellef kurum | Karşılıklı düzeltme; geçici vergi döneminde de yapılabilir |
 | **Dar mükellef kurum / gerçek kişi / vergiden muaf kişi** | Faiz **net kâr payı** sayılır → **brüte tamamlanır** → stopaj. Kur farkı bu kapsamda değil |
+
+**⚖️ YARGI (10.09.2026, Bedesten API'den doğrudan doğrulandı):** Danıştay 9. Daire,
+16.05.2024, **E.2023/4917, K.2024/2755** (kesin, oybirliğiyle) — alt mahkemeleri
+**bozdu.** Karar: *"bu şartın (kesinleşme+ödeme), örtülü sermaye kullanan kurumun
+kurumlar vergisine tabi kazancının çıktığı durumlar için geçerli olduğu, ancak
+dönem zararı... gibi durumlar... sonucu kurumlar vergisi matrahının oluşmaması
+halinde, verginin kesinleşmiş ve ödenmiş olması şartının aranmasına gerek
+bulunmamaktadır."*
+
+**Okunuşu:** Borç alan kurum **zarar beyan ettiyse** (vergi hiç tahakkuk etmediyse),
+kesinleşme+ödeme şartı **aranmaz** — borç veren yine de faizi kâr payı sayıp iştirak
+kazancı istisnasından yararlanır. Gerekçe: örtülü sermaye üzerinden ödenen faiz
+*sadece vergisel işlemler bakımından* kâr payı sayılır; zarar durumunda bu,
+*"ileride dağıtılacak kazanca mahsuben yapılan bir dağıtım"* olarak kabul edilir.
+**Alt mahkemeler (Vergi Mahkemesi + BİM) tam tersini söylemişti** — idari/yargısal
+görüş gerçekten çarpışmış, Danıştay mükellef lehine çözmüş.
 
 ## 6. Finansman gider kısıtlaması — parametreler
 

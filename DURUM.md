@@ -82,13 +82,26 @@ durumunda bırakıldı (bkz. `inceleme-icin/GECIS-HARITASI.md` A-009, A-010, A-0
 
 ## Bilinen engeller ve teyit bekleyenler
 
-- `Mevzuat MCP` ve `yargi-mcp` 10.09.2026'da **yeniden denendi, hâlâ
-  `CONNECT_TIMEOUT`** veriyor.
+- ✅ **KÖKTEN TEŞHİS (10.09.2026 gece):** `yargi-mcp` (üçüncü taraf, `surucu.dev`)
+  hem uzak sunucusu hem kaynak GitHub deposu **kapanmış** — geliştirici projeyi
+  çekmiş. PyPI paketi hâlâ var ama `uvx` ile çalıştırılınca `pydantic`/`mcp` SDK
+  uyumsuzluğuyla **çöküyor**. Ama paketin içindeki `bedesten_mcp_module`
+  doğrudan import edilip MCP sarmalayıcısı bypass edildi — **Danıştay 9. Daire
+  E.2023/4917 K.2024/2755 kararı gerçekten çekildi ve doğrulandı** (bkz. G-026).
+  `bedesten.adalet.gov.tr` (asıl veri kaynağı) **canlı**, sorun orada değil.
+- ✅ **Cihan'ın önerisiyle `turk-hukuku-mevzuat-mcp` (aydincan) kuruldu ve test
+  edildi** — gerçek kod çalıştırılarak KVK m.12'yi `mevzuat.gov.tr`'den canlı
+  çekti, tebliğle birebir tuttu. `claude mcp add` ile kaydedildi, sonraki
+  oturumda aktif. `mevzuat.gov.tr` erişilemezliğinin kök nedeni **TLS ara
+  sertifika eksikliğiymiş** (engelleme değil) — paket bunu düzeltmiş.
+- `claude.ai Mevzuat MCP` (claude.ai hesap düzeyi connector) hâlâ
+  `CONNECT_TIMEOUT` — bu, yerelden düzeltilemez; claude.ai → Ayarlar →
+  Connectors → yeniden bağlan gerekiyor.
 - ChatGPT'nin GitHub entegrasyonu repo içeriğini okuyabiliyor ama bu araçtan
   doğrudan yazma denemesi `403 Resource not accessible by integration` verdi;
   mobil GitHub üzerinden manuel commit yapılmış.
-- Özelge numaraları (5 adet) ve Danıştay 9. Daire E.2023/4917, K.2024/2755 kararı
-  doğrulanamadı — `[TEYİT: MCP bağlantısı başarısız]`.
+- Özelge numaraları (5 adet) hâlâ doğrulanamadı — `[TEYİT: kaynak gerekli]`.
+  ~~Danıştay 9. Daire E.2023/4917, K.2024/2755~~ → ✅ doğrulandı (yukarı bak, G-026).
 - Dar mükellefe faiz stopajının 2026 güncel oranı ve ÇVÖA indirimi doğrulanmadı
   (genel oran %15 doğrulandı, güncelliği ve istisna durumu değil).
 
