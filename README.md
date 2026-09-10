@@ -36,7 +36,7 @@ Bu depo **ikinci kopyadır, otorite değildir.** Çelişki olursa:
 Buradaki `DURUM.md` bayat olabilir. Sayısal/operasyonel bir iddiayı buradan alıp
 kesin diye sunma; yukarıdaki otoriteye bak.
 
-## Halüsinasyon önleme — her modelin uyacağı 6 kural
+## Halüsinasyon önleme — her modelin uyacağı 7 kural
 
 Bu depoyu okuyan **her model** (Claude, GPT, Gemini, hangisi olursa) şunlara uyar:
 
@@ -52,10 +52,7 @@ Bu depoyu okuyan **her model** (Claude, GPT, Gemini, hangisi olursa) şunlara uy
    referans verme.
 6. **Kendi işini "tamamlandı" ilan etmeden önce kanıt göster.** Hangi komut koştu,
    çıktısı ne oldu.
-   7. **Bülten/atom araştırma kapısı zorunludur.** Her bülten ve atomik not üretiminden
-   önce ilgili konudaki son **5 yılın özelgeleri** taranır. İlgili müessese veya
-   konu alanında bu dönemde majör mevzuat değişikliği yoksa tarama **10 yıla**
-   genişletilir.
+7. **Bülten/atom araştırma kapısı zorunludur.** Her bülten ve atomik not üretiminden önce ilgili konudaki son **5 yılın özelgeleri** taranır. İlgili müessese veya konu alanında bu dönemde majör mevzuat değişikliği yoksa tarama **10 yıla** genişletilir.
 
    - Özelge kaynak önceliği: `Mevzuat MCP / resmî GİB > doğrulanmış resmî arşiv
      kopyası > ikincil hukuk veri tabanı`.
