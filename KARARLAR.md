@@ -5,6 +5,61 @@ En yeni en üstte. Karar silinmez; değişirse yeni satır eklenir ve eskisi
 
 ---
 
+## K-007 · Bülten + Atomik Tekrar — üç katmanlı üretim mimarisi (eleştirilerek kabul edildi)
+**Tarih:** 10.09.2026 · **Veren:** Cihan · **Öneren:** gpt-5.6-sol (ChatGPT), taslak · **Denetleyen/Uygulayan:** claude-sonnet-5
+
+### Önce eleştiri — talimatın kendi kuralı
+
+ChatGPT'nin iki katmanlı (Bülten + Atomik Tekrar) önerisi körü körüne kabul
+edilmedi. Üç somut endişe kaydedildi:
+
+1. **Hacim riski.** Her konuda zorunlu bülten üretimi, eski `ymm-korpus`'un SRS
+   kartlarını battığı yola (kota-güdümlü hacim, kullanılabilirlik değil) benzer
+   bir risk taşır. **Düzeltme:** Bülten zorunlu değil — "her konu zorla bültene
+   sokulmaz" kuralı `OKUBEN.md`'ye açıkça yazıldı; önce atom/poster üretilir,
+   derinlik gerektiğinde bülten eklenir.
+2. **Araştırma kapısı şu an yürütülemez durumda.** 5→10 yıl özelge taraması,
+   Mevzuat MCP'ye dayanıyor ve MCP bu oturumda da `CONNECT_TIMEOUT` verdi.
+   Kapı **aspirasyonel** kaldı — çalışmadığı sürece kapıdan geçmiş sayılan
+   hiçbir özelge bulgusu `RESMI`'ye yükseltilmeyecek.
+3. **Terminoloji çakışması.** ChatGPT'nin "Atom" kavramı (kısa NODE/EDGE notu)
+   K-005'teki "Atom" (10-poster'daki tam künyeli konu dosyası) ile aynı adı
+   taşıyordu. **Çözüm:** üç ayrı, adı çakışmayan katman: `10-poster/` (kısa,
+   K-005'in atomu, değişmedi), `25-bulten/` (yeni, derin), `15-atomik-tekrar/`
+   (yeni, NODE/EDGE — ChatGPT'nin "atom"u aslında budur).
+
+### Karar
+
+> Aynı doğrulanmış araştırma tabanından **üç** tamamlayıcı yüzey üretilir:
+> `10-poster/` (K-005 atomu — kısa, poster-export'a hazır), `25-bulten/`
+> (derin anlama — özelge/BDO/analoji/inceleme çapraz kontrolü, **isteğe
+> bağlı**), `15-atomik-tekrar/` (NODE/EDGE — sınav öncesi hızlı tekrar,
+> export-ready veri modeli). XMind/Miro/poster/infografik üçünden de
+> türetilebilen render yüzeyleridir, kanonik kaynak değildir.
+
+Şablonlar ve araştırma kapısı `09_bilgi/OKUBEN.md`'de kanonikleştirildi.
+
+### Pilot sonucu — kararın gerekçesini güçlendirdi
+
+İlk pilotta (İlişkili Kişiden Borçlanma) araştırma kapısı mantığı **gerçek
+değer** üretti: ChatGPT'nin özelgeyle desteklediği üç iddia (mükerrer KKEG,
+ticari borç/vade, köprü kredi) bağımsız denetimde **doğrudan tebliğ metninde**
+bulundu — özelgeden daha güçlü bir kaynak statüsünde. Bu, K-006'nın geçiş
+kontrolü mekanizmasının dışarıdan gelen bir katkıyla ilk kez uçtan uca
+çalıştığı örnek oldu (bkz. `20-mevzuat-izleme/gecis-haritasi.md` G-022..G-025).
+
+Aynı zamanda sınır de netleşti: 5 özelge iddiası ve 1 yargı kararı bu oturumda
+**doğrulanamadı** (GİB sitesi JS-render, Yargı MCP bağlanamadı) — bunlar
+`[TEYİT]` durumunda kaldı, `RESMI`'ye yükseltilmedi.
+
+### Ne zaman gözden geçirilir
+
+10 atomdan sonra (K-006 ile eşzamanlı), bülten katmanının fiilen kullanılıp
+kullanılmadığı ölçülecek — eğer 25-bulten dosyaları üretilip hiç okunmuyorsa,
+bu da eski hatanın tekrarı demektir ve katman gözden geçirilir.
+
+---
+
 ## K-006 · Kanunlar arası geçiş, atomun zorunlu parçasıdır
 **Tarih:** 09.09.2026 · **Veren:** Cihan · **Öneren:** Claude Code
 
