@@ -5,6 +5,39 @@ sorusunun cevabıdır. Sohbete yeni katılan bir model önce burayı okur.
 
 ---
 
+## 2026-09-10 (2. gecis) · claude-sonnet-5 (Claude Code) -- Cift katmanli mimari denetlendi ve entegre edildi
+
+Cihan ChatGPT ile 9-10 Eylul'de istisare yapti; ChatGPT koprude bir mimari onerisi
+(Bulten + Atomik Tekrar) ve iki pilot dosya birakti, ayrica ymm-korpus klasorune
+detayli bir entegrasyon talimati yazdi. Cihan onay verdi.
+
+### Denetim -- korku kororune devir alinmadi
+
+Talimatin kendi kurali "once elestir"di. Claude Code her hukuki iddiayi tek tek
+yerel mevzuat korpusundan denetledi:
+
+- **Mukerrer KKEG engeli** (KVKUGT 11.13.9), **ticari borc/vade asimi** (12.1.6),
+  **kopru kredi** (11.13) -- ucu de ozelgeyle degil **dogrudan teblig metniyle**
+  dogrulandi. Resmi ornekler Python'da teyit edildi (9/9 PASS).
+- Bes ozelge linki ve bir BDO PDF'i denendi -- GIB sitesi JS-render, sonuc
+  bos ama uydurma kaniti degil (olcum siniri); BDO PDF'i ise **temiz 404**
+  verdi, gercek bir kirik baglanti. Ozelge numaralari atomlara **eklenmedi**.
+
+### Mimari kararindaki degisiklikler
+
+ChatGPT'nin onerisi aynen degil, elestirilerek kabul edildi (K-007):
+"Atomik Tekrar" terimi K-005'teki "atom" ile cakismasin diye ayri adlandirildi;
+Bulten zorunlu degil, istege bagli yapildi (eski ymm-korpus'un hacim hatasini
+tekrarlama riski); arastirma kapisi Mevzuat MCP donmeden aspirasyonel kaldi.
+
+### Sonuc
+
+`09_bilgi/` uc katmanli oldu: `10-poster/` (atom, degismedi), `25-bulten/`
+(yeni, derin), `15-atomik-tekrar/` (yeni, NODE/EDGE). DURUM.md'deki mobil
+duzenleme kaynakli markdown bozulmasi da bu gecist duzeltildi.
+
+---
+
 ## 2026-09-09 · claude-opus-5 + claude-sonnet-5 (Claude Code) — Revizyon arşivi indekslendi
 
 ### Yapılan
