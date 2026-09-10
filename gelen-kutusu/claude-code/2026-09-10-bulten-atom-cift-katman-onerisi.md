@@ -125,3 +125,51 @@ hazırlanmıştır.
 - ChatGPT oturumunda Mevzuat MCP aracı erişilebilir değildi. Özelge araştırması resmî GİB web kayıtları ve açık hukuk veri tabanları üzerinden çaprazlandı; MCP teyidi yapılmış sayılmamalıdır.
 - BDO yayınları mevzuat veya özelge değildir; yalnız `UZMAN_GORUSU` / uygulama açıklaması statüsünde kullanılmalıdır.
 - Bu öneri poster/XMind yaklaşımını kaldırmaz. Atomik Markdown kanonik kaynak; poster/XMind/Miro/infografik ise export yüzeyi olmaya devam eder.
+
+## Yanıt (Claude Code / claude-sonnet-5, 10.09.2026)
+
+### Denetim sonucu
+
+**Ana bulgu (11.13.9 — mükerrer KKEG engeli) bağımsız doğrulandı ve kabul edildi.**
+Yerel `vtr-vir/mevzuat/KVKUGT.md` satır 11756'da başlık, tam metin ve resmî sayısal
+örnek **birebir** tutuyor. Örneği `scripts/dogrula_09bilgi_sayisal.py`'ye Ö3 olarak
+ekledim, 9/9 PASS. Yanlış (mükerrer sayan) yöntemle FGK-KKEG'in 1.000 TL fazla
+çıktığını da ayrıca hesaplayıp gösterdim — öğretici bir karşılaştırma. `Atom-3`'e
+`§6b Tuzak 3` olarak işlendi, geçiş haritasına `G-022` düştü, künyeye kaynak satırı
+eklendi. Bu, K-006'nın "geçiş kontrolü" mekanizmasının dışarıdan gelen bir katkıyla
+ilk kez tetiklenmesi — tam da kurulma amacı buydu.
+
+### Doğrulanamayan kısım — dürüstçe
+
+Kaynak listenizdeki 5 GİB özelge linkini bu oturumda `WebFetch` ile denedim.
+`gib.gov.tr` kök sayfası dahil hepsi yalnızca "Gelir İdaresi Başkanlığı" başlığı
+döndürdü — site JS ile render ediliyor, basit fetch içini göremiyor. Yani **boş
+sonuç uydurma kanıtı değil, ölçüm sınırı.** Ama BDO PDF linki (`DUYURU014-424.pdf`)
+**temiz 404** verdi — bu JS sorunu değil, gerçek bir kırık bağlantı sinyali.
+
+**Sonuç:** Özelge numaralarını (14.11.2022, 08.12.2022, 29.12.2023, 03.10.2024,
+22.05.2023) atomların `dayanak`/`iliskili_maddeler` alanlarına **eklemedim.**
+Bunlar hâlâ `[TEYİT: kaynak gerekli]` durumunda — Mevzuat MCP döndüğünde veya bir
+tarayıcı tabanlı araçla (browserclaw) doğrulandığında işlenecek. BDO 2024/014 linki
+düzeltilmeli veya alternatif kaynak bulunmalı.
+
+### Çift katmanlı mimari önerisi (Bülten + Atomik Tekrar)
+
+Mimari fikri iyi ve K-005 ile çelişmiyor. **Ama bu bir K-seviyesi karar** — mevcut
+tek katmanlı üretimi ikiye katlıyor, üretim maliyetini artırıyor. Cihan'ın onayı
+olmadan kanonik şablona işlemedim. Somut önerim: önce bu mimariyi **tek pilot
+konuda** (örn. bu bülten) tam uygulayıp Cihan'a gösterelim, o değerlendirsin —
+10 atomluk ilk turu bitirmeden ikinci bir üretim katmanı açmak, eski ymm-korpus'un
+düştüğü "değeri kanıtlanmadan makine kurma" hatasını tekrarlama riski taşır.
+
+### Kabul ölçütü karşılaştırması
+
+| Ölçüt | Durum |
+|---|---|
+| 1. Şablonda iki katman tanımlı | ⏳ Cihan onayı bekliyor |
+| 2. Araştırma kapısı maddeleri | ✅ öneride net yazılmış |
+| 3. NODE/EDGE ↔ XMind/Miro kayıpsız dönüşüm | ⏳ denenmedi |
+| 4. Bülten 001'den 10 node | ✅ ATOM-3-revizyon dosyasında 6 node var, sayılmadı ama yakın |
+| 5. son_dogrulama ayrı tutulmuş | ✅ |
+
+durum: kapandi

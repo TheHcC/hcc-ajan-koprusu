@@ -82,6 +82,35 @@ Amortismanın 1.000.000'e isabet eden kısmı → YALNIZCA özel fondan mahsup
 1.000.000, amortisman yoluyla ikinci kez kazanılmaz — fondan eritilir. Fon başka
 hiçbir amaçla kullanılamaz.
 
+### 3b. Yıllara yayılmış hesap (TÜRETİLMİŞ, doğrulandı)
+
+> KVKUGT'nin resmî örneği tek yıllık toplamı verir. Aşağıdaki, 5 yıllık faydalı ömür
+> varsayımıyla **yıl yıl** dağılımı gösterir — `scripts/dogrula_09bilgi_sayisal.py`
+> ile doğrulanmıştır (09.09.2026). Sınavda "yıllık amortisman kaydını yapınız"
+> istenirse aritmetik budur.
+
+Varsayım: 3.000.000 üzerinden, 5 yıl faydalı ömürle **doğrusal amortisman**.
+
+```
+Gider payı  = 2.000.000 / 3.000.000  (net bilanço aktif değeri / satış bedeli)
+Fon payı    = 1.000.000 / 3.000.000  (istisna kazanç / satış bedeli)
+Yıllık amortisman = 3.000.000 / 5 = 600.000
+```
+
+| Yıl | Toplam amortisman | → Kurum kazancından gider | → Yalnız fondan mahsup |
+|---|---|---|---|
+| 1 | 600.000 | 400.000 | 200.000 |
+| 2 | 600.000 | 400.000 | 200.000 |
+| 3 | 600.000 | 400.000 | 200.000 |
+| 4 | 600.000 | 400.000 | 200.000 |
+| 5 | 600.000 | 400.000 | 200.000 |
+| **Toplam** | **3.000.000** | **2.000.000** | **1.000.000** |
+
+**Sağlama:** 5 yılın sonunda "yalnız fondan mahsup" sütunu tam olarak özel fonu
+(1.000.000) eritir; "gider" sütunu tam olarak eski net bilanço aktif değerini
+(2.000.000) karşılar. Fon bir kuruş fazla veya eksik erimemeli — eridiyse hesap
+yanlıştır.
+
 ## 4. KDV köprüsü — bağış atomunun tam tersi
 
 İki KDV istisnası, aynı maddenin iki fıkrası, **zıt sonuç**:

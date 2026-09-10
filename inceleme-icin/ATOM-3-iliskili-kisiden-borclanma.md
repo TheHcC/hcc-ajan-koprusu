@@ -12,18 +12,19 @@ iliskili_maddeler:
   - KDV m.9           # vergi sorumlusu
   - KDV m.30/d        # KKEG dolayısıyla ödenen KDV — m.13 anılıyor, m.12 anılmıyor
   - GVK m.41/1-5      # işletme aleyhine oluşan farklar (30/d parantezinde)
-  - KVKUGT 11.13, 12, 13
+  - KVKUGT 11.13, 11.13.9, 12, 13
 gecis_kontrolu:
   kdv: "VAR + ACIK UC — (a) Faizsiz borclanmada emsal bedel (m.27) ve sorumlu sifatiyla KDV (m.9) gundeme gelebilir; ANCAK korpusta 'iliskili kisiye faizsiz borc verme' icin ozel KDVUGT aciklamasi BULUNAMADI. (b) KDV m.30/d parantezi acikca yalniz KVK m.13'u (transfer fiyatlandirmasi) aniyor, m.12'yi (ortulu sermaye) ANMIYOR — ucuncu zit cift adayi, ancak [CIKARIM], metinde yazili degil."
   vuk: "VAR — oz sermaye VUK'a gore tespit edilmis HESAP DONEMI BASINDAKI oz sermayedir (donem sonu degil). Emsal bedel icin VUK m.267 mantigi KDV m.27'ye baglanir."
   gvk: "VAR — borc veren dar mukellef/gercek kisi/vergiden muaf ise ortulu sermaye faizi NET kar payi sayilir, brute tamamlanir ve stopaja tabi tutulur. Kur farki bu kapsamda DEGIL."
-  kvk: "VAR — uc muessese ayni olayda ayri tetikleyicilerle calisir; birinden muafiyet digerini kapatmaz."
+  kvk: "VAR + DUZELTME (10.09.2026) — uc muessese ayni olayda ayri tetikleyicilerle calisir; birinden muafiyet digerini kapatmaz. AMA bagimsiz test mukerrer ceza demek degildir: KVKUGT 11.13.9 geregi bir kapida zaten KKEG sayilan tutar sonraki kapinin (FGK) hesabina bir daha girmez. Kaynak: KVKUGT.md satir 11756, resmi ornekle dogrulandi (scripts/dogrula_09bilgi_sayisal.py Ö3, 9/9 PASS)."
   damga_harc: "SUPHELI — grup ici kredi aktarim sozlesmelerinin damga vergisi durumu bu cikarimda taranmadi [TEYIT: kaynak gerekli]."
   donem_sarkmasi: "VAR — GUCLU. (a) Ortulu sermaye olcusu 'hesap donemi icinde HERHANGI BIR TARIHTE' asilmasina baglidir; tek gunluk asim yil boyu sonuc dogurur. (b) Kar payi sayilma ani hesap doneminin SON GUNUdur. (c) Gecici vergi doneminde sartlar gerceklesirse duzeltme o donemde yapilabilir. (d) Karsi tarafta duzeltme icin tarh edilen vergilerin KESINLESMIS VE ODENMIS olmasi sart — duzeltme yillar sonraya sarkabilir."
   muhasebe_tms: "VAR — ortulu sermaye faizi gider yazilamaz (KKEG), kur farki GELIRI de kurum kazancina alinmaz (simetri); FGK'da asan kisma isabet eden giderin %10'u KKEG."
-gecerlilik_donemi: "[TEYİT: 2026 yürürlük doğrulanmadı — Görev S teyit turunda]"
+gecerlilik_donemi: "[TEYİT: 2026 yürürlük doğrulanmadı]"
 son_dogrulama: 2026-09-09
 dogrulama_durumu: KAYNAKTAN_OKUNDU_GUNCELLIK_TEYIT_BEKLIYOR
+teyit_kapsami: "Teyit turu 01 KAPSAMI DISINDA kaldi — bu atom Gorev S direktifi yazildiktan SONRA uretildi. KVK m.12, m.13, m.11/1-i, KDV m.27, m.9, m.30/d atiflari HENUZ DOGRULANMADI. Teyit turu 02 bekliyor."
 kaynak: vtr-vir/mevzuat/{KVK,KVKUGT,KDV,KDVUGT}.md — yerel korpus, birebir okundu
 ---
 
@@ -113,6 +114,48 @@ Yani düzeltme, tarhiyatın kesinleşip ödenmesine bağlıdır — **yıllar so
 - **Kapsam dışı mükellefler:** kredi kuruluşları, finansal kuruluşlar, finansal kiralama,
   faktoring ve finansman şirketleri
 - Kısıtlama **yalnız aşan kısma münhasırdır**
+
+## 6b. ⚠️ Tuzak 3 — mükerrer KKEG hesaplama (DÜZELTME, 10.09.2026)
+
+> **Kaynak:** ChatGPT'nin köprü deposuna bıraktığı BÜLTEN-001 önerisi, yerel korpustan
+> **bağımsız doğrulandı**: `KVKUGT.md` satır 11756, başlık **11.13.9** —
+> *"Örtülü sermaye, transfer fiyatlandırması yoluyla örtülü kazanç dağıtımı ve binek
+> otomobillerde gider kısıtlaması uygulamaları nedeniyle KKEG olarak dikkate alınan
+> finansman giderlerinin durumu."* Metin ve resmî sayısal örnek birebir teyit edildi;
+> `scripts/dogrula_09bilgi_sayisal.py` Ö3 ile 9/9 PASS (10.09.2026).
+
+`## 1. Karar tablosu` üç müessesenin **bağımsız** çalıştığını söylüyor — bu doğru, ama
+tek başına bırakılırsa yanlış anlaşılabilir:
+
+> **Bağımsız test ≠ mükerrer ceza.** Aynı faiz gideri, üç kapıdan sırayla geçer;
+> bir kapıda zaten KKEG sayılmış tutar, sonraki kapının hesabına bir daha girmez.
+
+**Doğru sıra:**
+
+```
+1. Örtülü sermaye testi → KKEG-1 ayrılır
+2. Transfer fiyatlandırması testi → varsa KKEG ayrılır
+3. Toplam finansman giderinden KKEG-1 (ve varsa TF KKEG'i) DÜŞÜLÜR
+4. Kalan tutar üzerinden FGK hesabı yapılır → KKEG-2
+```
+
+**Resmî örnek (KVKUGT 11.13.9, Örnek 1) — doğrulandı:**
+
+| Adım | Hesap | Tutar |
+|---|---|---|
+| Öz sermayenin 3 katı | 200.000 × 3 | 600.000 |
+| Örtülü sermaye | 1.000.000 − 600.000 | 400.000 |
+| **KKEG-1** (örtülü sermaye faizi) | 100.000 × (400.000/1.000.000) | **40.000** |
+| FGK'ya kalan gider | 150.000 − 40.000 | 110.000 |
+| Aşan kısım (YK−ÖK) | 2.000.000 − 1.500.000 | 500.000 |
+| Aşan kısma isabet | 110.000 × (500.000/2.000.000) | 27.500 |
+| **KKEG-2** (FGK) | 27.500 × %10 | **2.750** |
+| **Toplam KKEG** | 40.000 + 2.750 | **42.750** |
+
+**Puan öldüren hata:** KKEG-1'i düşmeden 150.000'in tamamı üzerinden FGK hesaplamak.
+Bu durumda aşan kısma isabet eden gider `150.000 × %25 = 37.500`, KKEG-2 `3.750` çıkar —
+**doğrusundan 1.000 TL fazla.** Küçük gibi görünse de mekanik hatadır ve sınavda
+tekrarlanabilir bir büyüklüktedir.
 
 ## 7. ⚠️ Tuzak 2 — KV'de sonuç yoksa KDV'de de yoktur varsayımı
 

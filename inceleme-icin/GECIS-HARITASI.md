@@ -50,7 +50,8 @@ uydurulmuş bir liste değil, fiilen kullanılan kategoriler.)*
 | G-010 | Sat-kirala-geri al | KVK m.5/1-j | VUK mük. m.290 | Kiracıda kullanma hakkı rayiç bedel ile kira ödemelerinin bugünkü değerinden düşük olanı ile değerlenir; amortismana tabi | aynı |
 | G-011 | Sat-kirala-geri al | KVK m.5/1-j | Amortisman / özel fon | Satış bedeli üzerinden amortisman ayrılır ama eski net bilanço aktif değerini aşan kısım yalnız fondan mahsup edilir — istisna af değil erteleme | aynı |
 | G-012 | Sat-kirala-geri al | KVK m.5/1-j | Geçici vergi | Geçici vergi dönemlerinde de yararlanılır; süresinde fona alınmazsa geçici vergiden doğan vergi ziyaı cezası ve gecikme faizi ayrıca aranır | aynı |
-| G-013 | İlişkili kişiden borçlanma | KVK m.12 | KVK m.11/1-b | Örtülü sermaye faizi **ve kur farkı gideri** KKEG — gider yazılamaz | `10-poster/iliskili-kisiden-borclanma.md` |
+| G-013 | İlişkili kişiden borçlanma | KVK m.12 · m.13 | **KVK m.11/1-i (FGK)** | G-022 |
+| KVK m.12 | KVK m.11/1-b | Örtülü sermaye faizi **ve kur farkı gideri** KKEG — gider yazılamaz | `10-poster/iliskili-kisiden-borclanma.md` |
 | G-014 | İlişkili kişiden borçlanma | KVK m.12 | GVK stopaj | Borç veren dar mükellef/gerçek kişi/muaf ise faiz **net kâr payı** sayılır, brüte tamamlanır, stopaja tabi. **Kur farkı bu kapsamda değil** | aynı |
 | G-015 | Grup içi kredi aktarımı | KVK m.12 (muafiyet) | **KVK m.11/1-i** | Banka kredisi aynı şartlarla aktarılırsa örtülü sermaye **değil** — ama FGK'nın tetikleyicisi farklı (yabancı kaynak > öz kaynak), **FGK yine uygulanır.** Muafiyet zinciri kurulamaz | aynı |
 | G-016 | Kur farkı | KVK m.12 | KVK m.11/1-i | **Aynı kalem, zıt muamele:** örtülü sermayede kur farkı kâr payı sayılmaz ve geliri de kazanca alınmaz; FGK'da kur farkı **kapsam içindedir** | aynı |
@@ -59,6 +60,7 @@ uydurulmuş bir liste değil, fiilen kullanılan kategoriler.)*
 | G-019 | Bağış — damga vergisi | KVK m.10/1-c · KDV m.13/1-k | **488 s.K. (2) sayılı tablo IV/55** | Kamu idareleri/il özel idareleri/YİKOB/belediye/köylere yapılacak bağışlara ilişkin, ilgili idare ile bağışlayan arasında düzenlenen kâğıtlar **damga vergisinden istisna** *(Ek: 14/10/2021-7338/54)*. Ayrıca DVK m.8: resmî daireler muaf | `10-poster/bagis-ve-yardimlar-kv-kdv.md` |
 | G-020 | Sat-kirala — damga ve harç | KVK m.5/1-j | **6361 s.K. m.37** | Finansal kiralama sözleşmeleri, devir/tadil kâğıtları, kiralayan-satıcı sözleşmeleri ve teminat kâğıtları **damga vergisinden**, ilgili işlemler **harçtan** müstesna (kiralayanlarca devralmaya ilişkin tapu işlemleri hariç). m.37/2: süre sonunda kiracı adına tescil tapu harcından müstesna | `10-poster/sat-kirala-geri-al.md` |
 | G-021 | Sat-kirala — kurum/gerçek kişi | KVK m.5/1-j | GVK (paralel **YOK**) | **ASİMETRİ:** GVK'da sat-kirala-geri al istisnasının karşılığı yoktur; istisna yalnız kurumlar vergisi mükelleflerine özgüdür | aynı |
+| G-022 | Mükerrer KKEG engeli | KVK m.12 / m.13 KKEG | **KVKUGT 11.13.9** | Örtülü sermaye veya transfer fiyatlandırması nedeniyle zaten KKEG sayılan finansman gideri, FGK (m.11/1-i) hesabına bir daha girmez — üç müessese bağımsız test edilir ama mükerrer cezalandırılmaz. Resmî örnekle doğrulandı (Python, 9/9 PASS) | `10-poster/iliskili-kisiden-borclanma.md` §6b |
 
 ## Ters dizin — hangi maddeden nereye gidilir
 
