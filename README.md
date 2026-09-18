@@ -72,8 +72,15 @@ Bu depoyu okuyan **her model** (Claude, GPT, Gemini, hangisi olursa) şunlara uy
 
 ## Bir ajana iş bırakmak
 
-`gelen-kutusu/claude-code/` veya `gelen-kutusu/codex/` altına
-`YYYY-MM-DD-kisa-baslik.md` adıyla dosya bırak. Şablon: `gelen-kutusu/OKUBEN.md`.
+**18.09.2026'dan itibaren gelen kutusu GitHub'da DEĞİL, Google Drive'da:**
+[HCC Ajan Köprüsü — Gelen Kutusu](https://drive.google.com/drive/folders/1MfpWVE8ubUO47018BuZ6uJCAVGkybRbJ)
+(şablon ve kurallar o klasördeki `OKUBEN` dokümanında). Sebep: Claude.ai ve
+ChatGPT web sohbetleri GitHub'a yazamıyor ama Drive'a kendi bağlayıcılarıyla
+doğrudan yazabiliyor. `DURUM.md`/`GUNLUK.md`/`KARARLAR.md` değişmedi, hâlâ burada
+— yalnız istek/öneri bırakma taşındı.
+
+Eski `gelen-kutusu/claude-code/` ve `gelen-kutusu/codex/` klasörleri GitHub'da
+arşiv olarak duruyor, silinmedi.
 
 Cihan onaylamadan hiçbir ajan gelen kutusundaki isteği uygulamaz — gelen kutusu
-bir **öneri kanalıdır**, emir kanalı değil.
+bir **öneri kanalıdır**, emir kanalı değil (Drive'da da aynı kural geçerli).

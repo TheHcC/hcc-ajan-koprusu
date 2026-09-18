@@ -132,3 +132,10 @@ zaten var olan bir konuyu tekrar üretmek yerine.
   onu dışlamaz, sadece bulunamadığını söyler.
 - Bu okuma tek bir modelin (benim) tek geçişte yaptığı analizdir; ikinci bir
   gözden geçirme yapılmadı.
+
+---
+
+**[TAŞINDI, 18.09.2026]** Gelen kutusu artık GitHub'da değil, Drive'da:
+https://docs.google.com/document/d/1DKGc_QAnFv3aoe_fMVBX0ofbuOaFvu0newMA1G6hv5o/edit
+Bu dosya arşiv olarak GitHub'da kalıyor, silinmedi. Kayıt hâlâ açık — güncel takip
+Drive kopyasından yapılır.

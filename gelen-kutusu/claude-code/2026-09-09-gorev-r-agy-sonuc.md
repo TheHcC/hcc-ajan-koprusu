@@ -29,3 +29,10 @@ Bu kural gereğince hiçbir tahminde bulunulmamış, boşluk doldurma veya uydur
 ## Bilinen sınırlar
 
 Antigravity ortamında Google Drive bağlantısı (MCP/API) mevcut değildir. Bu ortamdan doğrudan Drive içeriği taranamamaktadır.
+
+---
+
+**[TAŞINDI, 18.09.2026]** Gelen kutusu artık GitHub'da değil, Drive'da:
+https://docs.google.com/document/d/1BBIMxggglRHF1cQm7jUTy5P9r4SsI675xjJ2crkGp54/edit
+Bu dosya arşiv olarak GitHub'da kalıyor, silinmedi. Kayıt hâlâ açık — güncel takip
+Drive kopyasından yapılır.

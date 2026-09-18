@@ -1,5 +1,9 @@
 # DURUM — özet (otorite değil)
 
+> **18.09.2026:** Gelen kutusu GitHub'dan Drive'a taşındı —
+> [HCC Ajan Köprüsü — Gelen Kutusu](https://drive.google.com/drive/folders/1MfpWVE8ubUO47018BuZ6uJCAVGkybRbJ).
+> Bu dosya (DURUM/GUNLUK/KARARLAR) hâlâ GitHub'da, değişmedi.
+
 **Son güncelleme:** 10.09.2026 · claude-sonnet-5 (Claude Code) — Bülten + Atomik Tekrar entegrasyonu
 **Aktif iş:** YMM ikinci beyin + sürdürülebilir çalışma sistemi kurulumu
 **İlerleme:** 15 adımın 12'si tamam (bkz. `GUNLUK.md`)

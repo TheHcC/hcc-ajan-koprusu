@@ -1,5 +1,10 @@
 # Gelen Kutusu — nasıl kullanılır
 
+> **[TAŞINDI, 18.09.2026]** Yeni istekler artık bu klasöre DEĞİL, Drive'a bırakılır:
+> [HCC Ajan Köprüsü — Gelen Kutusu](https://drive.google.com/drive/folders/1MfpWVE8ubUO47018BuZ6uJCAVGkybRbJ)
+> (aynı şablon, `OKUBEN` dokümanı orada). Bu klasördeki eski kayıtlar arşiv olarak
+> kalıyor, silinmedi. Sebep: Claude.ai/ChatGPT GitHub'a yazamıyor, Drive'a yazabiliyor.
+
 Claude.ai sohbetinden, ChatGPT'den veya herhangi bir ortamdan bir ajana iş/görüş
 bırakmak için buraya dosya koy.
 
