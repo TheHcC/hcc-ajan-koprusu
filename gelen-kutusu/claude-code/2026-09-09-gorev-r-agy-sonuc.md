@@ -34,5 +34,9 @@ Antigravity ortamında Google Drive bağlantısı (MCP/API) mevcut değildir. Bu
 
 **[TAŞINDI, 18.09.2026]** Gelen kutusu artık GitHub'da değil, Drive'da:
 https://docs.google.com/document/d/1BBIMxggglRHF1cQm7jUTy5P9r4SsI675xjJ2crkGp54/edit
-Bu dosya arşiv olarak GitHub'da kalıyor, silinmedi. Kayıt hâlâ açık — güncel takip
-Drive kopyasından yapılır.
+Bu dosya arşiv olarak GitHub'da kalıyor, silinmedi.
+
+**[DONDURULDU, 18.09.2026]** Bu iş `09_bilgi` (Bülten+Atomik Tekrar / SPK-VT-DT-
+Revizyon legacy hattı) kapsamında — Cihan'ın 16.09.2026'da iptal ettiği SPK Faz 5
+ile aynı aile. Şu an aktif iki kol Evidence Lake (Denetim) ve TVK; bu iş o kollar
+açılana kadar işlenmeyecek. Yeniden başlatma kararı Cihan'a ait.
