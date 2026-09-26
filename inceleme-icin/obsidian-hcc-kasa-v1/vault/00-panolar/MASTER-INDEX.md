@@ -1,11 +1,11 @@
 ---
 tip: master-index
 baslik: HcC Kasa — Master Index
-etiketler: [master-index, ikinci-beyin, obsidian, pilot]
+etiketler: [master-index, ikinci-beyin, obsidian]
 tarih: 2026-09-26
 guncelleme: 2026-09-26
-surum: v1.0-pilot
-durum: pilot
+surum: v1.1
+durum: aktif
 karantina: false
 ---
 
@@ -20,13 +20,14 @@ karantina: false
 
 ## 🗺️ Ana Alanlar
 
-- 🧠 [[MOC-Kavramlar|10 — Kavramlar]]
+- 🧠 [[10-Kavramlar/_index|10 — Kavramlar]]
 - 🤖 [[20-Araclar/_index|20 — Araçlar / AI Sistemleri]]
-- 🗂️ [[30-Projeler/PROJELER-DURUM|30 — Projeler]]
-- 🎓 [[40-YMM-Sinav/DURUM|40 — YMM Sınav]]
-- 🔖 [[50-X-Bookmarks/2026-09-13_1140_codex_rapor_x-bookmark-obsidian-indeksi|50 — X Bookmarks]]
-- ⚖️ [[60-Vergi-Incelemeler/vergi-incelemeler.base|60 — Vergi İncelemeler]]
-- 📥 [[Raw/Raw-Islanmemis-Notlar-Kategorileme-Raporu|Raw — İşlenmemiş Notlar]]
+- 🗂️ [[30-Projeler/_index|30 — Projeler]]
+- 🎓 [[40-YMM-Sinav/_index|40 — YMM Sınav]]
+- 🔖 [[50-X-Bookmarks/_index|50 — X Bookmarks]]
+- ⚖️ [[60-Vergi-Incelemeler/_index|60 — Vergi İncelemeler]]
+- 📥 [[Raw/_index|Raw — İşlenmemiş Notlar]]
+- ❓ [[soru-cevap-defterleri/_index|Soru-Cevap Defterleri]]
 
 > [!info] MOC ile Index farkı
 > **MOC** “hangi not neden önemli, hangi sırayla okunmalı?” sorusunu cevaplar. **Canlı index/base** ise “kasada şu anda ne var?” sorusunu eksiksiz cevaplar. İkisi birlikte kullanılacaktır.
@@ -66,16 +67,22 @@ karantina: false
 
 ---
 
-## 🧪 Pilot Kapsamı
+## ✅ Canlı İndeks Kapsamı — Faz 1
 
-İlk pilot yalnızca `20-Araclar` üzerinde uygulanır. Dosya taşıma veya silme yapılmaz.
-
-- [x] `20-Araclar/_index.md` canlı klasör görünümü
-- [x] `KASA-MASTER.base` canlı kasa envanteri
-- [x] `MASTER-INDEX.md` kontrol paneli
+- [x] `10-Kavramlar/_index.md`
+- [x] `20-Araclar/_index.md`
+- [x] `30-Projeler/_index.md`
+- [x] `40-YMM-Sinav/_index.md`
+- [x] `50-X-Bookmarks/_index.md`
+- [x] `60-Vergi-Incelemeler/_index.md`
+- [x] `Raw/_index.md`
+- [x] `soru-cevap-defterleri/_index.md`
+- [x] `KASA-MASTER.base` — kasa geneli canlı veri görünümü
 - [x] QuickAdd için güvenli `Raw/` yakalama şablonu
-- [ ] 1 hafta kullanım sonrası diğer ana klasörlere `_index.md` yayılımı
 - [ ] İkinci dalga: Meta Bind + Omnisearch + Breadcrumbs yapılandırması
+
+> [!tip] Kullanım ilkesi
+> `_index.md` dosyaları otomatik envanterdir; MOC'lar editoryal anlam katmanıdır. Aynı işi iki kez elle tutmayacağız.
 
 ## 📖 Sistem Rehberi
 
