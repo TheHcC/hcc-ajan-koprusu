@@ -1,0 +1,92 @@
+filters:
+  and:
+    - file.ext == "md"
+    - not:
+        - file.inFolder(".trash")
+        - file.inFolder(".obsidian")
+        - file.inFolder(".smart-env")
+        - file.inFolder("YEKDEM Obsidian")
+        - file.inFolder("copilot")
+formulas:
+  alan: 'if(file.folder, file.folder.split("/")[0], "Kök")'
+  metadata_sagligi: 'if(tip && tarih, "✅", "⚠️")'
+properties:
+  formula.alan:
+    displayName: Alan
+  tip:
+    displayName: Tip
+  durum:
+    displayName: Durum
+  tarih:
+    displayName: Tarih
+  kaynak:
+    displayName: Kaynak
+  karantina:
+    displayName: Karantina
+  formula.metadata_sagligi:
+    displayName: Metadata
+  file.mtime:
+    displayName: Son Düzenleme
+views:
+  - type: table
+    name: Alanlara Göre
+    groupBy:
+      property: formula.alan
+      direction: ASC
+    order:
+      - file.name
+      - formula.metadata_sagligi
+      - tip
+      - durum
+      - tarih
+      - file.mtime
+    summaries:
+      file.name: Unique
+  - type: table
+    name: Son 30 Gün
+    limit: 50
+    filters:
+      and:
+        - 'file.mtime > now() - "30d"'
+    order:
+      - file.name
+      - formula.alan
+      - tip
+      - durum
+      - file.mtime
+  - type: table
+    name: Raw Kuyruğu
+    filters:
+      and:
+        - file.inFolder("Raw")
+    order:
+      - file.name
+      - durum
+      - tarih
+      - kaynak
+      - file.mtime
+    summaries:
+      file.name: Unique
+  - type: table
+    name: Eksik Metadata
+    filters:
+      or:
+        - tip == null
+        - tarih == null
+    order:
+      - file.name
+      - formula.alan
+      - tip
+      - tarih
+      - file.mtime
+  - type: table
+    name: Karantina
+    filters:
+      and:
+        - karantina == true
+    order:
+      - file.name
+      - formula.alan
+      - durum
+      - tarih
+      - file.mtime
