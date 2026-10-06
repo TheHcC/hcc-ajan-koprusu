@@ -5,6 +5,55 @@ En yeni en üstte. Karar silinmez; değişirse yeni satır eklenir ve eskisi
 
 ---
 
+## K-009 · Vergi sınavlarında StudyPack üstüne Muhakeme Motoru katmanı
+**Tarih:** 06.10.2026 · **Veren:** Cihan · **Öneren:** ChatGPT + Claude Code bulgularının birleşimi
+
+### Karar
+
+Vergi sınavlarında mevcut StudyPack sistemi korunur fakat **terminal öğrenme ürünü sayılmaz**.
+Doğrulanmış StudyPack/Kural Base üzerine yeni bir ileri muhakeme katmanı kurulur:
+
+> Typed Legal Graph + Commission Operator Library + Lifecycle Monographs +
+> GREEN/AMBER/RED Scenario Forge + Blind Independent Solve + MAU/Compression Output Training.
+
+İlk uygulama **Vergi Tekniği / GSYF** dar pilotudur. Pilot başarılı olmadan tüm
+derslere toplu yaygınlaştırma yapılmaz.
+
+### Gerekçe
+
+2026/2 Vergi Tekniği pilotu, tek mega-vakada çok sayıda orta zorlukta hükmün
+birbirine bağlanması, veri/anomali/süre/muhatap/sayaç operatörleri ve ekonomik
+nesnenin yaşam döngüsü boyunca yürütülmesi nedeniyle klasik “soruyu açıkla”
+StudyPack'inin tek başına yetersiz kaldığını gösterdi.
+
+Claude Code'un 2010–2026 kaba tarihsel taraması ayrıca yakın dönemlerde
+**kardeş-kural kaydırması** olabileceğine dair güçlü bir çalışma sinyali verdi
+(329→328, 327→326, yabancı fon 279→yerli GSYF 279, VM+379→BİM+379).
+Bu henüz komisyon davranış kuralı değildir; 2015–2026 tarihsel transition matrix ile
+doğrulanana kadar yalnız **çalışma önceliği heuristiği** olarak kullanılır.
+
+### Zorunlu korumalar
+
+1. “Üretim ucuz, doğrulama pahalı” — toplu 75 soru üretimi yok.
+2. Sentetik vaka cevap anahtarı tek model tarafından promote edilemez.
+3. GREEN yalnız güçlü doğrulanmış sonuç belirleyici kenarlardan kurulur.
+4. SCN içeren vaka AMBER olur ve “Kabul + alternatif” ile puanlanır.
+5. Kaynak yetersiz vaka RED tartışma drilidir; sayısal doğru cevap ezberletmez.
+6. Her güçlü vaka full reasoning + MAU + compression çıktısı taşır.
+7. Cihan'ın zaman verimi ana KPI'dır.
+
+### Kanonik yer
+
+Private repo: `TheHcC/ymm-korpus`
+- `00_strateji/VERGI_SINAVLARI_MUHAKEME_MOTORU_PROTOKOLU_v1.0.md`
+- `10_muhakeme_motoru/**`
+
+Public köprü yalnız karar ve durum özetini taşır; hukuki kaynak metinleri/özel
+içerik buraya kopyalanmaz.
+
+---
+
+
 ## K-008 · Üç katman artık zorunlu; uzman kaynak arşivi eklendi
 **Tarih:** 10.09.2026 · **Veren:** Cihan
 
