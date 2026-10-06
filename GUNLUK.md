@@ -5,6 +5,29 @@ sorusunun cevabıdır. Sohbete yeni katılan bir model önce burayı okur.
 
 ---
 
+## 2026-10-06 · GPT-5.6 Sol (ChatGPT) — Vergi sınavları ileri muhakeme mimarisi
+
+Cihan, 2026/2 Vergi Tekniği StudyPack çıktısını yararlı fakat fazla geriye dönük
+buldu: soru cevabını açıklıyor, fakat benzer grift çapraz mevzuat vakaları, “başka
+nasıl sorulurdu?” yüzeyi ve yazılı cevap antrenmanı yeterli değildi.
+
+Claude Code, tarihsel korpusta mega-vaka konsolidasyonu, kardeş-kural kaydırması,
+merkez/kuyruk düğümler ve “üretim ucuz, doğrulama pahalı” riskini çıkardı. İki
+görüş birleştirilerek K-009 kabul edildi.
+
+Private `ymm-korpus`ta kanonik olarak:
+- vergi muhakeme motoru protokolü,
+- typed graph,
+- operator kütüphanesi,
+- GSYF pilot spesifikasyonu
+kuruldu; README/BASLA/StudyPack rehberi/DURUM/GUNLUK bu yeni çekirdeğe bağlandı.
+
+Bu köprüde yalnız karar/durum kaydı tutulur. İlk sonraki çalışma GSYF dar pilotudur;
+bulk senaryo üretimi yapılmaz.
+
+---
+
+
 ## 2026-09-10 (2. gecis) · claude-sonnet-5 (Claude Code) -- Cift katmanli mimari denetlendi ve entegre edildi
 
 Cihan ChatGPT ile 9-10 Eylul'de istisare yapti; ChatGPT koprude bir mimari onerisi
