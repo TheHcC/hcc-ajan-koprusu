@@ -4,28 +4,11 @@
 > [HCC Ajan Köprüsü — Gelen Kutusu](https://drive.google.com/drive/folders/1MfpWVE8ubUO47018BuZ6uJCAVGkybRbJ).
 > Bu dosya (DURUM/GUNLUK/KARARLAR) hâlâ GitHub'da, değişmedi.
 
-**Son güncelleme:** 06.10.2026 · GPT-5.6 Sol (ChatGPT) — K-009 Vergi Sınavları Muhakeme Motoru
-**Aktif iş:** YMM ikinci beyin + sürdürülebilir çalışma sistemi kurulumu
-**İlerleme:** 15 adımın 12'si tamam (bkz. `GUNLUK.md`)
+**Son güncelleme:** 06.10.2026 · GPT-5.6 Sol (ChatGPT) — GSYF Muhakeme Motoru Phase-1
+**Aktif iş:** YMM ikinci beyin + vergi sınavları ileri muhakeme sistemi
+**İlerleme:** K-009 uygulaması başladı. GSYF için lifecycle monografisi, 13 düğüm, typed-edge graph, 10 parameter flip ve Claude Code producer direktifi kanonik `ymm-korpus` deposuna yazıldı. ChatGPT blind solver rolünü koruyor; senaryo cevap anahtarı henüz üretilmedi/görülmedi.
+**Sıradaki kapı:** Claude Code producer seti: 5 GREEN L1/L2 + 2 GREEN L3 + 2 AMBER; blind set / gizli producer key / build report ayrımı zorunlu.
 
-> Otorite bu dosya değildir. Operasyonel gerçek:
-> `Desktop\inceleme-os\obsidian-ikinci-beyin\durum.md`
-> Adım checkpoint'i: `claude-practice\.gorev-durumu\aktif-gorev.json`
-
-## 06.10.2026 — K-009 Muhakeme Motoru
-
-Cihan, 2026/2 Vergi Tekniği pilotundan sonra StudyPack'in yararlı fakat grift,
-geleceğe dönük sınav muhakemesini yeterince üretmediği değerlendirmesini onayladı.
-ChatGPT + Claude Code görüşleri birleştirilerek private `ymm-korpus` içine yeni
-kanonik protokol ve `10_muhakeme_motoru/` katmanı işlendi. İlk dar pilot GSYF'dir.
-
-**Yeni çekirdek:** 13 alanlı düğüm kartı · 8 typed edge · 12 provisional operator ·
-lifecycle monografisi · GREEN/AMBER/RED vaka sınıfı · K1–K5 kalite kapısı · blind
-independent solve · MAU/compression · hata defteri/aralıklı tekrar.
-
-**Sıradaki tek iş:** GSYF pilotunu üret ve ChatGPT blind solve ile bağımsız diff
-kapısından geçir. Kardeş-kural kaydırmasını 2015–2026 verisiyle doğrulamadan tahmin
-modeli olarak kullanma.
 
 ## Tek cümlelik durum
 
