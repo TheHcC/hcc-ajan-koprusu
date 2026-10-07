@@ -5,6 +5,34 @@ En yeni en üstte. Karar silinmez; değişirse yeni satır eklenir ve eskisi
 
 ---
 
+## K-010 · Blind agreement yeterli değildir; source adjudication zorunludur
+**Tarih:** 07.10.2026 · **Veren:** Cihan'ın K-009 onayı altında pilot sonucu · **Denetleyen:** GPT-5.6 Sol
+
+### Karar
+
+Vergi Muhakeme Motorunda iki bağımsız modelin aynı sonuca ulaşması tek başına GREEN promotion için yeterli değildir. Zorunlu kalite sırası:
+
+> **independent solve → current-law/source adjudication → promotion**
+
+GSYF pilotunun nihai sonucu **7 GREEN / 1 AMBER / 1 RED** olarak kilitlenmiştir. C08'de producer ve blind solver aynı ana dala gitmiş olmasına rağmen güncel resmî GİB VUK 325/A + KVK GT 10.4 uygulama örneği current-law ana yolu değiştirmiştir: yıl sonuna kadar yatırıma dönüşmeyen tutar bakımından ana okuma, ilk indirim yılındaki eksik tahakkuk eden verginin geri alınmasıdır. VZC boyutu SCN bırakılmıştır. C09'da eshamlı komandit kanal çekirdeği doğrulanmış, fakat KKEG + GSYF istisnası + komandite pay + 325/A %10 bazının birleşik işlem sırası kapanmadığı için sayısal cevap ezberletilmemiştir.
+
+### Sistem etkisi
+
+1. Koşullu GREEN yok: current-law sonucu belirleyen kenar kapanmıyorsa AMBER.
+2. Blind agreement = güçlü sinyal, fakat promotion kararı değil.
+3. RED vaka doğru rakam öğretmez; kaynak/sıra problemi teşhis ettirir.
+4. GSYF pilotu kapandı; yeni patch/QC turu yok.
+5. Scale Batch 01 dört lifecycle'a genişler; ChatGPT batch-end reviewer, Codex producer rolünde kalır.
+
+### Kanonik kayıt
+
+Private repo `TheHcC/ymm-korpus`:
+- `10_muhakeme_motoru/pilots/gsyf/GSYF_PILOT_ADJUDICATION_v0.2.md`
+- `10_muhakeme_motoru/pilots/gsyf/GSYF_PILOT_CIHAN_STUDY_v1.0.md`
+- `10_muhakeme_motoru/batches/SCALE_BATCH_01_v0.1.md`
+
+---
+
 ## K-009 · Vergi sınavlarında StudyPack üstüne Muhakeme Motoru katmanı
 **Tarih:** 06.10.2026 · **Veren:** Cihan · **Öneren:** ChatGPT + Claude Code bulgularının birleşimi
 
