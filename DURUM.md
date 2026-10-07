@@ -4,10 +4,10 @@
 > [HCC Ajan Köprüsü — Gelen Kutusu](https://drive.google.com/drive/folders/1MfpWVE8ubUO47018BuZ6uJCAVGkybRbJ).
 > Bu dosya (DURUM/GUNLUK/KARARLAR) hâlâ GitHub'da, değişmedi.
 
-**Son güncelleme:** 06.10.2026 · GPT-5.6 Sol (ChatGPT) — GSYF Muhakeme Motoru Phase-1
+**Son güncelleme:** 07.10.2026 · GPT-5.6 Sol (ChatGPT) — K-010 / GSYF pilot kapanışı
 **Aktif iş:** YMM ikinci beyin + vergi sınavları ileri muhakeme sistemi
-**İlerleme:** K-009 uygulaması başladı. GSYF için lifecycle monografisi, 13 düğüm, typed-edge graph, 10 parameter flip ve Claude Code producer direktifi kanonik `ymm-korpus` deposuna yazıldı. ChatGPT blind solver rolünü koruyor; senaryo cevap anahtarı henüz üretilmedi/görülmedi.
-**Sıradaki kapı:** Claude Code producer seti: 5 GREEN L1/L2 + 2 GREEN L3 + 2 AMBER; blind set / gizli producer key / build report ayrımı zorunlu.
+**İlerleme:** GSYF pilotu kapandı: 7 GREEN / 1 AMBER / 1 RED. Current-law source adjudication zorunlu kalite kapısı oldu. C08 LAW-NOW ana yolu 2025 clawback olarak düzeltildi; C09 RED/DISCUSSION.
+**Sıradaki kapı:** Scale Batch 01 — Codex dört lifecycle + recent operator validation batch'ini üretir; ChatGPT yalnız batch sonunda bağımsız review/diff yapar.
 
 
 ## Tek cümlelik durum
