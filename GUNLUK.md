@@ -4,6 +4,10 @@ En yeni kayıt en üstte. Bu dosya "ne konuşuldu, hangi aşamalardan geçildi"
 sorusunun cevabıdır. Sohbete yeni katılan bir model önce burayı okur.
 
 ---
+## 2026-10-07 · GPT-5.6 Sol (ChatGPT) — GSYF pilot kapandı / K-010
+
+GSYF producer key ile kilitli blind çözüm karşılaştırıldı ve daha sonra güncel resmî GİB kaynaklarıyla ayrıca source-adjudication yapıldı. Sonuç 7 GREEN, C08 AMBER, C09 RED/DISCUSSION. En önemli ders C08 oldu: iki model aynı ana dala gitmiş olsa da GİB VUK 325/A + KVK GT 10.4 uygulama örneği current-law ana yolunu ilk indirim yılındaki vergi clawback'ine çevirdi. Böylece “iki model aynı cevabı verdi = doğru” varsayımı sistemden çıkarıldı. Yeni zorunlu sıra: independent solve → source adjudication → promotion. GSYF üzerinde yeni QC turu açılmayacak; Scale Batch 01'e geçildi.
+
 
 ## 2026-10-06 · GPT-5.6 Sol (ChatGPT) — K-009 GSYF pilot Phase-1
 
