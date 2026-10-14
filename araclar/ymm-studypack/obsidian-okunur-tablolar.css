@@ -1,0 +1,28 @@
+/* Obsidian CSS snippet — YMM StudyPack okunurluğu
+   Kurulum: kasa/.obsidian/snippets/ klasörüne kopyala →
+   Ayarlar › Görünüm › CSS parçacıkları › bunu aç.
+   Ayrıca: Ayarlar › Düzenleyici › "Okunabilir satır uzunluğu" AÇIK olsun. */
+
+/* Tablo hücreleri metni sarsın, sayfa yana taşmasın */
+.markdown-rendered table,
+.markdown-source-view.mod-cm6 .cm-table-widget table {
+  table-layout: auto;
+  width: 100%;
+}
+.markdown-rendered td,
+.markdown-rendered th {
+  white-space: normal !important;
+  overflow-wrap: break-word;
+  vertical-align: top;
+}
+
+/* Kod blokları (karar ağaçları) yatay kaydırılsın, satır kırılmasın */
+.markdown-rendered pre {
+  overflow-x: auto;
+  font-size: 0.82em;
+}
+
+/* Telefonda: 3+ sütunlu tablolarda yazı biraz küçülsün */
+.is-mobile .markdown-rendered table {
+  font-size: 0.86em;
+}

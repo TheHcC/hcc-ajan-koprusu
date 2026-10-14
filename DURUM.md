@@ -1,5 +1,9 @@
 # DURUM — özet (otorite değil)
 
+> **15.10.2026 · Sıradaki kapı: G0 — Codex FAZ 0 (envanter + tek yedek ZIP), Cihan "devam" diyene kadar başlamaz.**
+> Görev: [`gorevler/2026-10-15-studypack-temizlik.md`](gorevler/2026-10-15-studypack-temizlik.md) · Araçlar: [`araclar/ymm-studypack/`](araclar/ymm-studypack/)
+> Karar özeti: tek işçi (Codex, tek model, alt ajan yok) · tek format (ÇALIŞMA ≤15 KB + gerçek-soru VAKA) · üç statü (TASLAK → KONTROLLU → CALISILDI) · doğrulamayı script yapar · eski sürümler kasadan silinir, tek yedek ZIP kasa dışında.
+
 > **18.09.2026:** Gelen kutusu GitHub'dan Drive'a taşındı —
 > [HCC Ajan Köprüsü — Gelen Kutusu](https://drive.google.com/drive/folders/1MfpWVE8ubUO47018BuZ6uJCAVGkybRbJ).
 > Bu dosya (DURUM/GUNLUK/KARARLAR) hâlâ GitHub'da, değişmedi.
