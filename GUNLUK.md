@@ -1,5 +1,12 @@
 # GÜNLÜK — baştan sona anlatı
 
+## 2026-10-15 00:28 · Codex (GPT-6; tam model kimliği doğrulanamadı) — StudyPack G1
+
+- **Yapılan:** G0 kararları uygulandı; iki pilotun checker çıkışı 0 (yeni madde/sayı yok). VR-E-003 KONTROLLU; VT-SP-01 tam komisyon metni kaynağında bulunmadığından TASLAK. Yedi A5 PDF + yedi HTML hazır; silme ve parti dönüşümü yapılmadı. Miras 142 satır eşleştirildi, 116 eşleşmeyen raporda; 2010/3 S2 YM04 planında; VT-SP-09 tüm 22 Markdown kaynakla sırada.
+- **Çıktılar:** Drive 01_CIKTI_DENETIM_BEKLIYOR/2026-10-15-temizlik-G1-rapor.md; private ymm-korpus/raporlar/2026-10-15_codex_rapor_studypack-temizlik-G1/.
+- **Sonraki adım:** Claude pilot denetimi ve Cihan telefon PDF okuması; G1 onayı olmadan devam yok.
+- **Sınır:** mevzuat-mcp/yargi-mcp erişimi yok, güncel hukuk yeniden teyit edilmedi.
+
 ## 2026-10-14 23:51 · Codex — G0 sayım düzeltmesi
 
 Güncel sayım **462 dosya: 105 PAKET, 127 KOPYA, 99 SİSTEM, 64 DENEY, 67 KAYNAK** (403 kasa + 59 git); 39 farklı paket kimliği. İlk 431 dosyalık sayım git eşitlenmediği için eksikti ve geçersizdir. 403 dosyalık tek kasa ZIP’i değişmedi. 418 normal dosyanın SHA-256 kontrolü geçti; 475 atıf / 413 farklı tarih-sayı çifti.
