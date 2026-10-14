@@ -9,7 +9,8 @@ kontrolü. Model değil, kural çalışır; aynı girdiye her seferinde aynı so
        python paket_denetle.py bicim YENI_CALISMA.md [YENI_VAKA_1.md ...]
 
   2) Koruma denetimi (eski uzun paket → yeni dosyalar):
-       python paket_denetle.py karsilastir ESKI.md YENI_CALISMA.md [YENI_VAKA_1.md ...]
+       python paket_denetle.py karsilastir ESKI.md YENI_CALISMA.md [YENI_VAKA_1.md ...] [--kaynak 01_ham/.../2020_1.md ...]
+       --kaynak: VAKA'ya özgün soru/komisyon cevabı ham sınav dosyasından alındıysa o dosyalar.
        (Yeni dosyaların TOPLAMI eskiyle karşılaştırılır.)
 
 Seçenek: --rapor RAPOR.md  → sonucu dosyaya da yazar.
@@ -23,7 +24,7 @@ Ne HATA sayılır (iş durur, Cihan'a gelmez):
   * Eski paketteki bir özelge atfının yenide kaybolması.
   * Google Docs kaçış bozukluğu (\\#, \\*\\*, \\_ gibi).
   * Zorunlu frontmatter alanı / SORU / CEVAP / Kaynak bölümü eksikliği; CEVAP'ın SORU'dan önce gelmesi.
-  * ÇALIŞMA dosyasının 15 KB, VAKA dosyasının 20 KB sınırını aşması.
+  * ÇALIŞMA dosyasının 18 KB, VAKA dosyasının 20 KB sınırını aşması.
 
 Ne UYARI sayılır (Cihan'ın / denetçinin bakacağı liste):
   * Eski paketteki bir sayı, tarih, oran veya madde atfının yenide geçmemesi
@@ -44,7 +45,7 @@ except ImportError:  # pragma: no cover
 
 ZORUNLU_ALANLAR = ("id", "ders", "durum", "kaynak", "tarih", "uretici")
 GECERLI_DURUMLAR = ("TASLAK", "KONTROLLU", "CALISILDI")
-BOYUT_SINIRI = {"CALISMA": 15_000, "VAKA": 20_000}
+BOYUT_SINIRI = {"CALISMA": 18_000, "VAKA": 20_000}
 
 KANUNLAR = r"(VUK|GVK|KVK|KDVK|KDV|ÖTVK|DVK|HK|ÇVÖA|AATUHK|TTK|İYUK|6183|213|193|5520|3065|7456|7524|7440|5746|3568)"
 MADDE_RE = re.compile(
@@ -167,13 +168,57 @@ def bicim_denetle(yol: Path, hatalar: list, uyarilar: list) -> None:
         hatalar.append(f"{ad}: CEVAP bölümü SORU'dan önce geliyor")
     if not any("KAYNAK" in b for b in basliklar) and not (tur == "VAKA" and on.get("kaynak")):
         hatalar.append(f"{ad}: 'Kaynak' bölümü yok (sınav dönemi + resmî dayanak listesi)")
+    if re.search(r"mevzuat-mcp|yargi-mcp|erişimi bulunmadığından", govde, re.I):
+        hatalar.append(f"{ad}: gövdede kalıp doğrulama uyarısı var — teyit durumu yalnız frontmatter `guncellik_teyidi:` alanına yazılır")
+    if re.search(r"TASLAK_TEYIT_BEKLIYOR|dogrulama_durumu\s*:", govde):
+        hatalar.append(f"{ad}: gövdede eski/bayat statü satırı var (TASLAK_TEYIT_BEKLIYOR / dogrulama_durumu) — statü yalnız frontmatter `durum:`")
+    ters = len(re.findall(r"^\|\s*[—–]\s*\|\s*[—–]\s*\|\s*$", govde, re.M))
+    if ters:
+        hatalar.append(f"{ad}: {ters} adet '| — | — |' ayraçlı ters çevrilmiş tablo — tabloyu normal satır/sütun düzeninde yaz (sütun sınırı yok, telefonda kart görünümü otomatik)")
+    hedge = len(re.findall(r"[Kk]aynak paket(?:e göre|te|teki|in)", govde))
+    if hedge > 4:
+        uyarilar.append(f"{ad}: {hedge} kez 'kaynak pakete göre/pakette' kalıbı — kuralı doğrudan yaz, aktarım olduğunu tekrar tekrar söyleme")
+    if re.search(r"kurulmuş metin", govde):
+        uyarilar.append(f"{ad}: SORU 'kurulmuş metin' — özgün soru KAYNAK (01_ham) dosyasında varsa oradan birebir alınmalı")
     isaret = govde.count("⚠")
     if isaret:
         uyarilar.append(f"{ad}: {isaret} adet ⚠ işareti — denetçinin özellikle bakacağı yerler")
 
 
-def karsilastir(eski: Path, yeniler: list[Path], hatalar: list, uyarilar: list) -> dict:
+MIKRO_SORU_RE = re.compile(r"^\s*(?:\*\*)?Soru\s*\d+\s*[:.)]", re.M | re.I)
+
+
+def tekrar_karti_sayisi(govde: str) -> int:
+    """'SRS / Tekrar kart' başlıklı bölümlerdeki tablo satırlarını sayar (başlık ve ayraç hariç)."""
+    sayi, aktif = 0, False
+    for satir in govde.splitlines():
+        if re.match(r"^#{1,6}\s", satir):
+            aktif = bool(re.search(r"SRS|TEKRAR KART|FLASH|KART", sade(satir)))
+            continue
+        if aktif and satir.startswith("|") and not re.match(r"^\|[\s:|-]+\|?\s*$", satir):
+            sayi += 1
+    return max(0, sayi - 1) if sayi else 0  # ilk satır tablo başlığı
+
+
+def yeni_kaynak_alintilari(govde: str) -> list[str]:
+    """Yeni dosyada 'Kaynak cevap / komisyon' başlıklı bölümlerdeki > satırları."""
+    satirlar, aktif = [], False
+    for satir in govde.splitlines():
+        if re.match(r"^#{1,6}\s", satir):
+            aktif = bool(re.search(r"KAYNAK CEVAP|KOMISYON|RESMI CEVAP|TAM CEVAP", sade(satir)))
+            continue
+        if aktif and satir.startswith(">"):
+            t = bosluk_normalize(satir.lstrip(">").strip())
+            if len(t) > 25:
+                satirlar.append(t)
+    return satirlar
+
+
+def karsilastir(eski: Path, yeniler: list[Path], hatalar: list, uyarilar: list,
+                kaynaklar: list[Path] | None = None) -> dict:
     _, eski_govde = oku(eski)
+    kaynak_metin = "\n".join(oku(k)[1] for k in (kaynaklar or []))
+    izinli_govde = eski_govde + "\n" + kaynak_metin
     yeni_onler, yeni_govdeler = zip(*(oku(y) for y in yeniler))
     yeni_metin = "\n".join(yeni_govdeler)
     cikarilan = set(); izinli_atif = set()
@@ -183,17 +228,17 @@ def karsilastir(eski: Path, yeniler: list[Path], hatalar: list, uyarilar: list) 
 
     # 1) madde atıfları
     eski_m, yeni_m = madde_atiflari(eski_govde), madde_atiflari(yeni_metin)
-    for a in sorted(yeni_m - eski_m):
+    for a in sorted(yeni_m - madde_atiflari(izinli_govde)):
         if not any(a.startswith(sade(z).replace("C", "C")) or a == z for z in izinli_atif):
-            hatalar.append(f"YENİ MADDE ATFI eski pakette yok: `{a}` — kaynağını göster ya da `yeni_atiflar:` alanına gerekçesiyle yaz")
+            hatalar.append(f"YENİ MADDE ATFI eski pakette/KAYNAK'ta yok: `{a}` — kaynağını göster ya da `yeni_atiflar:` alanına gerekçesiyle yaz")
     for a in sorted(eski_m - yeni_m):
         if a.split(" ")[-1] not in cikarilan and a not in cikarilan:
             uyarilar.append(f"Eski madde atfı yenide geçmiyor: `{a}`")
 
     # 2) özelge atıfları
     eski_o, yeni_o = ozelge_atiflari(eski_govde), ozelge_atiflari(yeni_metin)
-    for o in sorted(yeni_o - eski_o):
-        hatalar.append(f"YENİ ÖZELGE ATFI eski pakette yok: `{o}`")
+    for o in sorted(yeni_o - ozelge_atiflari(izinli_govde)):
+        hatalar.append(f"YENİ ÖZELGE ATFI eski pakette/KAYNAK'ta yok: `{o}`")
     for o in sorted(eski_o - yeni_o):
         hatalar.append(f"Özelge atfı kayboldu: `{o}` (özelge listesi için korunmalı)")
 
@@ -205,17 +250,33 @@ def karsilastir(eski: Path, yeniler: list[Path], hatalar: list, uyarilar: list) 
         if eksik:
             hatalar.append(f"Kaynak cevap #{i} birebir korunmamış: {len(eksik)}/{len(satirlar)} satır bulunamadı; ilk: «{eksik[0][:90]}»")
 
+    # 3b) yenideki komisyon alıntıları eski pakette ya da KAYNAK'ta birebir var mı?
+    izinli_norm = bosluk_normalize(izinli_govde.replace(">", " "))
+    uydurma = [t for t in yeni_kaynak_alintilari(yeni_metin) if t not in izinli_norm]
+    if uydurma:
+        hatalar.append(f"Yenideki kaynak/komisyon alıntısının {len(uydurma)} satırı eski pakette ve KAYNAK'ta birebir yok; ilk: «{uydurma[0][:90]}»")
+
+    # 3c) mikro sorular ve tekrar kartları kaybolmasın
+    cikarilan_metin = " ".join(cikarilan).lower()
+    eski_soru, yeni_soru = len(MIKRO_SORU_RE.findall(eski_govde)), len(MIKRO_SORU_RE.findall(yeni_metin))
+    if yeni_soru < eski_soru and "mikro" not in cikarilan_metin:
+        hatalar.append(f"Mikro sorular kayboldu: eskide {eski_soru}, yenide {yeni_soru} — 'Soru N:' biçiminde SORU bölümüne, cevapları CEVAP bölümüne taşı")
+    eski_kart, yeni_kart = tekrar_karti_sayisi(eski_govde), tekrar_karti_sayisi(yeni_metin)
+    if yeni_kart < eski_kart and "kart" not in cikarilan_metin:
+        hatalar.append(f"Tekrar kartları kayboldu: eskide {eski_kart}, yenide {yeni_kart} — 'Tekrar kartları' başlıklı | Ön | Arka | tablosu olarak koru")
+
     # 4) sayılar ve tarihler
     eski_s, yeni_s = sayilar(eski_govde), sayilar(yeni_metin)
     kayip = sorted(x for x in eski_s - yeni_s if x not in cikarilan)
-    yeni_eklenen = sorted(yeni_s - eski_s)
+    yeni_eklenen = sorted(yeni_s - sayilar(izinli_govde))
     if kayip:
         uyarilar.append(f"Eskide olup yenide geçmeyen {len(kayip)} sayı/tarih/oran: {', '.join(kayip[:40])}" + (" …" if len(kayip) > 40 else ""))
     if yeni_eklenen:
         uyarilar.append(f"Yenide olup eskide olmayan {len(yeni_eklenen)} sayı/tarih/oran (yeni hesap ise verify.py'de olmalı): {', '.join(yeni_eklenen[:40])}" + (" …" if len(yeni_eklenen) > 40 else ""))
 
     return {"eski_madde": len(eski_m), "yeni_madde": len(yeni_m), "eski_ozelge": len(eski_o),
-            "eski_sayi": len(eski_s), "kayip_sayi": len(kayip), "yeni_sayi": len(yeni_eklenen)}
+            "eski_sayi": len(eski_s), "kayip_sayi": len(kayip), "yeni_sayi": len(yeni_eklenen),
+            "mikro_soru": f"{eski_soru}->{yeni_soru}", "tekrar_karti": f"{eski_kart}->{yeni_kart}"}
 
 
 # ------------------------------------------------------------------------- ana
@@ -225,6 +286,7 @@ def main() -> int:
     ap.add_argument("kip", choices=["bicim", "karsilastir"])
     ap.add_argument("dosyalar", nargs="+")
     ap.add_argument("--rapor")
+    ap.add_argument("--kaynak", nargs="*", default=[], help="KAYNAK (01_ham) sınav dosyaları: soru ve komisyon cevabı buradan birebir alınabilir")
     a = ap.parse_args()
 
     hatalar: list[str] = []
@@ -239,7 +301,7 @@ def main() -> int:
             sys.exit("karsilastir: ESKI.md ve en az bir YENI.md gerekir")
         for y in yollar[1:]:
             bicim_denetle(y, hatalar, uyarilar)
-        ozet = karsilastir(yollar[0], yollar[1:], hatalar, uyarilar)
+        ozet = karsilastir(yollar[0], yollar[1:], hatalar, uyarilar, [Path(k) for k in a.kaynak])
 
     satirlar = [f"# Denetim raporu — {a.kip}", "", "Dosyalar: " + ", ".join(y.name for y in yollar), ""]
     if ozet:

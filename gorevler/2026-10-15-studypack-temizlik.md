@@ -155,3 +155,43 @@ At every STOP: put the report in the Drive inbox subfolder `01_CIKTI_DENETIM_BEK
 `2026-10-xx-temizlik-G<n>-rapor.md`, and add one line at the top of `DURUM.md` in the bridge repo
 (`Sıradaki kapı: G<n> — Cihan/Claude onayı bekleniyor`). When this directive is finished, add
 `## Yanıt` at the bottom of this file and prefix the title with `[KAPANDI]`.
+
+---
+
+## EK-1 — G1 review by Claude (2026-10-15) · binding for G1b and all batches
+
+**Verdict:** mechanics PASS, content NOT YET ACCEPTED. Arithmetic in VT-SP-01 (SYN-VT01-A and flips F2/F4/F5)
+was re-computed and is correct. The checker passed, but four content problems slipped past it; the checker
+has been extended to catch them (pull `araclar/ymm-studypack/paket_denetle.py` again, byte-exact).
+
+Amendments (they override §2 where they conflict):
+
+1. **No boilerplate in the body.** Delete the "(⚠) … mevzuat-mcp / yargi-mcp erişimi bulunmadığından …"
+   paragraph from every file. Verification status goes only into a new frontmatter key
+   `guncellik_teyidi: "<date> — <source> (eski paketten)"`. Checker: HATA.
+2. **No hedging prefixes.** Do not start rules with "Kaynak pakete göre", "Kaynak pakette …". The pack's
+   statement *is* the rule; provenance lives in frontmatter and the Kaynak section. Checker: UYARI if > 4.
+3. **Tables: the 3-column limit is withdrawn.** Write tables in normal row/column form with as many columns
+   as the content needs. Never transpose a table into key–value rows separated by `| — | — |`
+   (VT-SP-01 §5, §8b, §9 did this and became unreadable). The renderer turns 3+ column tables into cards on
+   phones automatically. Checker: HATA. CALISMA size limit raised to 18 KB.
+4. **Keep micro questions and review cards.** The old packs' "Soru N:" micro exercises and SRS/"Tekrar kartları"
+   tables are the most useful study parts and were dropped in VR-E-003. Put micro questions in `7. SORU`
+   one per line as `**Soru N:** …`, their answers in `8. CEVAP` as `**Cevap N:** …`, and keep the card table
+   under a `## Tekrar kartları` heading (`| Ön | Arka |`). Checker: HATA if counts drop.
+5. **VAKA files are built from the raw exam source, not from the old pack's summary.** For every VAKA, take the
+   original question text and the full commission answer **verbatim with Python** from `ymm-korpus/01_ham/...`
+   and pass that file to the checker with `--kaynak`. The SORU must contain every fact needed to reach the
+   answer (VT-SP-01 VAKA-1 omitted the 100.000 VZC on the cancelled tax, so the 190.000 terkin cannot be
+   derived). "Kurulmuş metin" is allowed only if 01_ham really lacks the question; then name the 01_ham file
+   you checked. Checker: every quoted commission line must exist verbatim in the old pack or a `--kaynak` file.
+6. **Ezber = legal rules, not process advice.** Each Ezber sentence states a rule with its article/rate/date
+   (e.g. "KVK 5/1-a yurt içi tam mükellef iştirak kâr payı; 5/1-b yurt dışı iştirak kazancı"), not
+   "Kaynakta olmayan matrahı üretme".
+7. **Stale status lines out of the body** (`TASLAK_TEYIT_BEKLIYOR`, `dogrulama_durumu:`). For VR-E-003 the
+   frontmatter acceptance (KABUL, Cihan 2026-10-01) supersedes the earlier body note; delete the
+   "G1 denetiminde görülmeli" sentence. Checker: HATA.
+
+**Next step — G1b:** redo SP-VR-E-003 and VT-SP-01 with these rules (effort high), run the new checker with
+`--kaynak` for every VAKA, re-render, replace the G1 files, and **stop at G1b** with a short report listing the
+before/after checker summary lines (`mikro_soru`, `tekrar_karti`). Do not start batches.
