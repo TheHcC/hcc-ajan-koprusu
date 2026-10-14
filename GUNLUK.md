@@ -1,5 +1,13 @@
 # GÜNLÜK — baştan sona anlatı
 
+## 2026-10-14 23:46 · Codex — StudyPack temizliği — G0 tamamlandı
+
+431 dosya: 83 PAKET, 126 KOPYA, 91 SİSTEM, 64 DENEY, 67 KAYNAK; 39 farklı paket kimliği. 140 ham dosyada 475 atıf / 413 farklı tarih-sayı çifti (hukuki teyit değil). Tek ZIP: 403 dosya (359 normal + 44 Docs DOCX), içerik SHA-256 ve CRC geçti.
+
+Rapor ve ENVANTER.csv Drive gelen kutusunun `01_CIKTI_DENETIM_BEKLIYOR/` klasöründedir; çalışma ve doğrulama kayıtları private `ymm-korpus` deposundadır. Yedek kasa dışında `HcC Kasa Arsiv/40-YMM-Sinav_TEMIZLIK_ONCESI_2026-10-15.zip`; SHA-256 `30ddc590dc39d9341040eb72b9685579723065110036a4ef9418861ab0dcbc0f`. Dört araç git bloblarıyla byte birebir doğrulandı. Native Google Docs içerikleri gerçek DOCX dışa aktarımlarıyla korundu.
+
+Cihan G0 envanterini ve DENEY kararını onaylasın; ardından SP-VR-E-003 + VT-SP-01 pilotu, G1 duruşu. Onay gelmeden ilerleme yok.
+
 En yeni kayıt en üstte. Bu dosya "ne konuşuldu, hangi aşamalardan geçildi"
 sorusunun cevabıdır. Sohbete yeni katılan bir model önce burayı okur.
 
