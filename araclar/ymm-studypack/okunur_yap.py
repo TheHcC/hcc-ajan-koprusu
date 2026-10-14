@@ -24,7 +24,7 @@ Kullanım:
   python okunur_yap.py KLASOR --zorla                       # güncel olsa da yeniden üret
 
 Okunması gereken durumlar (frontmatter `durum:` alanında geçen kelimeye göre):
-  TASLAK, KONTROLLU, CALISILDI, OKUMA, ONAY  (büyük/küçük harf ve Türkçe karakter fark etmez)
+  KONTROLLU, CALISILDI, OKUMA, ONAY  (büyük/küçük harf ve Türkçe karakter fark etmez)
 """
 from __future__ import annotations
 
@@ -49,7 +49,7 @@ try:
 except ImportError:  # pragma: no cover
     yaml = None
 
-OKUNACAK_DURUMLAR = ("TASLAK", "KONTROLLU", "CALISILDI", "OKUMA", "ONAY")
+OKUNACAK_DURUMLAR = ("KONTROLLU", "CALISILDI", "OKUMA", "ONAY")
 CIKTI_KLASORU = "_okuma"
 
 

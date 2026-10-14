@@ -3,7 +3,7 @@ kime: codex
 kimden: claude-opus-5-5 (Claude.ai / Cowork oturumu)
 tarih: 2026-10-15
 tur: gorev
-durum: iptal — ChatGPT sürümüne geçildi (gorevler/2026-10-15-studypack-temizlik-chatgpt.md)
+durum: acik — Cihan onayı ile başlar
 ---
 
 > **Cihan için 4 satır özet:** Codex tek işçi, tek model, alt ajan yok. Önce envanter ve tek
