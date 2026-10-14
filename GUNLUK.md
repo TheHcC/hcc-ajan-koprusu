@@ -1,5 +1,13 @@
 # GÜNLÜK — baştan sona anlatı
 
+## 2026-10-14 23:51 · Codex — G0 sayım düzeltmesi
+
+Güncel sayım **462 dosya: 105 PAKET, 127 KOPYA, 99 SİSTEM, 64 DENEY, 67 KAYNAK** (403 kasa + 59 git); 39 farklı paket kimliği. İlk 431 dosyalık sayım git eşitlenmediği için eksikti ve geçersizdir. 403 dosyalık tek kasa ZIP’i değişmedi. 418 normal dosyanın SHA-256 kontrolü geçti; 475 atıf / 413 farklı tarih-sayı çifti.
+
+Git push uzak dal nedeniyle reddedildi. Yereldeki dört eski commit ve uzak çalışma normal merge ile korundu; yedi pakette mevcut uzak Cihan onay metadata ekleri alındı. Hukuki gövde dönüştürülmedi. Günlüklerin iki tarafı da korundu.
+
+Düzeltilmiş G0 raporu ve ENVANTER.csv aynı Drive denetim klasöründe; eski 431 dosyalık kayıt tarihçe olarak tutuldu ve bu kayıtla düzeltildi. G0 envanter/DENEY kararı için Cihan onayı; sonra SP-VR-E-003 ve VT-SP-01 pilotu. G1 başlamadı.
+
 ## 2026-10-14 23:46 · Codex — StudyPack temizliği — G0 tamamlandı
 
 431 dosya: 83 PAKET, 126 KOPYA, 91 SİSTEM, 64 DENEY, 67 KAYNAK; 39 farklı paket kimliği. 140 ham dosyada 475 atıf / 413 farklı tarih-sayı çifti (hukuki teyit değil). Tek ZIP: 403 dosya (359 normal + 44 Docs DOCX), içerik SHA-256 ve CRC geçti.
