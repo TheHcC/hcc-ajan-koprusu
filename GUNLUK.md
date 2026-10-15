@@ -1,5 +1,12 @@
 # GÜNLÜK — baştan sona anlatı
 
+## 2026-10-15T15:56:03.393312+03:00 — CODEX (GPT-6.1; tek model) · Son EK-4 / G3
+
+- Dal main’e birleştirildi; 9 V eki birebir aktarıldı. 8 paket HATA 0; VR006 tek denemede KVK 12/m ayrıştırması nedeniyle BLOKE, eski yayını korundu.
+- 34 MD + 34 A5 PDF + 34 HTML teslim; dokuz eski ayna değişmedi. Denetleyici kullanıcı talimatıyla 18.000/20.000 ve tam cevap bölümü ölçümüne uyarlandı.
+- Son kapsam değişikliği öncesindeki VT/Denetim çıktıları korundu; kapsam dışı yeni işlem ve FAZ 3–4 yok. G3 onayı bekleniyor.
+
+
 ## 2026-10-15 11:20 · CODEX (tek model) — EK-3 / G2
 
 - **Yapılan:** EK-3 sonrası Parti 04: 3 BLOKE ile G2. Önceki 004/006/007/008 geçti; bu tur toplam 8 geçti/4 BLOKE. 30 A5 PDF+HTML teslim; eski kaynaklar yerinde, FAZ 3–4 başlamadı.

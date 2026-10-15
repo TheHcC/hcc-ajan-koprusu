@@ -24,7 +24,8 @@ Ne HATA sayılır (iş durur, Cihan'a gelmez):
   * Eski paketteki bir özelge atfının yenide kaybolması.
   * Google Docs kaçış bozukluğu (\\#, \\*\\*, \\_ gibi).
   * Zorunlu frontmatter alanı / SORU / CEVAP / Kaynak bölümü eksikliği; CEVAP'ın SORU'dan önce gelmesi.
-  * Birebir komisyon alıntısı hariç: ÇALIŞMA 30 KB, VAKA 40 KB tavanını aşması (20 / 12 KB üstü yalnız UYARI).
+  * Codex EK-4: ÇALIŞMA 18.000 baytı; VAKA tam komisyon cevabı
+    bölümü çıkarıldıktan sonra yazılan metin 20.000 baytı aşması.
 
 Ne UYARI sayılır (Cihan'ın / denetçinin bakacağı liste):
   * Eski paketteki bir sayı, tarih, oran veya madde atfının yenide geçmemesi
@@ -45,8 +46,8 @@ except ImportError:  # pragma: no cover
 
 ZORUNLU_ALANLAR = ("id", "ders", "durum", "kaynak", "tarih", "uretici")
 GECERLI_DURUMLAR = ("TASLAK", "KONTROLLU", "CALISILDI")
-BOYUT_SINIRI = {"CALISMA": 20_000, "VAKA": 12_000}  # alıntı HARİÇ; aşılırsa UYARI (okunurluk)
-BOYUT_TAVANI = {"CALISMA": 30_000, "VAKA": 40_000}  # alıntı HARİÇ; aşılırsa HATA
+BOYUT_SINIRI = {"CALISMA": 18_000, "VAKA": 20_000}
+BOYUT_TAVANI = dict(BOYUT_SINIRI)
 
 KANUNLAR = r"(VUK|GVK|KVK|KDVK|KDV|ÖTVK|DVK|HK|ÇVÖA|AATUHK|TTK|İYUK|6183|213|193|5520|3065|7456|7524|7440|5746|3568)"
 MADDE_RE = re.compile(
@@ -149,19 +150,55 @@ def bas_sozcugu(baslik: str) -> str:
 
 def kaynak_bolumu_satirlari(govde: str) -> list[str]:
     """'Kaynak cevap / komisyon / resmî cevap / tam cevap' başlıklı bölümlerdeki > satırları (ham hâliyle)."""
-    satirlar, aktif = [], False
+    satirlar, aktif = [], None
     for satir in govde.splitlines():
-        if re.match(r"^#{1,6}\s", satir):
-            aktif = bool(re.search(r"KAYNAK CEVAP|KOMISYON|RESMI CEVAP|TAM CEVAP", sade(satir)))
+        baslik = re.match(r"^(#{1,6})\s", satir)
+        if baslik:
+            seviye = len(baslik[1])
+            if aktif is not None and seviye <= aktif:
+                aktif = None
+            if re.search(r"KAYNAK CEVAP|KOMISYON|RESMI CEVAP|TAM CEVAP", sade(satir)):
+                aktif = seviye
             continue
-        if aktif and satir.startswith(">"):
+        if aktif is not None and satir.startswith(">"):
             satirlar.append(satir)
     return satirlar
+
+
+def cevap_bolumu_bayti(govde: str) -> int:
+    """Tam komisyon cevabı başlığından sonraki eş/daha üst başlığa kadar ölçer."""
+    aktif_seviye = None
+    toplam = 0
+    for satir in govde.splitlines(keepends=True):
+        baslik = re.match(r"^(#{1,6})\s+(.*)", satir)
+        if baslik:
+            seviye = len(baslik[1])
+            if aktif_seviye is not None and seviye <= aktif_seviye:
+                aktif_seviye = None
+            if re.search(r"TAM KOMISYON CEVABI|KAYNAK CEVAP|TAM CEVAP|RESMI CEVAP", sade(baslik[2])):
+                aktif_seviye = seviye
+        if aktif_seviye is not None:
+            toplam += len(satir.encode("utf-8"))
+    return toplam
+
+
+def yazilan_metin_bayti(yol: Path) -> int:
+    _, govde = oku(yol)
+    cevap = cevap_bolumu_bayti(govde) if "VAKA" in sade(yol.name) else 0
+    return len(yol.read_bytes()) - cevap
 
 
 def bicim_denetle(yol: Path, hatalar: list, uyarilar: list) -> None:
     on, govde = oku(yol)
     ad = yol.name
+    if "VARYASYON" in sade(ad):
+        # EK-4 §3: Bu ekin gövdesi birebir taşınır; çalışma/vaka şeması aranmaz.
+        for alan in ("id", "kaynak_bolum", "durum"):
+            if not on.get(alan):
+                hatalar.append(f"{ad}: frontmatter `{alan}` eksik")
+        if sade(str(on.get("durum", ""))) not in GECERLI_DURUMLAR:
+            hatalar.append(f"{ad}: varyasyon durumu geçersiz")
+        return
     tur = "VAKA" if "VAKA" in sade(ad) else "CALISMA"
     for alan in ZORUNLU_ALANLAR:
         if alan not in on or on.get(alan) in (None, "", []):
@@ -170,10 +207,9 @@ def bicim_denetle(yol: Path, hatalar: list, uyarilar: list) -> None:
     if durum and durum not in GECERLI_DURUMLAR:
         hatalar.append(f"{ad}: durum `{on.get('durum')}` geçersiz — yalnız {', '.join(GECERLI_DURUMLAR)}")
     toplam = len(yol.read_bytes())
-    alinti = sum(len(t.encode("utf-8")) + 3 for t in kaynak_bolumu_satirlari(govde))
-    boyut = toplam - alinti  # resmî komisyon cevabı sınırı zorlamasın; birebirliği ayrıca denetleniyor
+    boyut = yazilan_metin_bayti(yol)
     if boyut > BOYUT_TAVANI[tur]:
-        hatalar.append(f"{ad}: alıntı hariç {boyut:,} bayt — {tur} tavanı {BOYUT_TAVANI[tur]:,} bayt (toplam {toplam:,})".replace(",", "."))
+        hatalar.append(f"{ad}: yazılan metin {boyut:,} bayt — {tur} sınırı {BOYUT_TAVANI[tur]:,} bayt (toplam {toplam:,})".replace(",", "."))
     elif boyut > BOYUT_SINIRI[tur]:
         uyarilar.append(f"{ad}: alıntı hariç {boyut:,} bayt — {tur} önerilen sınırı {BOYUT_SINIRI[tur]:,} bayt aşıyor (okunurluk; içerik kısaltılmaz)".replace(",", "."))
     kacislar = KACIS_RE.findall(govde)
@@ -226,15 +262,11 @@ def tekrar_karti_sayisi(govde: str) -> int:
 
 def yeni_kaynak_alintilari(govde: str) -> list[str]:
     """Yeni dosyada 'Kaynak cevap / komisyon' başlıklı bölümlerdeki > satırları."""
-    satirlar, aktif = [], False
-    for satir in govde.splitlines():
-        if re.match(r"^#{1,6}\s", satir):
-            aktif = bool(re.search(r"KAYNAK CEVAP|KOMISYON|RESMI CEVAP|TAM CEVAP", sade(satir)))
-            continue
-        if aktif and satir.startswith(">"):
-            t = bosluk_normalize(satir.lstrip(">").strip())
-            if len(t) > 25:
-                satirlar.append(t)
+    satirlar = []
+    for satir in kaynak_bolumu_satirlari(govde):
+        t = bosluk_normalize(satir.lstrip(">").strip())
+        if len(t) > 25:
+            satirlar.append(t)
     return satirlar
 
 

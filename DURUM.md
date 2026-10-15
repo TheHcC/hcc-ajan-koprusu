@@ -1,5 +1,12 @@
 # DURUM — özet (otorite değil)
 
+G3 raporu: [2026-10-15-temizlik-G3-rapor.md](https://drive.google.com/file/d/1zoiKHBfUK_0YpxUWJfmngCoRIpVLDVZc/view)
+
+**Sıradaki kapı: G3 — Cihan/Claude onayı bekleniyor.** (2026-10-15T15:56:03.393312+03:00; CODEX, GPT-6.1; tek model.)
+
+Son EK-4 VR kapsamı: 8 geçti, VR-E-006 tek denemede BLOKE; 34 MD/PDF/HTML teslim. V aktarımı 9/9 birebir (006 adayda). Eski dokuz ayna korundu; kalan FAZ 2 ve FAZ 3–4 bekliyor.
+
+
 > **15.10.2026 · EK-4 yeniden denetimi Claude yaptı: VT-SP-02/06/07/08 GEÇTİ (değiştirilmeden). Codex kotası dönünce: bu dördünü yayımla, FAZ 2'ye VT-SP-09'dan devam.**
 > Görev: [`gorevler/2026-10-15-studypack-temizlik.md`](gorevler/2026-10-15-studypack-temizlik.md) · Araçlar: [`araclar/ymm-studypack/`](araclar/ymm-studypack/)
 > Karar özeti: tek işçi (Codex, tek model, alt ajan yok) · tek format (ÇALIŞMA ≤18 KB (EK-1) + gerçek-soru VAKA) · üç statü (TASLAK → KONTROLLU → CALISILDI) · doğrulamayı script yapar · eski sürümler kasadan silinir, tek yedek ZIP kasa dışında.
