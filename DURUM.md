@@ -1,6 +1,6 @@
 # DURUM — özet (otorite değil)
 
-> **15.10.2026 · Sıradaki kapı: G2 — Cihan/Claude onayı bekleniyor. İkinci partide 3 BLOKE; toplam 4 paket geçti/4 BLOKE. FAZ 3–4 başlamadı.**
+> **15.10.2026 · G2 kararı (EK-3): boyut kuralı birebir komisyon alıntısını saymıyor; VR-E-004/006/007/008 bir kez yeniden denenir, sonra partiler sürer.**
 > Görev: [`gorevler/2026-10-15-studypack-temizlik.md`](gorevler/2026-10-15-studypack-temizlik.md) · Araçlar: [`araclar/ymm-studypack/`](araclar/ymm-studypack/)
 > Karar özeti: tek işçi (Codex, tek model, alt ajan yok) · tek format (ÇALIŞMA ≤18 KB (EK-1) + gerçek-soru VAKA) · üç statü (TASLAK → KONTROLLU → CALISILDI) · doğrulamayı script yapar · eski sürümler kasadan silinir, tek yedek ZIP kasa dışında.
 

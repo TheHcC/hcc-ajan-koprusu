@@ -24,7 +24,7 @@ Ne HATA sayılır (iş durur, Cihan'a gelmez):
   * Eski paketteki bir özelge atfının yenide kaybolması.
   * Google Docs kaçış bozukluğu (\\#, \\*\\*, \\_ gibi).
   * Zorunlu frontmatter alanı / SORU / CEVAP / Kaynak bölümü eksikliği; CEVAP'ın SORU'dan önce gelmesi.
-  * ÇALIŞMA dosyasının 18 KB, VAKA dosyasının 20 KB sınırını aşması.
+  * Birebir komisyon alıntısı hariç: ÇALIŞMA 20 KB, VAKA 12 KB sınırını aşması.
 
 Ne UYARI sayılır (Cihan'ın / denetçinin bakacağı liste):
   * Eski paketteki bir sayı, tarih, oran veya madde atfının yenide geçmemesi
@@ -45,7 +45,7 @@ except ImportError:  # pragma: no cover
 
 ZORUNLU_ALANLAR = ("id", "ders", "durum", "kaynak", "tarih", "uretici")
 GECERLI_DURUMLAR = ("TASLAK", "KONTROLLU", "CALISILDI")
-BOYUT_SINIRI = {"CALISMA": 18_000, "VAKA": 20_000}
+BOYUT_SINIRI = {"CALISMA": 20_000, "VAKA": 12_000}  # birebir komisyon alıntısı HARİÇ bayt
 
 KANUNLAR = r"(VUK|GVK|KVK|KDVK|KDV|ÖTVK|DVK|HK|ÇVÖA|AATUHK|TTK|İYUK|6183|213|193|5520|3065|7456|7524|7440|5746|3568)"
 MADDE_RE = re.compile(
@@ -141,6 +141,18 @@ def liste(on: dict, anahtar: str) -> list[str]:
 
 # ------------------------------------------------------------------- denetimler
 
+def kaynak_bolumu_satirlari(govde: str) -> list[str]:
+    """'Kaynak cevap / komisyon / resmî cevap / tam cevap' başlıklı bölümlerdeki > satırları (ham hâliyle)."""
+    satirlar, aktif = [], False
+    for satir in govde.splitlines():
+        if re.match(r"^#{1,6}\s", satir):
+            aktif = bool(re.search(r"KAYNAK CEVAP|KOMISYON|RESMI CEVAP|TAM CEVAP", sade(satir)))
+            continue
+        if aktif and satir.startswith(">"):
+            satirlar.append(satir)
+    return satirlar
+
+
 def bicim_denetle(yol: Path, hatalar: list, uyarilar: list) -> None:
     on, govde = oku(yol)
     ad = yol.name
@@ -151,9 +163,11 @@ def bicim_denetle(yol: Path, hatalar: list, uyarilar: list) -> None:
     durum = sade(str(on.get("durum", "")))
     if durum and durum not in GECERLI_DURUMLAR:
         hatalar.append(f"{ad}: durum `{on.get('durum')}` geçersiz — yalnız {', '.join(GECERLI_DURUMLAR)}")
-    boyut = len(yol.read_bytes())
+    toplam = len(yol.read_bytes())
+    alinti = sum(len(t.encode("utf-8")) + 3 for t in kaynak_bolumu_satirlari(govde))
+    boyut = toplam - alinti  # resmî komisyon cevabı sınırı zorlamasın; birebirliği ayrıca denetleniyor
     if boyut > BOYUT_SINIRI[tur]:
-        hatalar.append(f"{ad}: {boyut:,} bayt — {tur} sınırı {BOYUT_SINIRI[tur]:,} bayt".replace(",", "."))
+        hatalar.append(f"{ad}: alıntı hariç {boyut:,} bayt — {tur} sınırı {BOYUT_SINIRI[tur]:,} bayt (toplam {toplam:,})".replace(",", "."))
     kacislar = KACIS_RE.findall(govde)
     if len(kacislar) > 3:
         hatalar.append(f"{ad}: {len(kacislar)} adet kaçış bozukluğu (\\# \\* vb.) — Google Docs dönüşümü kalıntısı")

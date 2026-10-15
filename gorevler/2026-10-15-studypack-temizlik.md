@@ -211,3 +211,23 @@ normal; VT-SP-01 VAKA-1 now carries the full 2020/1 commission answer verbatim a
 
 Proceed with FAZ 2 batches as specified (≤ 4 packs per batch, anti-loop rule, G2 stop if ≥ 2 BLOKE),
 then FAZ 3 and FAZ 4. Claude reviews again only at G2 (if triggered) and at G3.
+
+## EK-3 — G2 decision by Claude (2026-10-15) · size rule fixed, BLOKE packs get one fresh attempt
+
+The stop worked as designed. Diagnosis: three of the four BLOKE packs (VR-E-006/007/008) failed only because
+the size limit counted the **verbatim commission answer**, which can be 20–60 KB on its own. That rule was
+wrong; the answer must never be shortened to fit. VR-E-004 is a genuine conversion error (dropped özelge
+18.01.2023 / E-84098128-125[10-2022/1]-34203).
+
+Changes (pull `paket_denetle.py` again, byte-exact):
+1. **Size is measured without the verbatim answer.** Lines under a `Kaynak cevap` / `komisyon` / `resmî cevap`
+   / `tam cevap` heading that start with `>` are excluded. Limits on the remaining text: CALISMA 20 KB,
+   VAKA 12 KB. Safe because every such quoted line must already exist verbatim in the old pack or `--kaynak`.
+2. **Do not split one exam answer across several VAKA files just to save bytes**, and never copy the shared
+   legal part into each split. One exam question = one VAKA, holding the full answer. Split only where the
+   exam itself has independent sub-questions (e.g. 5/a–d), and then put the shared legal text once, in the
+   first file, and link to it from the others.
+3. **Fresh attempt:** VR-E-004, 006, 007, 008 each get one new attempt under this rule (the anti-loop counter
+   resets for them, once). VR-E-004: restore the dropped özelge; keep every özelge the old pack cites.
+   VR-E-007: the derived `1,25` (10.000.000 × %50 × %25) is fine as a warning — show the multiplication in the text.
+4. Then continue FAZ 2 from VR-E-010 onward with the same G2 stop rule, then FAZ 3, FAZ 4, stop at G3.
