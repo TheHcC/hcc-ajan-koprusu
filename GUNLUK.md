@@ -1,5 +1,12 @@
 # GÜNLÜK — baştan sona anlatı
 
+## 2026-10-15 10:24 · CODEX (tek model) — StudyPack G2
+
+- **Yapılan:** İki parti/8 paket işlendi: 4 KONTROLLU, 4 BLOKE. İkinci partide 3 BLOKE ile G2 sert duruşu; 12 yeni A5 PDF+HTML teslim. Eski dosyalar korundu; FAZ 3–4 başlamadı.
+- **Değişen dosyalar:** Özel ymm-korpus raporlar/2026-10-15_codex_rapor_studypack-temizlik-partiler/; geçen paketler; EK-2 pilot düzeltmeleri.
+- **Sonraki adım:** G2 için Cihan/Claude incelemesi; yeni parti/temizlik onaysız başlamaz.
+- **Rapor:** Drive 01_CIKTI_DENETIM_BEKLIYOR/2026-10-15-temizlik-G2-rapor.md.
+
 ## 2026-10-15T09:56:34.888505+03:00 · CODEX — StudyPack G1b
 
 EK-1 ile iki pilot yenilendi; ikisi de HATA 0/çıkış 0. VR mikro_soru 6→6, tekrar_karti 12→12; dört VAKA ham kaynakla doğrulandı. Altı A5 PDF+HTML hazır. G1b onayı bekleniyor; partiler başlamadı.
