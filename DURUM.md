@@ -1,6 +1,6 @@
 # DURUM — özet (otorite değil)
 
-> **15.10.2026 · Sıradaki kapı: G2 — Cihan/Claude onayı bekleniyor. EK-3 eski dört BLOKE’yi kapattı; Parti 04’te 3 yeni BLOKE. FAZ 3–4 başlamadı.**
+> **15.10.2026 · İkinci G2 kararı (EK-4): boyut yalnız uyarı (tavan ÇALIŞMA 30 KB / VAKA 40 KB); VT-SP-02/06/07/08 yeniden denetlenir, partiler VT-SP-09'dan sürer.**
 > Görev: [`gorevler/2026-10-15-studypack-temizlik.md`](gorevler/2026-10-15-studypack-temizlik.md) · Araçlar: [`araclar/ymm-studypack/`](araclar/ymm-studypack/)
 > Karar özeti: tek işçi (Codex, tek model, alt ajan yok) · tek format (ÇALIŞMA ≤18 KB (EK-1) + gerçek-soru VAKA) · üç statü (TASLAK → KONTROLLU → CALISILDI) · doğrulamayı script yapar · eski sürümler kasadan silinir, tek yedek ZIP kasa dışında.
 

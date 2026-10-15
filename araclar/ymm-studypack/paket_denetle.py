@@ -24,7 +24,7 @@ Ne HATA sayılır (iş durur, Cihan'a gelmez):
   * Eski paketteki bir özelge atfının yenide kaybolması.
   * Google Docs kaçış bozukluğu (\\#, \\*\\*, \\_ gibi).
   * Zorunlu frontmatter alanı / SORU / CEVAP / Kaynak bölümü eksikliği; CEVAP'ın SORU'dan önce gelmesi.
-  * Birebir komisyon alıntısı hariç: ÇALIŞMA 20 KB, VAKA 12 KB sınırını aşması.
+  * Birebir komisyon alıntısı hariç: ÇALIŞMA 30 KB, VAKA 40 KB tavanını aşması (20 / 12 KB üstü yalnız UYARI).
 
 Ne UYARI sayılır (Cihan'ın / denetçinin bakacağı liste):
   * Eski paketteki bir sayı, tarih, oran veya madde atfının yenide geçmemesi
@@ -45,7 +45,8 @@ except ImportError:  # pragma: no cover
 
 ZORUNLU_ALANLAR = ("id", "ders", "durum", "kaynak", "tarih", "uretici")
 GECERLI_DURUMLAR = ("TASLAK", "KONTROLLU", "CALISILDI")
-BOYUT_SINIRI = {"CALISMA": 20_000, "VAKA": 12_000}  # birebir komisyon alıntısı HARİÇ bayt
+BOYUT_SINIRI = {"CALISMA": 20_000, "VAKA": 12_000}  # alıntı HARİÇ; aşılırsa UYARI (okunurluk)
+BOYUT_TAVANI = {"CALISMA": 30_000, "VAKA": 40_000}  # alıntı HARİÇ; aşılırsa HATA
 
 KANUNLAR = r"(VUK|GVK|KVK|KDVK|KDV|ÖTVK|DVK|HK|ÇVÖA|AATUHK|TTK|İYUK|6183|213|193|5520|3065|7456|7524|7440|5746|3568)"
 MADDE_RE = re.compile(
@@ -141,6 +142,11 @@ def liste(on: dict, anahtar: str) -> list[str]:
 
 # ------------------------------------------------------------------- denetimler
 
+def bas_sozcugu(baslik: str) -> str:
+    """'10. CEVAP', 'C1. ÇÖZÜM', 'A. SORU' → numarasız, sadeleştirilmiş baş."""
+    return re.sub(r"^[A-Z]?\d*[A-Z]?[.)]\s*", "", sade(baslik).strip())
+
+
 def kaynak_bolumu_satirlari(govde: str) -> list[str]:
     """'Kaynak cevap / komisyon / resmî cevap / tam cevap' başlıklı bölümlerdeki > satırları (ham hâliyle)."""
     satirlar, aktif = [], False
@@ -166,14 +172,18 @@ def bicim_denetle(yol: Path, hatalar: list, uyarilar: list) -> None:
     toplam = len(yol.read_bytes())
     alinti = sum(len(t.encode("utf-8")) + 3 for t in kaynak_bolumu_satirlari(govde))
     boyut = toplam - alinti  # resmî komisyon cevabı sınırı zorlamasın; birebirliği ayrıca denetleniyor
-    if boyut > BOYUT_SINIRI[tur]:
-        hatalar.append(f"{ad}: alıntı hariç {boyut:,} bayt — {tur} sınırı {BOYUT_SINIRI[tur]:,} bayt (toplam {toplam:,})".replace(",", "."))
+    if boyut > BOYUT_TAVANI[tur]:
+        hatalar.append(f"{ad}: alıntı hariç {boyut:,} bayt — {tur} tavanı {BOYUT_TAVANI[tur]:,} bayt (toplam {toplam:,})".replace(",", "."))
+    elif boyut > BOYUT_SINIRI[tur]:
+        uyarilar.append(f"{ad}: alıntı hariç {boyut:,} bayt — {tur} önerilen sınırı {BOYUT_SINIRI[tur]:,} bayt aşıyor (okunurluk; içerik kısaltılmaz)".replace(",", "."))
     kacislar = KACIS_RE.findall(govde)
     if len(kacislar) > 3:
         hatalar.append(f"{ad}: {len(kacislar)} adet kaçış bozukluğu (\\# \\* vb.) — Google Docs dönüşümü kalıntısı")
     basliklar = [sade(b) for b in re.findall(r"^#{1,6}\s+(.*)$", govde, re.M)]
-    soru = next((i for i, b in enumerate(basliklar) if re.search(r"\bSORU\b", b)), None)
-    cevap = next((i for i, b in enumerate(basliklar) if re.search(r"\bCEVAP\b|^\W*\w?\d*\.?\s*COZUM\b(?!\s+SIRASI)", b)), None)
+    alt_basliklar = [(i, bas_sozcugu(b)) for i, b in enumerate(basliklar)
+                     if not re.match(r"^#\s", re.findall(r"^#{1,6}\s+.*$", govde, re.M)[i])]  # H1 başlık sayılmaz
+    soru = next((i for i, b in alt_basliklar if re.match(r"(MIKRO\s+)?SORU", b)), None)
+    cevap = next((i for i, b in alt_basliklar if re.match(r"CEVAP|TAM KAYNAK CEVAP|KAYNAK CEVAP|COZUM(?!\s+(SIRASI|ALGORITMA|ADIMLARI|YOLU))", b)), None)
     if soru is None:
         hatalar.append(f"{ad}: 'SORU' başlıklı bölüm yok (cevabı kapalı çalışma için zorunlu)")
     if cevap is None:

@@ -231,3 +231,23 @@ Changes (pull `paket_denetle.py` again, byte-exact):
    resets for them, once). VR-E-004: restore the dropped özelge; keep every özelge the old pack cites.
    VR-E-007: the derived `1,25` (10.000.000 × %50 × %25) is fine as a warning — show the multiplication in the text.
 4. Then continue FAZ 2 from VR-E-010 onward with the same G2 stop rule, then FAZ 3, FAZ 4, stop at G3.
+
+## EK-4 — second G2 decision by Claude (2026-10-15) · size is advisory, not a blocker
+
+Diagnosis: all four new BLOKE are rule problems, not content problems.
+- VT-SP-06/07/08 VAKA files are the already-accepted new-style worked cases (e.g. VT-SP-08 VAKA-1, 2025/3
+  özel okul: full tax, penalty, recurrence and tekerrür computation). Their body was correctly left untouched;
+  a 12 KB cap cannot be met without cutting real teaching content. Correctness beats file size.
+- VT-SP-02 exceeds 20 KB by 989 bytes — not worth cutting content for.
+- VT-SP-08 "CEVAP before SORU" was a checker bug: the H1 title "Vaka 1 · … · Cevap 1-c" was read as the
+  answer heading.
+
+Changes (pull `paket_denetle.py` again, byte-exact):
+1. Size (verbatim answer excluded) is now **advisory**: above CALISMA 20 KB / VAKA 12 KB → UYARI only;
+   **HATA only above CALISMA 30 KB / VAKA 40 KB**. Never shorten teaching content to meet a size number.
+2. SORU/CEVAP detection ignores the H1 title and reads only the leading word of a heading
+   (`A. SORU`, `8. CEVAP`, `C. ÇÖZÜM`; `ÇÖZÜM SIRASI` is not an answer heading).
+3. **Re-evaluate, don't rewrite:** run the new checker on the existing BLOKE candidates of VT-SP-02, 06, 07, 08
+   as they are. If they pass, publish them (render + status rule). This is a re-check under a corrected rule,
+   not a new attempt. If anything else fails, apply the normal one-repair rule.
+4. Continue FAZ 2 (VT-SP-09, Denetim, YM) with the same G2 rule, then FAZ 3, FAZ 4, stop at G3.
