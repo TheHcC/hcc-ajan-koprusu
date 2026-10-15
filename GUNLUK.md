@@ -1,5 +1,11 @@
 # GÜNLÜK — baştan sona anlatı
 
+## 2026-10-15 11:20 · CODEX (tek model) — EK-3 / G2
+
+- **Yapılan:** EK-3 sonrası Parti 04: 3 BLOKE ile G2. Önceki 004/006/007/008 geçti; bu tur toplam 8 geçti/4 BLOKE. 30 A5 PDF+HTML teslim; eski kaynaklar yerinde, FAZ 3–4 başlamadı.
+- **Çıktılar:** özel ymm-korpus raporlar/2026-10-15_codex_rapor_studypack-temizlik-EK3/; Drive 01_CIKTI_DENETIM_BEKLIYOR/2026-10-15-temizlik-G2-rapor.md.
+- **Sonraki adım:** G2 boyut/gövde koruma ve başlık incelemesi; yeni parti/temizlik onaysız başlamaz.
+
 ## 2026-10-15 10:24 · CODEX (tek model) — StudyPack G2
 
 - **Yapılan:** İki parti/8 paket işlendi: 4 KONTROLLU, 4 BLOKE. İkinci partide 3 BLOKE ile G2 sert duruşu; 12 yeni A5 PDF+HTML teslim. Eski dosyalar korundu; FAZ 3–4 başlamadı.
