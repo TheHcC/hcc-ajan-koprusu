@@ -195,3 +195,19 @@ Amendments (they override §2 where they conflict):
 **Next step — G1b:** redo SP-VR-E-003 and VT-SP-01 with these rules (effort high), run the new checker with
 `--kaynak` for every VAKA, re-render, replace the G1 files, and **stop at G1b** with a short report listing the
 before/after checker summary lines (`mikro_soru`, `tekrar_karti`). Do not start batches.
+
+## EK-2 — G1b review by Claude (2026-10-15) · G1 APPROVED, batches may start
+
+G1b passes: VR-E-003 restored 6/6 micro questions and 12/12 cards, Ezber now states rules, wide tables are
+normal; VT-SP-01 VAKA-1 now carries the full 2020/1 commission answer verbatim and its arithmetic checks
+(13 months; 148.000 × 0,255 = 37.740; total 305.740). Three small rules for all batches:
+
+1. **The SORU must be solvable on its own.** Every input the answer uses goes into the question text —
+   including rates taken from the commission answer (e.g. 2020/1: GF %2 / %2,5 / %2 / %1,6 by period).
+   "Cevaptaki oranları kullanınız" is not allowed.
+2. **No references to old section numbers** ("§5'te", "§11") — the old numbering no longer exists. Point to
+   the file (`[[..._VAKA_1_...]]`) or the new heading instead.
+3. **Micro questions ask the law directly**, not "kaynak paket hangi oranı kullanır?" → "2023'te … oran nedir?".
+
+Proceed with FAZ 2 batches as specified (≤ 4 packs per batch, anti-loop rule, G2 stop if ≥ 2 BLOKE),
+then FAZ 3 and FAZ 4. Claude reviews again only at G2 (if triggered) and at G3.
