@@ -182,7 +182,7 @@ def bicim_denetle(yol: Path, hatalar: list, uyarilar: list) -> None:
     basliklar = [sade(b) for b in re.findall(r"^#{1,6}\s+(.*)$", govde, re.M)]
     alt_basliklar = [(i, bas_sozcugu(b)) for i, b in enumerate(basliklar)
                      if not re.match(r"^#\s", re.findall(r"^#{1,6}\s+.*$", govde, re.M)[i])]  # H1 başlık sayılmaz
-    soru = next((i for i, b in alt_basliklar if re.match(r"(MIKRO\s+)?SORU", b)), None)
+    soru = next((i for i, b in alt_basliklar if re.search(r"\bSORU(LAR)?\b", b)), None)  # 'A. DÖRT SORU' de sayılır
     cevap = next((i for i, b in alt_basliklar if re.match(r"CEVAP|TAM KAYNAK CEVAP|KAYNAK CEVAP|COZUM(?!\s+(SIRASI|ALGORITMA|ADIMLARI|YOLU))", b)), None)
     if soru is None:
         hatalar.append(f"{ad}: 'SORU' başlıklı bölüm yok (cevabı kapalı çalışma için zorunlu)")

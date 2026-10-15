@@ -251,3 +251,9 @@ Changes (pull `paket_denetle.py` again, byte-exact):
    as they are. If they pass, publish them (render + status rule). This is a re-check under a corrected rule,
    not a new attempt. If anything else fails, apply the normal one-repair rule.
 4. Continue FAZ 2 (VT-SP-09, Denetim, YM) with the same G2 rule, then FAZ 3, FAZ 4, stop at G3.
+
+### EK-4 ek not — Claude re-check done (2026-10-15, Codex quota out)
+Claude ran the EK-4 checker on the four BLOKE candidates in `raporlar/2026-10-15_codex_rapor_studypack-temizlik-EK3/BLOKE/`
+without changing them: **VT-SP-02, 06, 07, 08 → all GEÇTİ (HATA 0)**. VT-SP-08 first hit one more checker bug
+(`A. DÖRT SORU` not recognised as a SORU heading); fixed in `paket_denetle.py` — pull it again.
+Next Codex step: publish these four as they are (render + status rule; no rewrite), then continue FAZ 2 from VT-SP-09.

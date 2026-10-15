@@ -19,7 +19,7 @@ Dosyalar: `gorevler/2026-10-15-studypack-temizlik.md` · `araclar/ymm-studypack/
 | v1.1 | 2026-10-15 | EK-1: gövdede kalıp uyarı yok, ters tablo yasağı ve sütun sınırı kaldırıldı, mikro soru/tekrar kartı korunur, VAKA ham kaynaktan birebir (`--kaynak`), ezber = hukuk kuralı (95f2031) | G1'de içerik kaybı ve okunamaz tablolar; denetim geçmesine rağmen | G1b: VR-E-003 mikro soru 6→6, kart 12→12; VT-SP-01 tam komisyon cevabı | Stabil |
 | v1.2 | 2026-10-15 | EK-2: soru kendi başına çözülebilir, eski bölüm numarasına atıf yok, mikro sorular doğrudan (7a0eda4) | G1b'de küçük kusurlar | Parti 01–02: 4 paket geçti, 4 BLOKE | Stabil |
 | v1.3 | 2026-10-15 | EK-3: boyut sınırı birebir komisyon alıntısını saymaz (ÇALIŞMA 20 KB / VAKA 12 KB); tek soru = tek VAKA; BLOKE 4 pakete bir yeni deneme (50596ee) | 3 BLOKE'nin nedeni kuraldı: alıntı 20–60 KB | 4 eski BLOKE geçti; parti 03–04'te 4 yeni BLOKE (hepsi boyut/başlık kuralı) | Sorunlu |
-| v1.4 | 2026-10-15 | EK-4: boyut yalnız uyarı, tavan ÇALIŞMA 30 KB / VAKA 40 KB; H1 başlık SORU/CEVAP sırasına sayılmaz; BLOKE adaylar yeniden yazılmadan yeniden denetlenir | Hazır işlenmiş vakalar (VT-SP-06/07/08) 12 KB'a sığmıyordu; başlık okuma hatası | Bekleniyor | Test |
+| v1.4 | 2026-10-15 | EK-4: boyut yalnız uyarı, tavan ÇALIŞMA 30 KB / VAKA 40 KB; H1 başlık SORU/CEVAP sırasına sayılmaz; BLOKE adaylar yeniden yazılmadan yeniden denetlenir | Hazır işlenmiş vakalar (VT-SP-06/07/08) 12 KB'a sığmıyordu; başlık okuma hatası | Yeniden denetim: 4/4 BLOKE geçti (bir başlık hatası daha düzeltildi) | Stabil |
 
 ## Eski tracker'dan devreden, kaydı yapılmamış sürümler
 
