@@ -1,5 +1,11 @@
 # GÜNLÜK — baştan sona anlatı
 
+## 2026-10-15T09:56:34.888505+03:00 · CODEX — StudyPack G1b
+
+EK-1 ile iki pilot yenilendi; ikisi de HATA 0/çıkış 0. VR mikro_soru 6→6, tekrar_karti 12→12; dört VAKA ham kaynakla doğrulandı. Altı A5 PDF+HTML hazır. G1b onayı bekleniyor; partiler başlamadı.
+
+Rapor: Drive 01_CIKTI_DENETIM_BEKLIYOR/2026-10-15-temizlik-G1b-rapor.md; özel ymm-korpus raporlar/2026-10-15_codex_rapor_studypack-temizlik-G1b/.
+
 ## 2026-10-15 00:28 · Codex (GPT-6; tam model kimliği doğrulanamadı) — StudyPack G1
 
 - **Yapılan:** G0 kararları uygulandı; iki pilotun checker çıkışı 0 (yeni madde/sayı yok). VR-E-003 KONTROLLU; VT-SP-01 tam komisyon metni kaynağında bulunmadığından TASLAK. Yedi A5 PDF + yedi HTML hazır; silme ve parti dönüşümü yapılmadı. Miras 142 satır eşleştirildi, 116 eşleşmeyen raporda; 2010/3 S2 YM04 planında; VT-SP-09 tüm 22 Markdown kaynakla sırada.
