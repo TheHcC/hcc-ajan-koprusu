@@ -21,6 +21,15 @@ Dosyalar: `gorevler/2026-10-15-studypack-temizlik.md` · `araclar/ymm-studypack/
 | v1.3 | 2026-10-15 | EK-3: boyut sınırı birebir komisyon alıntısını saymaz (ÇALIŞMA 20 KB / VAKA 12 KB); tek soru = tek VAKA; BLOKE 4 pakete bir yeni deneme (50596ee) | 3 BLOKE'nin nedeni kuraldı: alıntı 20–60 KB | 4 eski BLOKE geçti; parti 03–04'te 4 yeni BLOKE (hepsi boyut/başlık kuralı) | Sorunlu |
 | v1.4 | 2026-10-15 | EK-4: boyut yalnız uyarı, tavan ÇALIŞMA 30 KB / VAKA 40 KB; H1 başlık SORU/CEVAP sırasına sayılmaz; BLOKE adaylar yeniden yazılmadan yeniden denetlenir | Hazır işlenmiş vakalar (VT-SP-06/07/08) 12 KB'a sığmıyordu; başlık okuma hatası | Yeniden denetim: 4/4 BLOKE geçti (bir başlık hatası daha düzeltildi) | Stabil |
 
+## HCC-Beyin (Hermes yakalama/düzenleme/bülten prompt'ları)
+
+Dosyalar: Drive `HcC Kasa Obsidian/HCC-Beyin/_sistem/hermes-kurallari.md` (3 blok) · anayasa: `HCC-Beyin/00_Claude-Gorus-1_Yalin-Sistem.md`
+Değişiklik kuralı: 4. bültene (2026-11-15) kadar yalnız hata düzeltmesi; yeni alan/bölüm/klasör eklenmez.
+
+| Sürüm | Tarih | Değişiklik | Neden | Sonuç | Durum |
+|---|---|---|---|---|---|
+| v0.1 | 2026-10-18 | İlk sürüm, Cihan onaylı. Blok 1: Telegram yakalama kuralı (yalnız link/iletilen içerik ya da `b:` = kart; mükellef verisi reddedilir). Blok 2: günlük 07:30 inbox hijyeni + Hermes karşı görüşü + `derin_qc` bayrağı. Blok 3: Pazar 20:00 bülten (maks. 5 dk, boşsa alarm) + `onay N` / `red N` komutu. Ek: CLAUDE.md/AGENTS.md'ye tek satırlık kart yazma kuralı | ChatGPT'nin v0 tasarımı (7 faz kapısı, 6 durum, 5 hafıza türü) tek kişilik kullanım için fazla ağırdı; darboğaz kayıttı, QC değil | Bekleniyor — Hermes'e yüklenmedi; ilk bülten 2026-10-25 | Taslak |
+
 ## Eski tracker'dan devreden, kaydı yapılmamış sürümler
 
 | Prompt | Sürüm | Tarih | Not |
