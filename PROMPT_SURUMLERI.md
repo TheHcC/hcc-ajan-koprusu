@@ -30,6 +30,16 @@ Değişiklik kuralı: 4. bültene (2026-11-15) kadar yalnız hata düzeltmesi; y
 |---|---|---|---|---|---|
 | v0.1 | 2026-10-18 | İlk sürüm, Cihan onaylı. Blok 1: Telegram yakalama kuralı (yalnız link/iletilen içerik ya da `b:` = kart; mükellef verisi reddedilir). Blok 2: günlük 07:30 inbox hijyeni + Hermes karşı görüşü + `derin_qc` bayrağı. Blok 3: Pazar 20:00 bülten (maks. 5 dk, boşsa alarm) + `onay N` / `red N` komutu. Ek: CLAUDE.md/AGENTS.md'ye tek satırlık kart yazma kuralı | ChatGPT'nin v0 tasarımı (7 faz kapısı, 6 durum, 5 hafıza türü) tek kişilik kullanım için fazla ağırdı; darboğaz kayıttı, QC değil | Bekleniyor — Hermes'e yüklenmedi; ilk bülten 2026-10-25 | Taslak |
 
+## PCH — prompts.chat kişisel hasat (Hermes görev emri)
+
+Dosyalar: Drive `HcC Kasa Obsidian/20-Araclar/prompts.chat/HERMES_GOREV_PCH_HASAT_2026-10-23_v1.2.md` (güncel) · sevk: `VPS-KUTUSU/GIRIS/` · çıktı: `VPS-KUTUSU/CIKTI/PROMPTS-CHAT/HERMES-PCH-HASAT-2026-10-23/`
+
+| Sürüm | Tarih | Değişiklik | Neden | Sonuç | Durum |
+|---|---|---|---|---|---|
+| v1.0 | 2026-10-23 | İlk direktif (Claude): profil merceği, 8 küme, 5 ölçütlü puanlama, ≤15 Hazine, desen kütüphanesi; çıktıyı rclone ile doğrudan kasaya yazıyordu | — | Sevk edilmedi | İptal |
+| v1.1 | 2026-10-23 | **VPS-KUTUSU uyumlu** (Claude): `HERMES_GOREV` biçimi; yazma yalnız `CIKTI/PROMPTS-CHAT/<görev>`; kasa notları `04_OBSIDIAN_IMPORT_BUNDLE` olarak önerilir, kasaya alımı Claude QC sonrası yapar; tek seferlik icra + kopya savunması + Drive geri-okuma; MCP ekleme yasak | Hermes Drive'da yalnız VPS-KUTUSU'yu kullanabiliyor; v1.0 bu kuralı çiğniyordu | Sevk edilmedi; v1.2 yerine geçti | İptal |
+| v1.2 | 2026-10-23 | ChatGPT revizyonu: doğrulanmamış profil varsayımları çıkarıldı; 22.10 yönetici raporu kuralının `_YONETICI` dar yazma istisnası; tek 0–10 puanlama, gizli bonus yok; CSV eksikse HTML/MCP alternatifi; gerçek test / masa başı / statik inceleme ayrımı | v1.1'de profil varsayımları ve bonus/ceza karmaşası | GIRIS'e sevk edildi (2026-10-23 20:49 TR); sonuç bekleniyor | Test |
+
 ## Eski tracker'dan devreden, kaydı yapılmamış sürümler
 
 | Prompt | Sürüm | Tarih | Not |
