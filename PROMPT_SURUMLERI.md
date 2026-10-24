@@ -46,7 +46,7 @@ Dosyalar: Drive `HcC Kasa Obsidian/20-Araclar/prompts.chat/HERMES_GOREV_PCH_KISI
 
 | Sürüm | Tarih | Değişiklik | Neden | Sonuç | Durum |
 |---|---|---|---|---|---|
-| v1.0 | 2026-10-24 | İki eksenli taksonomi (alan EGT/SIT/OKU/DIS/KIS + işlev F01–F11, yüz: seviye, kullanıcı, çocuğa doğrudan, TR uyarlama); 534 eski adayın yeniden tasnifi + kişisel alan araması; kapılar: akademik dürüstlük, çocuk verisi, fetva yasağı, uydurma kaynak yasağı; kişisel rubrik U/H/A/G/B (0,35/0,20/0,15/0,20/0,10); alan başına ≤4 Hazine, toplam ≤18; 30 örneklik kör uyum kontrolü; Obsidian import bundle `kisisel-katalog/` | PCH v1.2'nin şeritleri mesleki; kişisel alanlar kapsam matrisinde yoktu | GIRIS'e sevk edildi (2026-10-24 15:09 TR); sonuç bekleniyor | Test |
+| v1.0 | 2026-10-24 | İki eksenli taksonomi (alan EGT/SIT/OKU/DIS/KIS + işlev F01–F11, yüz: seviye, kullanıcı, çocuğa doğrudan, TR uyarlama); 534 eski adayın yeniden tasnifi + kişisel alan araması; kapılar: akademik dürüstlük, çocuk verisi, fetva yasağı, uydurma kaynak yasağı; kişisel rubrik U/H/A/G/B (0,35/0,20/0,15/0,20/0,10); alan başına ≤4 Hazine, toplam ≤18; 30 örneklik kör uyum kontrolü; Obsidian import bundle `kisisel-katalog/` | PCH v1.2'nin şeritleri mesleki; kişisel alanlar kapsam matrisinde yoktu | BITTI 2026-10-24 16:15 TR: 1.674 aday tarandı, yalnız 21'i tam okundu, 4 Hazine (EGT 2, SIT 1, OKU 1; DIS/KIS 0). Kör uyum %33 (hedef %80) → 1.653 satırlık katalog güvenilir tasnif değil, aday havuzu. Claude QC: puan 20/20 tutarlı, kapılar uygulanmış; K-EGT-02 = H-10 tekrarı ("NEW" diye işaretli), EGT.VAR tanımsız kod, 1 notta katkıcı e-postası. Kabul Cihan'da | Sorunlu |
 
 ## Eski tracker'dan devreden, kaydı yapılmamış sürümler
 
