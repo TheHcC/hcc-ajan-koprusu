@@ -38,7 +38,15 @@ Dosyalar: Drive `HcC Kasa Obsidian/20-Araclar/prompts.chat/HERMES_GOREV_PCH_HASA
 |---|---|---|---|---|---|
 | v1.0 | 2026-10-23 | İlk direktif (Claude): profil merceği, 8 küme, 5 ölçütlü puanlama, ≤15 Hazine, desen kütüphanesi; çıktıyı rclone ile doğrudan kasaya yazıyordu | — | Sevk edilmedi | İptal |
 | v1.1 | 2026-10-23 | **VPS-KUTUSU uyumlu** (Claude): `HERMES_GOREV` biçimi; yazma yalnız `CIKTI/PROMPTS-CHAT/<görev>`; kasa notları `04_OBSIDIAN_IMPORT_BUNDLE` olarak önerilir, kasaya alımı Claude QC sonrası yapar; tek seferlik icra + kopya savunması + Drive geri-okuma; MCP ekleme yasak | Hermes Drive'da yalnız VPS-KUTUSU'yu kullanabiliyor; v1.0 bu kuralı çiğniyordu | Sevk edilmedi; v1.2 yerine geçti | İptal |
-| v1.2 | 2026-10-23 | ChatGPT revizyonu: doğrulanmamış profil varsayımları çıkarıldı; 22.10 yönetici raporu kuralının `_YONETICI` dar yazma istisnası; tek 0–10 puanlama, gizli bonus yok; CSV eksikse HTML/MCP alternatifi; gerçek test / masa başı / statik inceleme ayrımı | v1.1'de profil varsayımları ve bonus/ceza karmaşası | GIRIS'e sevk edildi (2026-10-23 20:49 TR); sonuç bekleniyor | Test |
+| v1.2 | 2026-10-23 | ChatGPT revizyonu: doğrulanmamış profil varsayımları çıkarıldı; 22.10 yönetici raporu kuralının `_YONETICI` dar yazma istisnası; tek 0–10 puanlama, gizli bonus yok; CSV eksikse HTML/MCP alternatifi; gerçek test / masa başı / statik inceleme ayrımı | v1.1'de profil varsayımları ve bonus/ceza karmaşası | BITTI 2026-10-24 02:44 TR: 534 aday, 15 not (2 Hazine, 10 Pilot, 3 Beklet); Claude QC: puan formülü 15/15 tutarlı; kasa kabulü Cihan'da | Test |
+
+## PCH-K — prompts.chat kişisel alan tasnifi (Hermes görev emri)
+
+Dosyalar: Drive `HcC Kasa Obsidian/20-Araclar/prompts.chat/HERMES_GOREV_PCH_KISISEL_TASNIF_2026-10-24_v1.0.md` · sevk: `VPS-KUTUSU/GIRIS/` · çıktı: `VPS-KUTUSU/CIKTI/PROMPTS-CHAT/HERMES-PCH-KISISEL-2026-10-24/`
+
+| Sürüm | Tarih | Değişiklik | Neden | Sonuç | Durum |
+|---|---|---|---|---|---|
+| v1.0 | 2026-10-24 | İki eksenli taksonomi (alan EGT/SIT/OKU/DIS/KIS + işlev F01–F11, yüz: seviye, kullanıcı, çocuğa doğrudan, TR uyarlama); 534 eski adayın yeniden tasnifi + kişisel alan araması; kapılar: akademik dürüstlük, çocuk verisi, fetva yasağı, uydurma kaynak yasağı; kişisel rubrik U/H/A/G/B (0,35/0,20/0,15/0,20/0,10); alan başına ≤4 Hazine, toplam ≤18; 30 örneklik kör uyum kontrolü; Obsidian import bundle `kisisel-katalog/` | PCH v1.2'nin şeritleri mesleki; kişisel alanlar kapsam matrisinde yoktu | GIRIS'e sevk edildi (2026-10-24 15:09 TR); sonuç bekleniyor | Test |
 
 ## Eski tracker'dan devreden, kaydı yapılmamış sürümler
 
