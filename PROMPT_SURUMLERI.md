@@ -48,6 +48,15 @@ Dosyalar: Drive `HcC Kasa Obsidian/20-Araclar/prompts.chat/HERMES_GOREV_PCH_KISI
 |---|---|---|---|---|---|
 | v1.0 | 2026-10-24 | İki eksenli taksonomi (alan EGT/SIT/OKU/DIS/KIS + işlev F01–F11, yüz: seviye, kullanıcı, çocuğa doğrudan, TR uyarlama); 534 eski adayın yeniden tasnifi + kişisel alan araması; kapılar: akademik dürüstlük, çocuk verisi, fetva yasağı, uydurma kaynak yasağı; kişisel rubrik U/H/A/G/B (0,35/0,20/0,15/0,20/0,10); alan başına ≤4 Hazine, toplam ≤18; 30 örneklik kör uyum kontrolü; Obsidian import bundle `kisisel-katalog/` | PCH v1.2'nin şeritleri mesleki; kişisel alanlar kapsam matrisinde yoktu | BITTI 2026-10-24 16:15 TR: 1.674 aday tarandı, yalnız 21'i tam okundu, 4 Hazine (EGT 2, SIT 1, OKU 1; DIS/KIS 0). Kör uyum %33 (hedef %80) → 1.653 satırlık katalog güvenilir tasnif değil, aday havuzu. Claude QC: puan 20/20 tutarlı, kapılar uygulanmış; K-EGT-02 = H-10 tekrarı ("NEW" diye işaretli), EGT.VAR tanımsız kod, 1 notta katkıcı e-postası. Kabul Cihan'da | Sorunlu |
 
+## PCH-CGPT — ChatGPT prompts.chat çalışması (ChatGPT görev emri)
+
+Dosyalar: Drive `HcC Kasa Obsidian/20-Araclar/prompts.chat/ChatGPT Calisma/` (ChatGPT'nin master planı ve kartları) · devam direktifi: `prompts.chat/CHATGPT_GOREV_PCH_CGPT_DEVAM_2026-10-24_v1.0.md`
+
+| Sürüm | Tarih | Değişiklik | Neden | Sonuç | Durum |
+|---|---|---|---|---|---|
+| v1.0 | 2026-10-24 | ChatGPT'nin kendi master planı: 6 grup (MES, YMM, EGT, HUK, OKU, KIS), PCH-CGPT-1 puanlama (ağırlıkları PCH-K ile aynı), not standardı; ilk parti MES-001…003 | Cihan doğrudan ChatGPT'den istedi | 18 not; 3 kart H-03/H-01/H-05'in geliştirilmiş sürümleri; H-09'da kaynağa yanlış atfedilmiş adım tespit etti | Test |
+| DEVAM v1.0 | 2026-10-24 | Claude: önce üç üreticinin işini kaynak kimliğine göre uzlaştıran kayıt; iş sırası boşluk öncelikli (YMM → HUK → EGT boşlukları → MES M4–M5 → OKU boşlukları; KIS ertelendi); aday havuzu olarak Hermes CSV'leri; temiz oturumda model denemesi; her karta hedef Claude Projesi; kullanım kapısı; Hermes'e yalnız HERMES_TALEP ile ulaşma | ChatGPT'nin planı kasaya alınan ve Hermes'in yeni bitirdiği işlerle çakışıyordu | Cihan'ın ChatGPT'ye vermesi bekleniyor | Taslak |
+
 ## Eski tracker'dan devreden, kaydı yapılmamış sürümler
 
 | Prompt | Sürüm | Tarih | Not |
