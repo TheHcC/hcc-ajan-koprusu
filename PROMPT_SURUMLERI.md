@@ -55,7 +55,7 @@ Dosyalar: Drive `HcC Kasa Obsidian/20-Araclar/prompts.chat/ChatGPT Calisma/` (Ch
 | Sürüm | Tarih | Değişiklik | Neden | Sonuç | Durum |
 |---|---|---|---|---|---|
 | v1.0 | 2026-10-24 | ChatGPT'nin kendi master planı: 6 grup (MES, YMM, EGT, HUK, OKU, KIS), PCH-CGPT-1 puanlama (ağırlıkları PCH-K ile aynı), not standardı; ilk parti MES-001…003 | Cihan doğrudan ChatGPT'den istedi | 18 not; 3 kart H-03/H-01/H-05'in geliştirilmiş sürümleri; H-09'da kaynağa yanlış atfedilmiş adım tespit etti | Test |
-| DEVAM v1.0 | 2026-10-24 | Claude: önce üç üreticinin işini kaynak kimliğine göre uzlaştıran kayıt; iş sırası boşluk öncelikli (YMM → HUK → EGT boşlukları → MES M4–M5 → OKU boşlukları; KIS ertelendi); aday havuzu olarak Hermes CSV'leri; temiz oturumda model denemesi; her karta hedef Claude Projesi; kullanım kapısı; Hermes'e yalnız HERMES_TALEP ile ulaşma | ChatGPT'nin planı kasaya alınan ve Hermes'in yeni bitirdiği işlerle çakışıyordu | Cihan'ın ChatGPT'ye vermesi bekleniyor | Taslak |
+| DEVAM v1.0 | 2026-10-24 | Claude: önce üç üreticinin işini kaynak kimliğine göre uzlaştıran kayıt; iş sırası boşluk öncelikli (YMM → HUK → EGT boşlukları → MES M4–M5 → OKU boşlukları; KIS ertelendi); aday havuzu olarak Hermes CSV'leri; temiz oturumda model denemesi; her karta hedef Claude Projesi; kullanım kapısı; Hermes'e yalnız HERMES_TALEP ile ulaşma | ChatGPT'nin planı kasaya alınan ve Hermes'in yeni bitirdiği işlerle çakışıyordu | 2026-10-24: uzlaştırma kaydı (33 kaynak), H-09 düzeltme önerisi, YMM-001…003. Claude QC: statik GEÇTİ, 2 küçük düzeltme. Model denemesi 0, kullanım 0 → kullanım kapısı devrede | Test |
 
 ## Eski tracker'dan devreden, kaydı yapılmamış sürümler
 
