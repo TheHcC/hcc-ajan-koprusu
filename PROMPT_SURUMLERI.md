@@ -71,7 +71,7 @@ Dosyalar: Drive `HcC Kasa Obsidian/40-YMM-Sinav/00-YENI-DUZEN/03_DIREKTIF_CHATGP
 
 | Sürüm | Tarih | Değişiklik | Neden | Sonuç | Durum |
 |---|---|---|---|---|---|
-| v1.0 | 2026-10-28 | İlk görev emri (Claude): konu başına 4 dosya (1-KART, 2-VAKA, 3-COZUM, 4-TEST); yalnız 4 frontmatter alanı; süreç verisi yasak; iki kapı (kaynak + Python hesap); ikili karar KABUL/DÜZELT; pilot 2 paket: VR-E-004 dönüşümü + SPK-A1 yeni üretim | Kasa süreç dosyalarıyla doldu; Cihan çalışacağı dosyayı bulamıyor. Cihan 28.10'da 4 dosya formatını onayladı; ders bazında ayrı stil şablonu isteyebileceğini bildirdi | Cihan tüm kararları onayladı (28.10); girdi ZIP hazır; ChatGPT'ye sevk bekliyor | Taslak |
+| v1.0 | 2026-10-28 | İlk görev emri (Claude): konu başına 4 dosya (1-KART, 2-VAKA, 3-COZUM, 4-TEST); yalnız 4 frontmatter alanı; süreç verisi yasak; iki kapı (kaynak + Python hesap); ikili karar KABUL/DÜZELT; pilot 2 paket: VR-E-004 dönüşümü + SPK-A1 yeni üretim | Kasa süreç dosyalarıyla doldu; Cihan çalışacağı dosyayı bulamıyor. Cihan 28.10'da 4 dosya formatını onayladı; ders bazında ayrı stil şablonu isteyebileceğini bildirdi | 29.10 teslim: 2 paket, 8 dosya. Claude QC Q1–Q8 iki pakette GEÇTİ → KABUL; Python 11/11 blok birebir; ChatGPT kaynak paketteki süre hatasını yakaladı (9,0 M → 9,6 M); SPK-A1'e Claude 3 kart ekledi. Açık: SPKn m.22 metni [EKSİK] | Stabil |
 
 ## SADE-v1 — ymm-korpus + kasa sadeleştirme (Codex görev emri)
 
