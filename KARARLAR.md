@@ -13,7 +13,7 @@ En yeni en üstte. Karar silinmez; değişirse yeni satır eklenir ve eskisi
 1. Her konu paketi 4 dosyadan oluşur: `1-KART` (ezber kartı), `2-VAKA` (çıkmış vaka), `3-COZUM` (ayrıntılı çözüm föyü), `4-TEST` (seri soru-cevap).
 2. Kasaya yalnız bu 4 dosya iner; DENETIM, VARYASYON, rapor, yama ve sürüm kopyaları üretim tarafında (GitHub) kalır.
 3. Dosya iskeleti bütün derslerde aynıdır, ancak **ders bazında ayrı stil şablonu** tanımlanabilir (Cihan istediğinde). İlk ders şablonu: İleri Düzeyde Finansal Muhasebe.
-4. Ezber ağırlıklı ve sayısal dersler için ayrı ağırlıklar `02_YENI_DUZEN_KARAR_TASLAGI.md` KARAR-3 matrisinde.
+4. Ezber ağırlıklı ve sayısal dersler için ayrı ağırlıklar `02_YENI_DUZEN_KARAR.md` KARAR-3 matrisinde.
 5. **28.10.2026 23:52 — Cihan KARAR-1…6'nın tamamını onayladı.** Yürürlükteki tek plan: `ymm-korpus/00_strateji/PLAN.md`. Eski formatta süren VT-EK8, GUAV-PLAN, GUAV-ENV-KART beklemede.
 
 ### Gerekçe

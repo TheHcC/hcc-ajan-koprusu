@@ -67,7 +67,7 @@ Dosyalar: Drive `HcC Kasa Obsidian/00-Ajan-Tahtasi/` (`KURALLAR.md`, `TAHTA.md`,
 
 ## CGPT-TEK-STIL — YMM StudyPack tek stil, 4 dosya (ChatGPT görev emri)
 
-Dosyalar: Drive `HcC Kasa Obsidian/40-YMM-Sinav/00-YENI-DUZEN/03_DIREKTIF_CHATGPT_STUDYPACK_TEK_STIL_v1.md` · bağlam: aynı klasörde `01_SPK_KAPSAMA_HARITASI_2023-2026.md`, `02_YENI_DUZEN_KARAR_TASLAGI.md`
+Dosyalar: Drive `HcC Kasa Obsidian/40-YMM-Sinav/00-YENI-DUZEN/03_DIREKTIF_CHATGPT_STUDYPACK_TEK_STIL_v1.md` · bağlam: aynı klasörde `01_SPK_KAPSAMA_HARITASI_2023-2026.md`, `02_YENI_DUZEN_KARAR.md`
 
 | Sürüm | Tarih | Değişiklik | Neden | Sonuç | Durum |
 |---|---|---|---|---|---|
