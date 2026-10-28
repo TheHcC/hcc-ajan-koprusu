@@ -65,6 +65,14 @@ Dosyalar: Drive `HcC Kasa Obsidian/00-Ajan-Tahtasi/` (`KURALLAR.md`, `TAHTA.md`,
 |---|---|---|---|---|---|
 | v1.0 | 2026-10-24 | Tahta kuralları: kart/adım/tek sahip, durum akışı, tek yazar (Claude), ChatGPT olay notu, Hermes GIRIS/SON_DURUM. Claude QC GEÇTİ → kasaya (Cihan'ın ayrıca kabulü gerekmez, ret hakkı saklı). Claude'un saatlik kontrol görevi (değişiklik yoksa sessiz). İlk kartlar: eğitim kartı (Hermes kaynak → ChatGPT föy → Claude QC/şekil/PDF → kullanım → tekrar föyü), PCH-K kasa alımı, H-09 düzeltmesi | Cihan en az insan müdahalesiyle döngü istedi | Kuruldu; Hermes kaynak görevi GIRIS'te | Test |
 
+## CGPT-TEK-STIL — YMM StudyPack tek stil, 4 dosya (ChatGPT görev emri)
+
+Dosyalar: Drive `HcC Kasa Obsidian/40-YMM-Sinav/00-YENI-DUZEN/03_DIREKTIF_CHATGPT_STUDYPACK_TEK_STIL_v1.md` · bağlam: aynı klasörde `01_SPK_KAPSAMA_HARITASI_2023-2026.md`, `02_YENI_DUZEN_KARAR_TASLAGI.md`
+
+| Sürüm | Tarih | Değişiklik | Neden | Sonuç | Durum |
+|---|---|---|---|---|---|
+| v1.0 | 2026-10-28 | İlk görev emri (Claude): konu başına 4 dosya (1-KART, 2-VAKA, 3-COZUM, 4-TEST); yalnız 4 frontmatter alanı; süreç verisi yasak; iki kapı (kaynak + Python hesap); ikili karar KABUL/DÜZELT; pilot 2 paket: VR-E-004 dönüşümü + SPK-A1 yeni üretim | Kasa süreç dosyalarıyla doldu; Cihan çalışacağı dosyayı bulamıyor. Cihan 28.10'da 4 dosya formatını onayladı; ders bazında ayrı stil şablonu isteyebileceğini bildirdi | Henüz ChatGPT'ye verilmedi | Taslak |
+
 ## Eski tracker'dan devreden, kaydı yapılmamış sürümler
 
 | Prompt | Sürüm | Tarih | Not |

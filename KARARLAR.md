@@ -5,6 +5,22 @@ En yeni en üstte. Karar silinmez; değişirse yeni satır eklenir ve eskisi
 
 ---
 
+## K-011 · YMM StudyPack: konu başına 4 dosya; ders bazında stil şablonu açık
+**Tarih:** 28.10.2026 · **Veren:** Cihan · **Öneren:** Claude Opus 5.5
+
+### Karar
+
+1. Her konu paketi 4 dosyadan oluşur: `1-KART` (ezber kartı), `2-VAKA` (çıkmış vaka), `3-COZUM` (ayrıntılı çözüm föyü), `4-TEST` (seri soru-cevap).
+2. Kasaya yalnız bu 4 dosya iner; DENETIM, VARYASYON, rapor, yama ve sürüm kopyaları üretim tarafında (GitHub) kalır.
+3. Dosya iskeleti bütün derslerde aynıdır, ancak **ders bazında ayrı stil şablonu** tanımlanabilir (Cihan istediğinde). İlk ders şablonu: İleri Düzeyde Finansal Muhasebe.
+4. Ezber ağırlıklı ve sayısal dersler için ayrı ağırlıklar `02_YENI_DUZEN_KARAR_TASLAGI.md` KARAR-3 matrisinde; matrisin geri kalanı ve KARAR-1/4/5/6 Cihan onayı bekliyor.
+
+### Gerekçe
+
+Vergi Revizyonu'nda konu başına 4-10 dosya (çoğu 6-7) oluşmuş, kontrol dosyaları kasaya inmiş; Cihan çalışacağı dosyayı bulamadığını bildirdi. SISTEM_DURUMU K2 ("paket biçimi bütün derslerde aynı") bu kararla revize edildi.
+
+---
+
 ## K-010 · Blind agreement yeterli değildir; source adjudication zorunludur
 **Tarih:** 07.10.2026 · **Veren:** Cihan'ın K-009 onayı altında pilot sonucu · **Denetleyen:** GPT-5.6 Sol
 

@@ -1,5 +1,11 @@
 # GÜNLÜK — baştan sona anlatı
 
+## 2026-10-28 23:55 · Claude Opus 5.5 (Claude sohbet, uzak oturum)
+
+- **Yapılan:** CGPT-TEK-STIL v1.0 prompt sürüm defterine işlendi; K-011 (4 dosyalı paket, ders bazında stil şablonu) karar defterine eklendi.
+- **Değişen dosyalar:** `PROMPT_SURUMLERI.md`, `KARARLAR.md`, `GUNLUK.md`
+- **Sonraki adım:** Cihan KARAR-1/3/4/5/6'yı onaylarsa ChatGPT pilotu (2 paket) başlar; İDFM stil şablonu yazılır.
+
 ## 2026-10-15T15:56:03.393312+03:00 — CODEX (GPT-6.1; tek model) · Son EK-4 / G3
 
 - Dal main’e birleştirildi; 9 V eki birebir aktarıldı. 8 paket HATA 0; VR006 tek denemede KVK 12/m ayrıştırması nedeniyle BLOKE, eski yayını korundu.
