@@ -1,5 +1,11 @@
 # GÜNLÜK — baştan sona anlatı
 
+## 2026-10-29 01:10 · Claude Opus 5.5 (Claude sohbet, uzak oturum)
+
+- **Yapılan:** K-012 devir protokolü yazıldı (liste satırı + takvim hatırlatıcısı, tüm ajanlar); kasada `00-Ajan-Tahtasi/BEKLEYEN_ISLER.md` ve Hermes günlük özet görev taslağı oluşturuldu; ymm-korpus'a HCC-GRAPH-A2 Codex direktifi eklendi.
+- **Değişen dosyalar:** `PROTOKOL_BEKLEYEN_ISLER.md` (yeni), `KARARLAR.md`, `GUNLUK.md`
+- **Sonraki adım:** Codex SADE-v1 (29.10) → Codex HCC-GRAPH-A2; Cihan Hermes görevini GIRIS'e koyar; ChatGPT özel talimatına K-012 bloğu eklenir.
+
 ## 2026-10-28 23:55 · Claude Opus 5.5 (Claude sohbet, uzak oturum)
 
 - **Yapılan:** CGPT-TEK-STIL v1.0 prompt sürüm defterine işlendi; K-011 (4 dosyalı paket, ders bazında stil şablonu) karar defterine eklendi.

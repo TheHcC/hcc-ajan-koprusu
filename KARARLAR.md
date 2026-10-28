@@ -5,6 +5,20 @@ En yeni en üstte. Karar silinmez; değişirse yeni satır eklenir ve eskisi
 
 ---
 
+## K-012 · Devir = liste satırı + takvim hatırlatıcısı (tüm ajanlar)
+**Tarih:** 29.10.2026 · **Veren:** Cihan · **Öneren:** Claude Opus 5.5
+
+### Karar
+Bir ajan işi başka bir ajana devrettiğinde ya da Cihan'a "şunu orada yap" dediğinde, aynı yanıtta (1) `HcC Kasa Obsidian/00-Ajan-Tahtasi/BEKLEYEN_ISLER.md`'ye kopyala-yapıştır komutlu bir satır ekler, (2) Google Takvim hatırlatıcısı kurar. Yazma aracı olmayan ajan (ör. ChatGPT) bu ikisini yanıtın sonunda yapıştırılmaya hazır blok olarak verir. Ayrıntı: `PROTOKOL_BEKLEYEN_ISLER.md`.
+
+### Gerekçe
+Claude kotası bitince iş ChatGPT'de sürüyor; devredilen işler hatırlatıcısız kalıp yarıda unutuluyordu. Kural ajan bağımsız olmalı.
+
+### Bağlı
+Hermes günlük Telegram özeti (onay bekliyor) · HCC Graph A2 depo tarafı aynası (`ymm-korpus/direktifler/codex/HCC-GRAPH-A2_STUDYPACK_v1.md`).
+
+---
+
 ## K-011 · YMM StudyPack: konu başına 4 dosya; ders bazında stil şablonu açık
 **Tarih:** 28.10.2026 · **Veren:** Cihan · **Öneren:** Claude Opus 5.5
 
